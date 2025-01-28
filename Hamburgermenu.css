@@ -1,0 +1,10 @@
+/* Simple bottom bar */
+.bottom-bar {
+  position: fixed;
+  bottom: 0; /* Sticks to the bottom */
+  left: 0; /* Sticks to the left */
+  width: 100%; /* Full width */
+  height: 3rem; /* Adjust height as needed */
+  background-color: #333; /* Background color (dark gray) */
+  z-index: 100; /* Keeps it above other elements */
+}

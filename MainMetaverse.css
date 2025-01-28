@@ -1,0 +1,9 @@
+/* Page-specific details */
+body {
+  background: linear-gradient(to right, #A2E9A2,#038C65);
+  color: black;
+}
+
+.page-header {
+  background: linear-gradient(to right, darkgreen, white, seagreen );
+}

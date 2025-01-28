@@ -1,0 +1,39 @@
+/* Universal.css - THIS IS THE ONLY PLACE FOR STRUCTURE */
+
+body {
+    background: linear-gradient(135deg, #1A1A1A, #333333); /* Sleek, modern dark tones */
+
+
+
+.page-header {
+    background: linear-gradient(to right, seagreen, lightblue, blue, purple, violet);
+}
+
+.content_intro {
+    background: linear-gradient(to right, beige, white);
+}
+
+.mainanime {
+    background: linear-gradient(to right, #D4A017, #FF3B3F);
+}
+
+.Manga {
+    background: radial-gradient(circle, #FF3B3F, #ededed, #3d56ffda);
+}
+
+.comicstv_main {
+  background: linear-gradient(to right, #FF3B3F, #3d56ffda);
+  }
+
+.metaverse {
+  background:linear-gradient(to right, lightgreen, seagreen);
+}
+
+.Worlds_Universes{
+  background: linear-gradient(to right, hotpink, purple, violet);
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
