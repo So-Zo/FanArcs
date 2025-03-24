@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Community Page</title>
+    <link rel="stylesheet" href="TheCommunity.css" />
+    <link rel="stylesheet" href="Unihomestyle.css" />
+    <link rel="stylesheet" href="Hamburgermenu.css" />
+    <link rel="stylesheet" href="Root_var.css" />
+  </head>
+  <body>
+    <header>
+      <div class="image-header">
+        <img src="Concept3.jpg" alt="FanArcs Logo" />
+      </div>
+    </header>
+    <main>
+      <hr>
+      <div class="post-container">
+        <div class="post-card">
+          <div class="post-header">
+            <div class="profile-container">
+              <img src="post-image.jpg" alt="Post Image" id="profile-img" />
+            </div>
+            <div class="post-info">
+              <p>Posted: 18hrs ago</p>
+              <p>Author: user234</p>
+              <p>Tags: #anime #fanfiction #comedy #discussion</p>
+            </div>
+          </div>
+          <h3 class="post-title">Amazing Fan Fiction</h3>
+          <p class="post-preview">
+            This is a short preview of the fan fiction that will blow your mind.
+            Keep reading...
+          </p>
+          <div class="post-actions">
+            <button class="action-btn">💬</button>
+            <button class="action-btn">✅</button>
+            <button class="action-btn">...</button>
+            <button class="vote">❤️</button>
+            <button class="vote">👎</button>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="post-container">
+        <div class="post-card">
+          <div class="post-header">
+            <img src="post-image.jpg" alt="Post Image" class="post-image" />
+            <div class="post-info">
+              <p>posted: 18hrs ago Author: user234</p>
+              <p>Tags: anime #fanfiction #comedy #discussion</p>
+            </div>
+          </div>
+          <h3 class="post-title">Amazing Fan Fiction</h3>
+          <p class="post-preview">
+            This is a short preview of the fan fiction that will blow your mind.
+            Keep reading...
+          </p>
+          <div class="post-actions">
+            <button class="comment-btn">*</button>
+            <button class="save-btn">+</button>
+            <button class="opt-btn">...</button>
+          </div>
+          <div class="user-votes">
+            <button class="heart">❤️</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Bottom navigation bar -->
+      <div id="bottom-bar">
+        <a href="Homepage.html" class="home-button" aria-label="Go Home">🏠</a>
+        <a
+          href="Profile Pagebs.html"
+          class="profile-button"
+          aria-label="Profile Page"
+          >👤</a
+        >
+        <div class="popup-search" onclick="toggleSearch()"><span>🔍</span></div>
+
+        <div class="hamburger-menu" aria-label="Open navigation menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <!-- The navigation menu that will show/hide -->
+      <nav class="nav-menu">
+        <ul>
+          <!-- Categories dropdown -->
+          <li>
+            <button
+              class="toggle-dropdown"
+              aria-expanded="false"
+              aria-controls="categories-dropdown"
+            >
+              Categories <span>►</span>
+            </button>
+            <ul id="categories-dropdown" class="drop-down">
+              <li><a href="main_anime.html">Anime</a></li>
+              <li><a href="main_manga.html">Manga</a></li>
+              <li><a href="main_metaverse.html">Metaverse</a></li>
+              <li><a href="main_comic.html">Comics</a></li>
+              <li><a href="mainWU.html">Worlds & Universes</a></li>
+            </ul>
+          </li>
+
+          <!-- FanArcs Info dropdown -->
+          <li>
+            <button
+              class="toggle-dropdown"
+              aria-expanded="false"
+              aria-controls="info-dropdown"
+            >
+              FanArcs Info <span>►</span>
+            </button>
+            <ul id="info-dropdown" class="drop-down">
+              <li><a href="site_extras.html">About</a></li>
+              <li><a href="Contribute.html">Help FanArcs</a></li>
+              <li><a href="Community.html">Community</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <p>&copy; 2025 FanArcs. All rights reserved.</p>
+    </footer>
+    <!-- Link your JS file here for Firebase integration later -->
+    <script src="firebase-app.js"></script>
+    <script src="firebase-config.js"></script>
+    <!-- Firebase setup, etc. -->
+    <script src="app.js"></script>
+    <!-- JS file for future Firebase logic -->
+    <script src="Dropdowns.js"></script>
+  </body>
+</html>

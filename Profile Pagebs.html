@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Profile_Page</title>
+  
+  <link rel="stylesheet" href = "ProfilePage.css">
+  <link rel="stylesheet" href = "Hamburgermenu.css">
+  <link rel="stylesheet" href = "root_var.css">
+</head>
+<body>
+<header>
+  <div class="center-image">
+  <div class="profile-container">
+    <img id="profile-img" alt="" src="default.jpg">
+    <p class="Profile-label">Profile Picture</p>
+    <input type="file" id= "file-input" accept="image/*">
+  </div>
+ </div>
+ <div class="User-name"> <p>hello</p></div>
+</header>
+<main>
+    <div class="options-bar">
+        <button class="option-item">Comments</button>
+        <button class="option-item">Posts</button>
+        <button class="option-item">Work Requests</button>
+        <button class="option-item">Settings
+        </button>
+        </div>
+    
+    <!-- Profile Content: Can be dynamic based on the selected option -->
+    <div class="profile-content">
+        <!-- Dynamic content goes here depending on selected option -->
+    </div>
+    </main>
+    
+      <footer>
+   <!-- Bottom navigation bar -->
+<div id="bottom-bar">
+    <a href="Homepage.html" class="home-button" aria-label="Go Home">🏠</a>
+    <a href="Profile Pagebs.html" class="profile-button" aria-label="Profile Page">👤</a>
+    <div class="popup-search" onclick="toggleSearch()"><span>🔍</span></div>
+  
+  
+  <div class="hamburger-menu" aria-label="Open navigation menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  </div>
+
+<!-- The navigation menu that will show/hide -->
+<nav class="nav-menu">
+  <ul>
+    <!-- Categories dropdown -->
+    <li>
+      <button class="toggle-dropdown" aria-expanded="false" aria-controls="categories-dropdown">
+        Categories <span>►</span>
+      </button>
+      <ul id="categories-dropdown" class="drop-down">
+        <li><a href="main_anime.html">Anime</a></li>
+        <li><a href="main_manga.html">Manga</a></li>
+        <li><a href="main_metaverse.html">Metaverse</a></li>
+        <li><a href="main_comic.html">Comics</a></li>
+        <li><a href="mainWU.html">Worlds & Universes</a></li>
+      </ul>
+    </li>
+    
+    <!-- FanArcs Info dropdown -->
+    <li>
+      <button class="toggle-dropdown" aria-expanded="false" aria-controls="info-dropdown">
+        FanArcs Info <span>►</span>
+      </button>
+      <ul id="info-dropdown" class="drop-down">
+        <li><a href="site_extras.html">About</a></li>
+        <li><a href="Contribute.html">Help FanArcs</a></li>
+        <li><a href="Community.html">Community</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <p>&copy; 2025 FanArcs. All rights reserved.</p>
+  </footer>
+ 
+ <button class="create-post">+</button>
+
+<script src="ProfileInteract.js"></script>
+<script src="Dropdowns.js"></script>
+<script src="Profile_loadup.js"></script>
+
+</body>
+</html>

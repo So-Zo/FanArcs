@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href=
+  "Comic Main.css">
+  <link rel="stylesheet" href=  "Unihomestyle.css">
+  <link rel="stylesheet" href = "Section-buttons.css">
+  <link rel="stylesheet" href = "Section-content.css">
+  <link rel="stylesheet" href = "Search-bar.css">
+  <link rel="stylesheet" href= "Hamburgermenu.css">
+  <link rel="stylesheet" href= "Root_var.css">
+  
+  <title>Comic</title>
+</head>
+<body>
+  <header>
+     <div class="image-header"> <img src="Comicheader.jpg"> </div>
+    <input type="search" id="searchBar" placeholder="Search for Characters, Universes, etc.">
+</header>
+<main>
+  <section class="section-content"><h2>Brief Intro</h2>
+  <p>Comics were blah blah blah. filler words and more.</p> </section>
+ 
+  <section class="fanfiction">   <h3>Genres & Styles</h3>
+  
+  <p>A sentence or two about what fanfiction is.</p>
+  </section>
+ 
+ <section class="section worlds">
+  <h3>Comic Worlds & Universes</h3>
+ 
+  <p>Welcome to the worlds and universes of Television.</p>
+  </section>
+  </main>
+ 
+   <footer>
+   <!-- Bottom navigation bar -->
+<div id="bottom-bar">
+    <a href="Homepage.html" class="home-button" aria-label="Go Home">🏠</a>
+    <a href="Profile Pagebs.html" class="profile-button" aria-label="Profile Page">👤</a>
+    <div class="popup-search" onclick="toggleSearch()"><span>🔍</span></div>
+  
+  
+  <div class="hamburger-menu" aria-label="Open navigation menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  </div>
+
+<!-- The navigation menu that will show/hide -->
+<nav class="nav-menu">
+  <ul>
+    <!-- Categories dropdown -->
+    <li>
+      <button class="toggle-dropdown" aria-expanded="false" aria-controls="categories-dropdown">
+        Categories <span>►</span>
+      </button>
+      <ul id="categories-dropdown" class="drop-down">
+        <li><a href="main_anime.html">Anime 🌸</a></li>
+        <hr>
+        <li><a href="main_comic.html">Comics 💥</a></li>
+        <hr>
+        <li><a href="main_manga.html">Manga 📖</a></li>
+        <hr>
+        <li><a href="main_tv.html">Television 📺</a></li>
+      <hr>  
+        <li><a href="main_metaverse.html">Metaverse 🎮</a></li>
+        <hr>
+        <li><a href="mainWU.html">Worlds & Universes 🌌</a></li>
+      </ul>
+    </li>
+    
+    <!-- FanArcs Info dropdown -->
+    <li>
+      <button class="toggle-dropdown" aria-expanded="false" aria-controls="info-dropdown">
+        FanArcs Info <span>►</span>
+      </button>
+      <ul id="info-dropdown" class="drop-down">
+        <li><a href="site_extras.html">About</a></li>
+        <li><a href="Contribute.html">Help FanArcs</a></li>
+        <li><a href="Community.html">Community</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <p>&copy; 2025 FanArcs. All rights reserved.</p>
+  </footer>
+
+<script src="Dropdowns.js"></script>
+  
+</body>
+</html>

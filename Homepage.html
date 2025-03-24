@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="description"
+      content="Your go-to site for anime, manga, comics, TV, and fanfiction. Explore deep dives, character bios, and user-generated content all in one place!"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="Home_page.css" />
+    <link rel="stylesheet" href="Unihomestyle.css" />
+    <link rel="stylesheet" href="Section-buttons.css" />
+    <link rel="stylesheet" href="Section-content.css" />
+    <link rel="stylesheet" href="Search-bar.css" />
+    <link rel="stylesheet" href="Hamburgermenu.css" />
+    <link rel="stylesheet" href="root_var.css" />
+
+    <title>FanArc</title>
+  </head>
+
+  <body>
+    <!-- Header Section: Site title, Search bar, Navigation links -->
+    <header>
+      <div class="image-header">
+        <img src="Imagefive.jpg" alt="The FanArcs Logo" />
+      </div>
+
+      <input
+        type="search"
+        id="searchBar"
+        aria-label="Search Site Wide"
+        placeholder="Search for Characters, Universes, etc."
+      />
+    </header>
+    <main>
+      <hr />
+      <!--Main Body sections-->
+      <section class="content_intro">
+        <h1>About the Site</h1>
+        <p>
+          Welcome to FanArcs! The comprehensive collection and playground for
+          Deep Dives, FanFiction, and even Power Comparisons! We are excited to
+          see what you bring
+        </p>
+      </section>
+      <hr />
+
+      <section class="mainanime">
+        <a class="Btn-nav" href="main_anime.html">Anime</a>
+        <p>
+          Explore the Origins or the Fanlore behind some of your favorite
+          stories!
+        </p>
+      </section>
+      <hr />
+
+      <section class="Comics">
+        <a class="Btn-nav" href="main_comic.html">Comics</a>
+        <p>Comics superheros and more! Which one will you explore?</p>
+      </section>
+
+      <hr />
+
+      <section class="Manga">
+        <a class="Btn-nav" href="main_manga.html">Manga</a>
+        <p>
+          Explore the Origins or the Fanlore behind some of your favorite
+          stories!
+        </p>
+      </section>
+      <hr />
+
+      <section class="tv_main">
+        <a class="Btn-nav" href="main_tv.html">Television</a>
+        <p>
+          Learn about the origins of your favorite Characters, Stories, and
+          Universes!
+        </p>
+      </section>
+      <hr />
+
+      <section class="metaverse">
+        <a class="Btn-nav" href="main_metaverse.html">Metaverse</a>
+        <p>
+          See the differences and similarities, or uprisings of your favorite
+          Games and Characters from the ages!
+        </p>
+      </section>
+      <hr />
+
+      <section class="Worlds_Universes">
+        <a class="Btn-nav" href="mainWU.html">Worlds & Universes</a>
+        <p>Explore the Most Popular Characters, Worlds, and Story spinoffs!</p>
+      </section>
+    </main>
+
+    <!-- Optional Footer Section -->
+    <footer>
+      <!-- Bottom navigation bar -->
+      <div id="bottom-bar">
+        <a href="Homepage.html" class="home-button" aria-label="Go Home">🏠</a>
+        <a
+          href="Profile Pagebs.html"
+          class="profile-button"
+          aria-label="Profile Page"
+          >👤</a
+        >
+        <div class="popup-search" onclick="toggleSearch()"><span>🔍</span></div>
+
+        <div class="hamburger-menu" aria-label="Open navigation menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <!-- The navigation menu that will show/hide -->
+      <nav class="nav-menu">
+        <ul>
+          <!-- Categories dropdown -->
+          <li>
+            <button
+              class="toggle-dropdown"
+              aria-expanded="false"
+              aria-controls="categories-dropdown"
+            >
+              Categories <span>►</span>
+            </button>
+            <ul class="drop-down">
+              <li><a href="main_anime.html">Anime 🌸</a></li>
+              <hr />
+              <li><a href="main_comic.html">Comics 💥</a></li>
+              <hr />
+              <li><a href="main_manga.html">Manga 📖</a></li>
+              <hr />
+              <li><a href="main_tv.html">Television 📺</a></li>
+              <hr />
+              <li><a href="main_metaverse.html">Metaverse 🎮</a></li>
+              <hr />
+              <li><a href="mainWU.html">Worlds & Universes 🌌</a></li>
+            </ul>
+          </li>
+
+          <!-- FanArcs Info dropdown -->
+          <li>
+            <button
+              class="toggle-dropdown"
+              aria-expanded="false"
+              aria-controls="info-dropdown"
+            >
+              FanArcs Info <span>►</span>
+            </button>
+            <ul id="info-dropdown" class="drop-down">
+              <li><a href="site_extras.html">About 🔎</a></li>
+              <li><a href="Contribute.html">Help FanArcs ⁉️ </a></li>
+              <li><a href="Community.html">Community</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <p>&copy; 2025 FanArcs. All rights reserved.</p>
+    </footer>
+
+    <script src="Dropdowns.js"></script>
+    <script src="Firebase-configure.js"></script>
+  </body>
+</html>

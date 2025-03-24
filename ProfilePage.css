@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: radial-gradient(circle at 50% 15%,  
+    rgba(42, 26, 111, .9) 20%,  /* Rich indigo glow at the top */
+    rgba(0, 0, 92, 0) 60%       /* Fades into transparent */
+),  
+linear-gradient(to bottom,  
+    #4b0082 5%,  
+    #330066 30%,  
+    #1d004d 60%,  
+    #2a1a6f 100%  /* Use the new color here */
+);
+}
+
+.profile-content {
+  margin: var(--spacing-base);
+  max-width: 95%;
+  box-shadow: 2px 2px 5px var(--shadow-color);
+  border: var(--border-width) solid var(--text-color);
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-base);
+  background: linear-gradient(to right, var(--primarytxt-bg-color), var(--secondarytxt-bg-color));
+  
+}
+
+.center-image {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+/* Profile Page Container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgray ;
+    overflow: hidden;
+    width: 10rem;
+    height: 10rem;
+    border: 0.1rem solid;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.Profile-label {
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+}
+
+#file-input {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+
+#profile-img {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+
+
+/* Horizontal Scrollable Bar */
+.options-bar {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-top: 1rem;
+}
+
+.option-item {
+    padding: 10px 20px;
+    margin-right: 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-item:hover {
+    background-color: #e0e0e0;
+}
+
+.create-post {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 0.1rem solid black;
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  z-index: 100;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.User-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 1rem;
+  margin: 1rem;
+  border: 0.1rem solid;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  width: 25%;
+  height: auto;
+}
+
+

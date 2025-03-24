@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href=
+  "MainWU.css">
+  <link rel="stylesheet" href=  "Unihomestyle.css">
+  <link rel="stylesheet" href = "Section-buttons.css">
+  <link rel="stylesheet" href = "Section-content.css">
+  <link rel="stylesheet" href = "Search-bar.css">
+  <link rel="stylesheet" href= "Hamburgermenu.css">
+  <link rel="stylesheet" href= "Root_var.css">
+  
+  <title>Manga</title>
+</head>
+<body>
+  <header>
+    <div class="image-header">
+      <img src="WandUheader.jpg" alt ="Worlds and universes image" aria-label= "page header">
+    </div>
+    
+    <input type="search" id="searchBar" placeholder="Search for Characters, Universes, etc.">
+</header>
+<main>
+  <section class="section-content"><h2>Brief Intro</h2>
+  <p> Filler words and stuff, This topic is a bit more nuanced then just a show topic or something of the sorts..</p> </section>
+ 
+  <section class="fanfiction">   <h3>Backstory/ Lore?</h3>
+  <button class="section-button">Explore them</button> 
+ 
+  <p>A sentence or two about what Backstory and lore is and why someone would want to read them.</p>
+ </section>
+  <section class="sectionworlds">  <h3>Worlds/Universes</h3>
+ 
+  <p>maybe this is where the list should go for categories of worlds and such. </p>
+  
+  <div>Images and buttons with popular worlds and unique differences.</div>
+  </section>
+  </main>
+ 
+   <footer>
+   <!-- Bottom navigation bar -->
+<div id="bottom-bar">
+    <a href="Homepage.html" class="home-button" aria-label="Go Home">🏠</a>
+    <a href="Profile Pagebs.html" class="profile-button" aria-label="Profile Page">👤</a>
+    <div class="popup-search" onclick="toggleSearch()"><span>🔍</span></div>
+  
+  
+  <div class="hamburger-menu" aria-label="Open navigation menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  </div>
+
+<!-- The navigation menu that will show/hide -->
+<nav class="nav-menu">
+  <ul>
+    <!-- Categories dropdown -->
+    <li>
+      <button class="toggle-dropdown" aria-expanded="false" aria-controls="categories-dropdown">
+        Categories <span>►</span>
+      </button>
+      <ul id="categories-dropdown" class="drop-down">
+        <li><a href="main_anime.html">Anime</a></li>
+        <li><a href="main_manga.html">Manga</a></li>
+        <li><a href="main_metaverse.html">Metaverse</a></li>
+        <li><a href="main_comic.html">Comics</a></li>
+        <li><a href="mainWU.html">Worlds & Universes</a></li>
+      </ul>
+    </li>
+    
+    <!-- FanArcs Info dropdown -->
+    <li>
+      <button class="toggle-dropdown" aria-expanded="false" aria-controls="info-dropdown">
+        FanArcs Info <span>►</span>
+      </button>
+      <ul id="info-dropdown" class="drop-down">
+        <li><a href="site_extras.html">About</a></li>
+        <li><a href="Contribute.html">Help FanArcs</a></li>
+        <li><a href="Community.html">Community</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <p>&copy; 2025 FanArcs. All rights reserved.</p>
+  </footer>
+
+<script src="Dropdowns.js"></script>
+  
+</body>
+</html>
