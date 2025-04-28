@@ -3,7 +3,6 @@ body {
   background-image: linear-gradient(to right, #2c3e50 0%, #2980b9 50%, #f1c40f 100%);
 }
 
-
 .TestImgHead {
   position: relative;
   max-width: 100%;
@@ -16,3 +15,126 @@ body {
   display: block;
 }
 
+/* Anime series list */
+.anime-series-list {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-base);
+}
+
+.anime-series-list h4 {
+  margin-top: 0;
+  color: #f8f8f8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.anime-series-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.anime-series-list li {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-small);
+  transition: background-color 0.3s;
+}
+
+.anime-series-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.anime-series-list a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.anime-series-list a:hover {
+  text-decoration: underline;
+}
+
+/* Anime categories */
+.anime-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.anime-category {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-base);
+  padding: 1rem;
+}
+
+.anime-category h4 {
+  margin-top: 0;
+  color: #f8f8f8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.anime-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.anime-category li {
+  margin-bottom: 0.5rem;
+}
+
+.anime-category a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+.anime-category a:hover {
+  text-decoration: underline;
+}
+
+/* Non-existent page links */
+.non-existent-page {
+  border-bottom: 1px dotted #e74c3c;
+  position: relative;
+}
+
+.non-existent-page:hover::after {
+  content: "Page doesn't exist yet - Click to create";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius-small);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 5px;
+}
+
+.non-existent-page:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  margin-bottom: -5px;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .anime-categories {
+    grid-template-columns: 1fr;
+  }
+}

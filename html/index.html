@@ -18,13 +18,15 @@ content="Your go-to site for anime, manga, comics, TV, and fanfiction. Explore d
 <link rel="stylesheet" href="../css/navigation.css" />
 <link rel="stylesheet" href="../css/root-variables.css" />
 <link rel="stylesheet" href="../css/footer-style.css" />
+<link rel="stylesheet" href="../css/accessibility.css" />
 
 <title>Fan Arc</title>
 </head>
 
 <body>
+<a href="#main-content" class="skip-to-content">Skip to content</a>
 <!-- Header Section: Site title, Search bar, Navigation links -->
-<header>
+<header role="banner">
 <div class="header-logo">
 <img src="logo-image.jpg" alt="The Fan Arc Logo" />
 </div>
@@ -36,7 +38,7 @@ aria-label="Search Site Wide"
 placeholder="Search for Characters, Universes, etc."
 />
 </header>
-<main>
+<main id="main-content" role="main">
 <hr />
 <!--Main Body sections-->
 <section class="content-intro">
@@ -49,8 +51,8 @@ see what you bring
 </section>
 <hr />
 
-<section class="section-anime">
-<a class="nav-button" href="anime-page.html">Anime</a>
+<section class="section-anime" role="region" aria-labelledby="anime-section-title">
+<a class="nav-button" href="anime-page.html" id="anime-section-title">Anime</a>
 <p>
 Explore the Origins or the Fan Lore behind some of your favorite
 stories!
@@ -58,8 +60,8 @@ stories!
 </section>
 <hr />
 
-<section class="section-comics">
-<a class="nav-button" href="comics-page.html">Comics</a>
+<section class="section-comics" role="region" aria-labelledby="comics-section-title">
+<a class="nav-button" href="comics-page.html" id="comics-section-title">Comics</a>
 <p>
 Comics superheroes and more! Which one will you explore?
 </p>
@@ -67,8 +69,8 @@ Comics superheroes and more! Which one will you explore?
 
 <hr />
 
-<section class="section-manga">
-<a class="nav-button" href="manga-page.html">Manga</a>
+<section class="section-manga" role="region" aria-labelledby="manga-section-title">
+<a class="nav-button" href="manga-page.html" id="manga-section-title">Manga</a>
 <p>
 Explore the Origins or the Fan Lore behind some of your favorite
 stories!
@@ -76,8 +78,8 @@ stories!
 </section>
 <hr />
 
-<section class="section-tv">
-<a class="nav-button" href="tv-page.html">Television</a>
+<section class="section-tv" role="region" aria-labelledby="tv-section-title">
+<a class="nav-button" href="tv-page.html" id="tv-section-title">Television</a>
 <p>
 Learn about the origins of your favorite Characters, Stories, and
 Universes!
@@ -85,8 +87,8 @@ Universes!
 </section>
 <hr />
 
-<section class="section-metaverse">
-<a class="nav-button" href="metaverse-page.html">Metaverse</a>
+<section class="section-metaverse" role="region" aria-labelledby="metaverse-section-title">
+<a class="nav-button" href="metaverse-page.html" id="metaverse-section-title">Metaverse</a>
 <p>
 See the differences and similarities, or uprisings of your favorite
 Games and Characters from the ages!
@@ -94,8 +96,8 @@ Games and Characters from the ages!
 </section>
 <hr />
 
-<section class="section-worlds-universes">
-<a class="nav-button" href="worlds-universes-page.html"
+<section class="section-worlds-universes" role="region" aria-labelledby="worlds-section-title">
+<a class="nav-button" href="worlds-universes-page.html" id="worlds-section-title"
 >Worlds & Universes</a
 >
 <p>
@@ -104,8 +106,8 @@ Explore the Most Popular Characters, Worlds, and Story spinoffs!
 </section>
 <hr />
 
-<section class="section-power-room">
-<a class="nav-button" href="power-room.html">Power Room</a>
+<section class="section-power-room" role="region" aria-labelledby="power-room-section-title">
+<a class="nav-button" href="power-room.html" id="power-room-section-title">Power Room</a>
 <p>
 Compare the powers and abilities of your favorite characters from across different universes!
 </p>
@@ -125,13 +127,13 @@ Compare the powers and abilities of your favorite characters from across differe
         <a href="#" class="social-icon" aria-label="Discord">💬</a>
       </div>
     </div>
-    
+
     <div class="footer-section footer-contact">
       <h3>Contact Us</h3>
       <p><span>📧</span> contact@fanarc.com</p>
       <p><span>📱</span> (555) 123-4567</p>
       <p><span>🏢</span> 123 Fan Street, Anime City</p>
-      
+
       <h3>Newsletter</h3>
       <form class="newsletter-form">
         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
@@ -139,7 +141,7 @@ Compare the powers and abilities of your favorite characters from across differe
       </form>
     </div>
   </div>
-  
+
   <div class="footer-bottom">
     <p>&copy; 2025 Fan Arc. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
@@ -148,13 +150,9 @@ Compare the powers and abilities of your favorite characters from across differe
 
 <!-- Bottom navigation bar -->
 <div class="bottom-navigation">
+  <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
 <a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
-<a
-href="profile-page.html"
-class="nav-profile-button"
-aria-label="Profile Page"
->👤</a
->
+<a href="profile-page.html"class="nav-profile-button"aria-label="Profile Page">👤</a>
 <div class="nav-search-popup" onclick="toggleSearchPopup()">
 <span>🔍</span>
 </div>
@@ -169,9 +167,6 @@ aria-label="Profile Page"
 <!-- The navigation menu that will show/hide -->
 <nav class="main-navigation">
 <ul>
-<ul>
-<li><a href="index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
-</ul>
 <!-- Categories dropdown -->
 <li>
 <button
@@ -223,6 +218,7 @@ Fan Arc Info <span>►</span>
 <script src="../js/menu-interaction.js"></script>
 <script src="../js/firebase-config.js"></script>
 <script src="../js/search-functionality.js"></script>
+<script src="../js/accessibility.js"></script>
 </body>
 </html>
 

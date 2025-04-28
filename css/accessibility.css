@@ -1,0 +1,140 @@
+/* Accessibility styles */
+
+/* Keyboard shortcuts info */
+.keyboard-shortcuts-info {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.shortcuts-toggle {
+  background-color: var(--fanarc-primary-color, #0F084B);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.shortcuts-toggle:hover {
+  background-color: var(--fanarc-secondary-color, #A997DF);
+}
+
+.shortcuts-toggle:focus {
+  outline: 2px solid var(--fanarc-secondary-color, #A997DF);
+  outline-offset: 2px;
+}
+
+.shortcuts-list {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  max-width: 300px;
+  color: #333;
+}
+
+.shortcuts-list h3 {
+  margin-top: 0;
+  color: var(--fanarc-primary-color, #0F084B);
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shortcuts-list h4 {
+  color: var(--fanarc-primary-color, #0F084B);
+  font-size: 1rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.shortcuts-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shortcuts-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.shortcuts-list kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
+  white-space: nowrap;
+}
+
+/* Focus styles for better accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--fanarc-secondary-color, #A997DF);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--fanarc-primary-color, #0F084B);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .shortcuts-toggle,
+  .shortcuts-list,
+  .skip-to-content {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .keyboard-shortcuts-info {
+    bottom: 5rem;
+    right: 0.5rem;
+  }
+
+  .shortcuts-list {
+    max-width: 250px;
+  }
+}
+
+/* Adjustments for sidebar mode */
+@media (min-width: 992px) {
+  .keyboard-shortcuts-info {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .skip-to-content:focus {
+    left: 70px;
+  }
+}

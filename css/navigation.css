@@ -121,18 +121,116 @@
   border-radius: 1rem;
 }
 
-@media (min-width: 768px) {
+/* Media queries for responsive design */
+@media (min-width: 992px) {
+  /* Transform bottom navigation into sidebar for larger screens */
   .bottom-navigation {
-    display: none;
-  }
-  .bottom-navigation {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
-    width: 200px;
-    background-color: #333;
+    width: 60px;
+    background-color: #0F084B;
     color: #fff;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+  }
+
+  /* Adjust main content to make room for sidebar */
+  main {
+    margin-left: 60px;
+  }
+
+  /* Adjust header to make room for sidebar */
+  header {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  /* Adjust footer to make room for sidebar */
+  .site-footer {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  /* Adjust navigation menu position */
+  .main-navigation {
+    left: 60px;
+    bottom: auto;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    transform: translateX(-100%);
+    border-radius: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .main-navigation.active {
+    transform: translateX(0);
+  }
+
+  /* Style sidebar icons */
+  .nav-home-button,
+  .nav-profile-button,
+  .nav-social-button,
+  .nav-search-popup {
+    font-size: 1.75rem;
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .nav-home-button:hover,
+  .nav-profile-button:hover,
+  .nav-social-button:hover,
+  .nav-search-popup:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  /* Position hamburger menu at the bottom of sidebar */
+  .hamburger-menu-icon {
+    margin-top: auto;
+    width: 30px;
+    height: 24px;
+  }
+}
+
+/* Larger screens with more space */
+@media (min-width: 1200px) {
+  .bottom-navigation {
+    width: 70px;
+  }
+
+  main, header, .site-footer {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+
+  .main-navigation {
+    left: 70px;
+    width: 300px;
+  }
+
+  .nav-home-button,
+  .nav-profile-button,
+  .nav-social-button,
+  .nav-search-popup {
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
   }
 }

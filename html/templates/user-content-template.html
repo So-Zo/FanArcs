@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>[Title] | Fan Arc</title>
+  
+  <link rel="stylesheet" href="../../css/universal-style.css" />
+  <link rel="stylesheet" href="../../css/section-buttons.css" />
+  <link rel="stylesheet" href="../../css/section-content.css" />
+  <link rel="stylesheet" href="../../css/search-bar.css" />
+  <link rel="stylesheet" href="../../css/navigation.css" />
+  <link rel="stylesheet" href="../../css/root-variables.css" />
+  <link rel="stylesheet" href="../../css/footer-style.css" />
+  <link rel="stylesheet" href="../../css/accessibility.css" />
+  <link rel="stylesheet" href="../../css/user-content.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+  <header role="banner">
+    <div class="image-header">
+      <img src="[header-image-path]" alt="[Title]" class="content-header-image" />
+      <div class="content-category-badge">[Category]</div>
+    </div>
+    
+    <input
+      type="search"
+      id="site-search-bar"
+      aria-label="Search Site"
+      placeholder="Search for Characters, Universes, etc."
+    />
+  </header>
+  
+  <main id="main-content" role="main">
+    <div class="content-header">
+      <h1 class="content-title">[Title]</h1>
+      <div class="content-meta">
+        <span class="content-type">[Content Type]</span> • 
+        <span class="content-creator">Created by <a href="[creator-profile]">[Creator Name]</a></span> • 
+        <span class="content-date">Created on [Creation Date]</span>
+      </div>
+    </div>
+    
+    <nav class="content-tabs" role="navigation" aria-label="Content sections">
+      <ul>
+        <li><a href="#overview" class="active" aria-current="page">Overview</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#episodes">Episodes</a></li>
+        <li><a href="#theories">Fan Theories</a></li>
+        <li><a href="#discussion">Discussion</a></li>
+      </ul>
+    </nav>
+    
+    <div class="content-container">
+      <div class="content-main">
+        <!-- Overview Section -->
+        <section id="overview" class="content-section active">
+          <div class="content-block">
+            <h2>Synopsis</h2>
+            <div class="editable-content">
+              <!-- User content goes here -->
+              <p>Enter a synopsis of the show/character here...</p>
+            </div>
+          </div>
+          
+          <div class="content-block">
+            <h2>Background</h2>
+            <div class="editable-content">
+              <!-- User content goes here -->
+              <p>Enter background information here...</p>
+            </div>
+          </div>
+          
+          <div class="content-block">
+            <h2>Notable Features</h2>
+            <div class="editable-content">
+              <!-- User content goes here -->
+              <p>Enter notable features here...</p>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Characters Section -->
+        <section id="characters" class="content-section">
+          <div class="content-block">
+            <h2>Main Characters</h2>
+            <div class="character-grid">
+              <!-- Character cards will be generated here -->
+              <div class="character-card">
+                <div class="character-image">
+                  <img src="[character-image]" alt="[Character Name]" />
+                </div>
+                <div class="character-info">
+                  <h3 class="character-name">[Character Name]</h3>
+                  <p class="character-role">[Character Role]</p>
+                  <a href="[character-page]" class="character-link">View Profile</a>
+                </div>
+              </div>
+              
+              <!-- Example of a non-existent character page link -->
+              <div class="character-card">
+                <div class="character-image">
+                  <img src="placeholder-character.jpg" alt="[New Character]" />
+                </div>
+                <div class="character-info">
+                  <h3 class="character-name">[New Character]</h3>
+                  <p class="character-role">[Character Role]</p>
+                  <a href="#" class="character-link non-existent-page" data-page-type="character" data-page-title="[New Character]" data-related-to="[Title]">Create Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-block">
+            <h2>Supporting Characters</h2>
+            <div class="character-grid">
+              <!-- Supporting character cards will be generated here -->
+            </div>
+          </div>
+        </section>
+        
+        <!-- Episodes Section -->
+        <section id="episodes" class="content-section">
+          <div class="content-block">
+            <h2>Episodes/Chapters</h2>
+            <div class="episode-list">
+              <!-- Episode items will be generated here -->
+              <div class="episode-item">
+                <div class="episode-number">01</div>
+                <div class="episode-details">
+                  <h3 class="episode-title">[Episode Title]</h3>
+                  <p class="episode-description">[Brief description of the episode...]</p>
+                </div>
+                <div class="episode-actions">
+                  <a href="#" class="episode-link">Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Fan Theories Section -->
+        <section id="theories" class="content-section">
+          <div class="content-block">
+            <h2>Fan Theories</h2>
+            <div class="theory-list">
+              <!-- Theory items will be generated here -->
+              <div class="theory-item">
+                <h3 class="theory-title">[Theory Title]</h3>
+                <div class="theory-meta">
+                  <span class="theory-author">By [Author Name]</span> • 
+                  <span class="theory-date">[Date Posted]</span>
+                </div>
+                <p class="theory-summary">[Brief summary of the theory...]</p>
+                <a href="#" class="theory-link">Read More</a>
+              </div>
+            </div>
+            <div class="add-theory">
+              <button class="add-theory-button">Add Your Theory</button>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Discussion Section -->
+        <section id="discussion" class="content-section">
+          <div class="content-block">
+            <h2>Discussion</h2>
+            <div class="discussion-thread">
+              <!-- Comment items will be generated here -->
+              <div class="comment-item">
+                <div class="comment-avatar">
+                  <img src="[user-avatar]" alt="[User Name]" />
+                </div>
+                <div class="comment-content">
+                  <div class="comment-header">
+                    <span class="comment-author">[User Name]</span> • 
+                    <span class="comment-date">[Date Posted]</span>
+                  </div>
+                  <p class="comment-text">[Comment text...]</p>
+                  <div class="comment-actions">
+                    <button class="reply-button">Reply</button>
+                    <button class="like-button">Like</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="add-comment">
+              <textarea placeholder="Add your comment..." class="comment-input"></textarea>
+              <button class="post-comment-button">Post Comment</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <aside class="content-sidebar">
+        <div class="sidebar-block quick-info">
+          <h3>Quick Info</h3>
+          <ul class="info-list">
+            <li><strong>Type:</strong> [Content Type]</li>
+            <li><strong>Genre:</strong> [Genre]</li>
+            <li><strong>Status:</strong> [Status]</li>
+            <li><strong>Release Date:</strong> [Release Date]</li>
+            <li><strong>Creator:</strong> [Original Creator]</li>
+          </ul>
+        </div>
+        
+        <div class="sidebar-block related-content">
+          <h3>Related Content</h3>
+          <ul class="related-list">
+            <!-- Example of existing page link -->
+            <li><a href="[related-page-1]">[Related Title 1]</a></li>
+            
+            <!-- Example of non-existent page link -->
+            <li><a href="#" class="non-existent-page" data-page-type="show" data-page-title="[Related Title 2]">[Related Title 2]</a></li>
+          </ul>
+        </div>
+        
+        <div class="sidebar-block tags">
+          <h3>Tags</h3>
+          <div class="tag-cloud">
+            <a href="#" class="tag">[Tag 1]</a>
+            <a href="#" class="tag">[Tag 2]</a>
+            <a href="#" class="tag">[Tag 3]</a>
+            <a href="#" class="tag">[Tag 4]</a>
+            <a href="#" class="tag">[Tag 5]</a>
+          </div>
+        </div>
+        
+        <div class="sidebar-block page-actions">
+          <h3>Page Actions</h3>
+          <button class="action-button edit-button">Edit Page</button>
+          <button class="action-button history-button">View History</button>
+          <button class="action-button report-button">Report Issue</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-about">
+        <img src="../../logo-image.jpg" alt="Fan Arc Logo" class="footer-logo">
+        <p>Fan Arc is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="Discord">💬</a>
+        </div>
+      </div>
+      
+      <div class="footer-section footer-links-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../anime-page.html">Anime</a></li>
+          <li><a href="../../manga-page.html">Manga</a></li>
+          <li><a href="../../comics-page.html">Comics</a></li>
+          <li><a href="../../tv-page.html">Television</a></li>
+          <li><a href="../../power-room.html">Power Room</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section footer-links-section">
+        <h3>Community</h3>
+        <ul class="footer-links">
+          <li><a href="../../community-page.html">Community Hub</a></li>
+          <li><a href="../../profile-page.html">Your Profile</a></li>
+          <li><a href="#">Fan Fiction</a></li>
+          <li><a href="#">Fan Art</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="../../contribute-page.html">Contribute</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p><span>📧</span> contact@fanarc.com</p>
+        <p><span>📱</span> (555) 123-4567</p>
+        <p><span>🏢</span> 123 Fan Street, Anime City</p>
+        
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-navigation">
+    <a href="../../community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+    <a href="../../profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
+    <div class="nav-search-popup" onclick="toggleSearchPopup()">
+      <span>🔍</span>
+    </div>
+
+    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </div>
+
+  <!-- The navigation menu that will show/hide -->
+  <nav class="main-navigation">
+    <ul>
+      <ul>
+        <li><a href="../../index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
+      </ul>
+      <!-- Categories dropdown -->
+      <li>
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="categories-dropdown">
+          Categories <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="../../anime-page.html">Anime 🌸</a></li>
+          <hr />
+          <li><a href="../../comics-page.html">Comics 💥</a></li>
+          <hr />
+          <li><a href="../../manga-page.html">Manga 📖</a></li>
+          <hr />
+          <li><a href="../../tv-page.html">Television 📺</a></li>
+          <hr />
+          <li><a href="../../metaverse-page.html">Metaverse 🎮</a></li>
+          <hr />
+          <li><a href="../../worlds-universes-page.html">Worlds & Universes 🌌</a></li>
+          <hr />
+          <li><a href="../../power-room.html">Power Room ⚔️</a></li>
+        </ul>
+      </li>
+
+      <!-- FanArcs Info dropdown -->
+      <li>
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="info-dropdown">
+          Fan Arc Info <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="../../about-page.html">About 🔎</a></li>
+          <li><a href="../../contribute-page.html">Help Fan Arc ⁉️ </a></li>
+          <li><a href="../../community-page.html">Community</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="../../js/menu-interaction.js"></script>
+  <script src="../../js/accessibility.js"></script>
+  <script src="../../js/user-content.js"></script>
+  <script src="../../js/non-existent-pages.js"></script>
+</body>
+</html>
