@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Power Room | Fan Arc</title>
+
+  <link rel="stylesheet" href="../css/power-room-style.css" />
+  <link rel="stylesheet" href="../css/universal-style.css" />
+  <link rel="stylesheet" href="../css/section-buttons.css" />
+  <link rel="stylesheet" href="../css/section-content.css" />
+  <link rel="stylesheet" href="../css/search-bar.css" />
+  <link rel="stylesheet" href="../css/navigation.css" />
+  <link rel="stylesheet" href="../css/root-variables.css" />
+  <link rel="stylesheet" href="../css/footer-style.css" />
+</head>
+<body>
+  <header>
+    <div class="image-header">
+      <img src="power-room-header.jpg" alt="Power Room - Character Comparison" />
+    </div>
+
+    <input
+      type="search"
+      id="site-search-bar"
+      aria-label="Search Power Room"
+      placeholder="Search for Characters, Universes, etc."
+    />
+  </header>
+
+  <main>
+    <section class="power-room-intro">
+      <h1>The Power Room</h1>
+      <p>
+        Compare the powers and abilities of your favorite characters from across different universes.
+        Select characters using the controls and see how they match up!
+      </p>
+    </section>
+
+    <section class="power-comparison-container">
+      <!-- Left Character Panel -->
+      <div class="character-panel left-character">
+        <div class="character-image">
+          <img src="character-placeholder.jpg" alt="Character 1" id="left-character-img" />
+        </div>
+        <div class="character-info">
+          <h2 id="left-character-name">Character Name</h2>
+          <h3 id="left-character-show">Show Title</h3>
+          <div class="character-stats">
+            <div class="stat-item">
+              <span class="stat-label">Strength:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 75%"></div>
+              </div>
+              <span class="stat-value">75</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Speed:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 85%"></div>
+              </div>
+              <span class="stat-value">85</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Intelligence:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 60%"></div>
+              </div>
+              <span class="stat-value">60</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Durability:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 70%"></div>
+              </div>
+              <span class="stat-value">70</span>
+            </div>
+          </div>
+        </div>
+        <div class="character-controls left-controls">
+          <button class="prev-character" id="left-prev">◀</button>
+          <button class="next-character" id="left-next">▶</button>
+        </div>
+      </div>
+
+      <!-- VS Divider for Desktop -->
+      <div class="vs-divider">
+        <span>VS</span>
+      </div>
+
+      <!-- Right Character Panel -->
+      <div class="character-panel right-character">
+        <div class="character-image">
+          <img src="character-placeholder.jpg" alt="Character 2" id="right-character-img" />
+        </div>
+        <div class="character-info">
+          <h2 id="right-character-name">Character Name</h2>
+          <h3 id="right-character-show">Show Title</h3>
+          <div class="character-stats">
+            <div class="stat-item">
+              <span class="stat-label">Strength:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 90%"></div>
+              </div>
+              <span class="stat-value">90</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Speed:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 65%"></div>
+              </div>
+              <span class="stat-value">65</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Intelligence:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 50%"></div>
+              </div>
+              <span class="stat-value">50</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Durability:</span>
+              <div class="stat-bar">
+                <div class="stat-fill" style="width: 95%"></div>
+              </div>
+              <span class="stat-value">95</span>
+            </div>
+          </div>
+        </div>
+        <div class="character-controls right-controls">
+          <button class="prev-character" id="right-prev">◀</button>
+          <button class="next-character" id="right-next">▶</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-about">
+        <img src="logo-image.jpg" alt="Fan Arc Logo" class="footer-logo">
+        <p>Fan Arc is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="Discord">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-section footer-links-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="anime-page.html">Anime</a></li>
+          <li><a href="manga-page.html">Manga</a></li>
+          <li><a href="comics-page.html">Comics</a></li>
+          <li><a href="tv-page.html">Television</a></li>
+          <li><a href="power-room.html">Power Room</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-links-section">
+        <h3>Community</h3>
+        <ul class="footer-links">
+          <li><a href="community-page.html">Community Hub</a></li>
+          <li><a href="profile-page.html">Your Profile</a></li>
+          <li><a href="#">Fan Fiction</a></li>
+          <li><a href="#">Fan Art</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="contribute-page.html">Contribute</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p><span>📧</span> contact@fanarc.com</p>
+        <p><span>📱</span> (555) 123-4567</p>
+        <p><span>🏢</span> 123 Fan Street, Anime City</p>
+
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-navigation">
+    <a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+    <a
+      href="profile-page.html"
+      class="nav-profile-button"
+      aria-label="Profile Page"
+      >👤</a
+    >
+    <div class="nav-search-popup" onclick="toggleSearchPopup()">
+      <span>🔍</span>
+    </div>
+
+    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </div>
+
+  <!-- The navigation menu that will show/hide -->
+  <nav class="main-navigation">
+    <ul>
+      <ul>
+        <li><a href="index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
+      </ul>
+      <!-- Categories dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+        >
+          Categories <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="anime-page.html">Anime 🌸</a></li>
+          <hr />
+          <li><a href="comics-page.html">Comics 💥</a></li>
+          <hr />
+          <li><a href="manga-page.html">Manga 📖</a></li>
+          <hr />
+          <li><a href="tv-page.html">Television 📺</a></li>
+          <hr />
+          <li><a href="metaverse-page.html">Metaverse 🎮</a></li>
+          <hr />
+          <li>
+            <a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
+          </li>
+          <hr />
+          <li>
+            <a href="power-room.html">Power Room ⚔️</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- FanArcs Info dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="info-dropdown"
+        >
+          Fan Arc Info <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="about-page.html">About 🔎</a></li>
+          <li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+          <li><a href="community-page.html">Community</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="../js/menu-interaction.js"></script>
+  <script src="../js/power-room.js"></script>
+</body>
+</html>

@@ -68,6 +68,22 @@ body {
   background-image: linear-gradient(to top, #0056b3 0%, #d35400 100%);
 }
 
+.section-power-room {
+  background: radial-gradient(
+      circle at 50% 30%,
+      rgba(111, 26, 91, 0.9) 10%,
+      rgba(0, 0, 0, 0.9) 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #820082 5%,
+      #660066 30%,
+      #4d004d 60%,
+      #6f1a5f 100%
+    );
+  color: white;
+}
+
 .header-logo img {
   max-width: 100%; /* Ensures the container doesn’t exceed the width of the screen */
   overflow: hidden; /* Prevents anything from spilling outside the container */
