@@ -37,10 +37,6 @@ h6 {
   margin-bottom: 0.25rem;
 }
 
-footer {
-  background-color: black;
-  color: white;
-}
 
 nav a:hover {
   color: var(--link-hover);

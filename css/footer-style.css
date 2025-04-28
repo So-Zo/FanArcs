@@ -1,6 +1,6 @@
 /* Footer Styles */
 .site-footer {
-  background: linear-gradient(to right, #0F084B, #26408B);
+  background: transparent;
   color: #ffffff;
   padding: 2rem 1rem 6rem;
   margin-top: 2rem;
@@ -149,7 +149,7 @@
   .footer-container {
     grid-template-columns: 1fr;
   }
-  
+
   .social-links {
     justify-content: center;
   }

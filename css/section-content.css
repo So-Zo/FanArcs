@@ -1,0 +1,111 @@
+/* Section Content Styles - For content inside individual pages */
+.section-content,
+.Type_Content,
+.sectionworlds,
+.content-section,
+.content-block,
+.sidebar-block,
+.anime-series-list,
+.anime-category,
+.discussion-thread,
+.comment-item,
+.add-comment,
+section:not(.section-anime):not(.section-comics):not(.section-manga):not(.section-tv):not(.section-metaverse):not(.section-worlds-universes):not(.section-power-room):not(.content-intro) {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+/* Dark mode option */
+.dark-theme .section-content,
+.dark-theme .Type_Content,
+.dark-theme .sectionworlds,
+.dark-theme .content-section,
+.dark-theme .content-block,
+.dark-theme .sidebar-block,
+.dark-theme .anime-series-list,
+.dark-theme .anime-category,
+.dark-theme .discussion-thread,
+.dark-theme .comment-item,
+.dark-theme .add-comment,
+.dark-theme section:not(.section-anime):not(.section-comics):not(.section-manga):not(.section-tv):not(.section-metaverse):not(.section-worlds-universes):not(.section-power-room):not(.content-intro),
+.section-dark .section-content,
+.section-dark .Type_Content,
+.section-dark .sectionworlds,
+.section-dark .content-section,
+.section-dark .content-block,
+.section-dark .sidebar-block,
+.section-dark .anime-series-list,
+.section-dark .anime-category,
+.section-dark .discussion-thread,
+.section-dark .comment-item,
+.section-dark .add-comment,
+.section-dark section:not(.section-anime):not(.section-comics):not(.section-manga):not(.section-tv):not(.section-metaverse):not(.section-worlds-universes):not(.section-power-room):not(.content-intro) {
+  background-color: #222;
+  color: #f5f5f5;
+}
+
+/* Dark mode headings */
+.dark-theme .section-content h1,
+.dark-theme .section-content h2,
+.dark-theme .section-content h3,
+.dark-theme .Type_Content h1,
+.dark-theme .Type_Content h2,
+.dark-theme .Type_Content h3,
+.dark-theme .content-section h1,
+.dark-theme .content-section h2,
+.dark-theme .content-section h3,
+.dark-theme .content-block h1,
+.dark-theme .content-block h2,
+.dark-theme .content-block h3,
+.section-dark .section-content h1,
+.section-dark .section-content h2,
+.section-dark .section-content h3,
+.section-dark .Type_Content h1,
+.section-dark .Type_Content h2,
+.section-dark .Type_Content h3,
+.section-dark .content-section h1,
+.section-dark .content-section h2,
+.section-dark .content-section h3,
+.section-dark .content-block h1,
+.section-dark .content-block h2,
+.section-dark .content-block h3 {
+  color: #f0f0f0;
+}
+
+/* Section headings */
+.section-content h1,
+.section-content h2,
+.section-content h3,
+.Type_Content h1,
+.Type_Content h2,
+.Type_Content h3,
+.sectionworlds h1,
+.sectionworlds h2,
+.sectionworlds h3,
+.content-section h1,
+.content-section h2,
+.content-section h3,
+.content-block h1,
+.content-block h2,
+.content-block h3,
+.sidebar-block h1,
+.sidebar-block h2,
+.sidebar-block h3 {
+  color: var(--heading-color, #333);
+  margin-bottom: 0.5rem;
+}
+
+/* Section paragraphs */
+.section-content p,
+.Type_Content p,
+.sectionworlds p,
+.content-section p,
+.content-block p,
+.sidebar-block p,
+.editable-content p {
+  color: var(--text-color, #555);
+  line-height: 1.5;
+}
