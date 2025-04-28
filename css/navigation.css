@@ -1,0 +1,138 @@
+/* Bottom navigation styles */
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.hamburger-menu-icon .hamburger-bar {
+  width: 100%;
+  height: 0.3rem;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Navigation buttons */
+.nav-home-button,
+.nav-profile-button,
+.nav-search-popup {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+/* The navigation menu hidden initially */
+.main-navigation {
+  position: fixed;
+  bottom: 3rem;
+  left: 0;
+  width: 100%;
+  height: 65vh;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 150;
+  -webkit-overflow-scrolling: touch;
+  transform: translateY(100%);
+  transition: transform 1s ease-out;
+  pointer-events: none; /* Prevents interaction while hidden */
+  background: linear-gradient(to right, #4b0082, #330066);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.main-navigation.active {
+  transform: translateY(0);
+  pointer-events: auto; /* Re-enable interaction when visible */
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+/* Dropdown toggle button */
+.nav-dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.75rem;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #eeeeee;
+}
+
+/* Dropdown menu */
+.nav-dropdown-menu {
+  background: linear-gradient(to right, #4b0082, #330066);
+  width: 100%;
+  top: 100%;
+  padding-left: 1rem;
+  margin-top: -2rem;
+  transform: translateY(-100%);
+  transition: transform 1s ease-out;
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.nav-dropdown-menu.active {
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+  max-height: 95vh;
+}
+
+.nav-dropdown-menu li {
+  padding: 1rem 0;
+}
+
+.nav-dropdown-menu a {
+  text-decoration: none;
+  color: #e0dedec0;
+  font-size: 1.5rem;
+  display: block;
+  letter-spacing: 0.065rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bottom-navigation {
+    display: none;
+  }
+  .bottom-navigation {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+  }
+}

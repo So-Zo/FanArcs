@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Television</title>
+    <link rel="stylesheet" href="../css/tv-style.css" />
+    <link rel="stylesheet" href="../css/universal-style.css" />
+    <link rel="stylesheet" href="../css/section-buttons.css" />
+    <link rel="stylesheet" href="../css/section-content.css" />
+    <link rel="stylesheet" href="../css/search-bar.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/root-variables.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="image-header"><img src="Tvheader.jpg" /></div>
+
+      <input
+        type="search"
+        id="site-search-bar"
+        placeholder="Search for content..."
+      />
+    </header>
+    <main>
+      <!-- Section Content -->
+      <section class="section-content">
+        <h2>Brief Intro</h2>
+        <p>A sentence or two about who and when it was created.</p>
+      </section>
+
+      <section class="Type_Content">
+        <h3>FanFictions!</h3>
+        <button class="section-button">Explore Them</button>
+        <p>description about western FanFictions.</p>
+      </section>
+
+      <section class="sectionworlds">
+        <h3>Worlds and Universes</h3>
+        <p>Intro to popular worlds and there origins.</p>
+        images and buttons to popular ones and their backstory/lore.
+        <!-- Placeholder for additional content -->
+      </section>
+    </main>
+
+    <footer>
+      <!-- Bottom navigation bar -->
+      <div class="bottom-navigation">
+        <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+        <a
+          href="profile-page.html"
+          class="nav-profile-button"
+          aria-label="Profile Page"
+          >👤</a
+        >
+        <div class="nav-search-popup" onclick="toggleSearchPopup()">
+          <span>🔍</span>
+        </div>
+
+        <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+
+      <!-- The navigation menu that will show/hide -->
+      <nav class="main-navigation">
+        <ul>
+          <!-- Categories dropdown -->
+          <li>
+            <button
+              class="nav-dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="categories-dropdown"
+            >
+              Categories <span>►</span>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="anime-page.html">Anime 🌸</a></li>
+              <hr />
+              <li><a href="comics-page.html">Comics 💥</a></li>
+              <hr />
+              <li><a href="manga-page.html">Manga 📖</a></li>
+              <hr />
+              <li><a href="tv-page.html">Television 📺</a></li>
+              <hr />
+              <li><a href="metaverse-page.html">Metaverse 🎮</a></li>
+              <hr />
+              <li>
+                <a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- FanArcs Info dropdown -->
+          <li>
+            <button
+              class="nav-dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="info-dropdown"
+            >
+              Fan Arc Info <span>►</span>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="about-page.html">About 🔎</a></li>
+              <li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+              <li><a href="community-page.html">Community</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/menu-interaction.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body {
+    background: linear-gradient(135deg, #0F084B, #A997DF);
+}
+
+.logo-container {
+  max-width: 100%; /* Ensures the container doesn't exceed the width of the screen */
+  overflow: hidden; /* Prevents anything from spilling outside the container */
+}
+
+.logo-container img {
+  width: 100%; /* Makes the logo scale to fit the container width */
+  height: auto; /* Maintains the logo's aspect ratio */
+  display: block; /* Eliminates any extra space below the image */
+}

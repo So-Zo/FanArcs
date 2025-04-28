@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/universal-style.css" />
+    <link rel="stylesheet" href="../css/section-buttons.css" />
+    <link rel="stylesheet" href="../css/section-content.css" />
+    <link rel="stylesheet" href="../css/search-bar.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/root-variables.css" />
+    <title>About Fan Arc</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="FanArcLogo.jpg" alt="The Fan Arc Logo" />
+      </div>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <h2>Why It Exists?</h2>
+        <p>
+          The internet is bloated, cluttered, and full of half-functional tools
+          that assume everyone's using a high-end desktop with unlimited plugins
+          and extensions. I don't have that luxury. A lot of people don't. So
+          instead of waiting for someone else to fix it, I decided to build
+          something better. This site exists because fandoms of all
+          sizes, deserve more than a mess of ads, broken navigation, and
+          inconsistent information. It exists because people should be able to
+          explore, connect, and understand without fighting the very tools meant
+          to help them.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>How are we Different?</h2>
+        <p>
+          Most fandom sites are built to host content, not help people find it.
+          They expect users to adapt to them, instead of the other way around.
+          This site is built for clarity, accessibility, and ease of use. No
+          clutter, no confusion, no corporate bloat—just clean, structured
+          information that's easy to navigate. Whether you're looking for deep
+          dives, fan theories, or discussions, everything is designed to make
+          sense from the first click.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>Contact Me</h2>
+        <p>dev.to instagram, email, linkedin,</p>
+      </section>
+      <hr />
+    </main>
+
+    <footer>
+      <!-- Bottom navigation bar -->
+      <div class="bottom-navigation">
+        <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+        <a
+          href="profile-page.html"
+          class="nav-profile-button"
+          aria-label="Profile Page"
+          >👤</a
+        >
+        <div class="nav-search-popup" onclick="toggleSearchPopup()">
+          <span>🔍</span>
+        </div>
+
+        <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+
+      <!-- The navigation menu that will show/hide -->
+      <nav class="main-navigation">
+        <ul>
+          <!-- Categories dropdown -->
+          <li>
+            <button
+              class="nav-dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="categories-dropdown"
+            >
+              Categories <span>►</span>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="anime-page.html">Anime 🌸</a></li>
+              <hr />
+              <li><a href="comics-page.html">Comics 💥</a></li>
+              <hr />
+              <li><a href="manga-page.html">Manga 📖</a></li>
+              <hr />
+              <li><a href="tv-page.html">Television 📺</a></li>
+              <hr />
+              <li><a href="metaverse-page.html">Metaverse 🎮</a></li>
+              <hr />
+              <li>
+                <a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- FanArcs Info dropdown -->
+          <li>
+            <button
+              class="nav-dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="info-dropdown"
+            >
+              Fan Arc Info <span>►</span>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li><a href="about-page.html">About 🔎</a></li>
+              <li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+              <li><a href="community-page.html">Community</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/menu-interaction.js"></script>
+  </body>
+</html>

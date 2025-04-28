@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fan Arc - Community Posts</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="../css/user-post-style.css" />
+<link rel="stylesheet" href="../css/filter-buttons.css" />
+<link rel="stylesheet" href="../css/search-bar.css" />
+<link rel="stylesheet" href="../css/logo-header.css" />
+<link rel="stylesheet" href="../css/community-style.css" />
+<link rel="stylesheet" href="../css/navigation.css" />
+</head>
+
+<body>
+<div id="app-container">
+<header class="main-header">
+<div class="header-logo">
+<img src="logo-image.jpg" alt="Fan Arc Logo" class="logo" />
+</div>
+<div class="search-group">
+<input
+type="search"
+id="site-search-bar"
+aria-label="Search Site Wide"
+placeholder="Search for Characters, Universes, etc." />
+<div class="filter-buttons">
+<button class="filter-btn">Post type</button>
+<button class="filter-btn">Filter genre</button>
+<button class="filter-btn">Sort By</button>
+</div>
+<div class="filter-dropdown">
+<ul>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="anime">
+<span class="custom-checkbox"></span>
+<button>Creators</button>
+</label>
+<span class="category-count">245</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="manga">
+<span class="custom-checkbox"></span>
+<button>Fan Art</button>
+</label>
+<span class="category-count">189</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="metaverse">
+<span class="custom-checkbox"></span>
+<button>Fan Fiction</button>
+</label>
+<span class="category-count">76</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="comics">
+<span class="custom-checkbox"></span>
+<button>World Building</button>
+</label>
+<span class="category-count">112</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="worlds">
+<span class="custom-checkbox"></span>
+<button>Character Spin-offs</button>
+</label>
+<span class="category-count">93</span>
+</li>
+</ul>
+</div>
+
+<div class="filter-dropdown">
+<ul>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="comedy">
+<span class="custom-checkbox"></span>
+<button>Comedy</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="horror">
+<span class="custom-checkbox"></span>
+<button>Horror</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="drama">
+<span class="custom-checkbox"></span>
+<button>Drama</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="romance">
+<span class="custom-checkbox"></span>
+<button>Romance</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="action">
+<span class="custom-checkbox"></span>
+<button>Action</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="adventure">
+<span class="custom-checkbox"></span>
+<button>Adventure</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="fantasy">
+<span class="custom-checkbox"></span>
+<button>Fantasy</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="sci-fi">
+<span class="custom-checkbox"></span>
+<button>Science Fiction</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="mystery">
+<span class="custom-checkbox"></span>
+<button>Mystery</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="thriller">
+<span class="custom-checkbox"></span>
+<button>Thriller</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="supernatural">
+<span class="custom-checkbox"></span>
+<button>Supernatural</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="psychological">
+<span class="custom-checkbox"></span>
+<button>Psychological</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="slice-of-life">
+<span class="custom-checkbox"></span>
+<button>Slice of Life</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="dark-comedy">
+<span class="custom-checkbox"></span>
+<button>Dark Comedy</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="historical">
+<span class="custom-checkbox"></span>
+<button>Historical</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="cyberpunk">
+<span class="custom-checkbox"></span>
+<button>Cyberpunk</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="post-apocalyptic">
+<span class="custom-checkbox"></span>
+<button>Post-Apocalyptic</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="magical-girl">
+<span class="custom-checkbox"></span>
+<button>Magical Girl</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="mecha">
+<span class="custom-checkbox"></span>
+<button>Mecha</button>
+</label>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="genre" value="sports">
+<span class="custom-checkbox"></span>
+<button>Sports</button>
+</label>
+</li>
+</ul>
+</div>
+
+<div class="filter-dropdown">
+<ul>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="anime">
+<span class="custom-checkbox"></span>
+<button>New to Old</button>
+</label>
+<span class="category-count">245</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="manga">
+<span class="custom-checkbox"></span>
+<button>Old to New</button>
+</label>
+<span class="category-count">189</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="metaverse">
+<span class="custom-checkbox"></span>
+<button>Most Liked</button>
+</label>
+<span class="category-count">76</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="comics">
+<span class="custom-checkbox"></span>
+<button>Shortest to Longest </button>
+</label>
+<span class="category-count">112</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="worlds">
+<span class="custom-checkbox"></span>
+<button>Longest to Shortest</button>
+</label>
+<span class="category-count">93</span>
+</li>
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="worlds">
+<span class="custom-checkbox"></span>
+<button>Completed Works</button>
+</label>
+<span class="category-count">93</span>
+</li>
+
+<li>
+<label class="checkbox-wrapper">
+<input type="checkbox" name="category" value="worlds">
+<span class="custom-checkbox"></span>
+<button>Unfinished Work</button>
+</label>
+<span class="category-count">93</span>
+</li>
+</ul>
+</div>
+</div>
+</header>
+
+<main class="community-feed">
+<!-- Content here -->
+
+<div class="posts-container">
+<!-- Post Card Template -->
+<article class="post-card">
+<div class="post-card-header">
+<div class="post-author-mini">
+<img src="author-profile.jpg" alt="Author Profile" />
+<div class="author-info">
+<span class="author-name">CreativeUsername</span>
+<span class="post-timestamp">2h ago</span>
+</div>
+</div>
+<div class="post-category-tag">
+Anime
+</div>
+</div>
+<div class="post-content">
+<h2 class="post-title">Incredible Character Design Concept</h2>
+<div class="post-media">
+<img src="Post-test.jpg" alt="Character Design" />
+</div>
+<p class="post-description">
+Just finished this character design for my upcoming manga
+project. Inspired by classic 90s anime aesthetics with a
+modern twist!
+</p>
+</div>
+
+<div class="post-interactions">
+<div class="interaction-group">
+<button class="like-btn">👍 256</button>
+<button class="comment-btn">💬 42</button>
+<button class="share-btn">🔗 Share</button>
+</div>
+<div class="save-btn">
+<button>💾 Save</button>
+</div>
+</div>
+</article>
+</div>
+
+<div class="posts-container">
+<!-- Post Card Template -->
+<article class="post-card">
+<div class="post-card-header">
+<div class="post-author-mini">
+<img src="author-profile.jpg" alt="Author Profile" />
+<div class="author-info">
+<span class="author-name">CreativeUsername</span>
+<span class="post-timestamp">2h ago</span>
+</div>
+</div>
+<div class="post-category-tag">
+Anime
+</div>
+</div>
+<div class="post-content">
+<h2 class="post-title">Incredible Character Design Concept</h2>
+<div class="post-media">
+<img src="character-design.jpg" alt="Character Design" />
+</div>
+<p class="post-description">
+Just finished this character design for my upcoming manga
+project. Inspired by classic 90s anime aesthetics with a
+modern twist!
+</p>
+</div>
+
+<div class="post-interactions">
+<div class="interaction-group">
+<button class="like-btn">👍 256</button>
+<button class="comment-btn">💬 42</button>
+<button class="share-btn">🔗 Share</button>
+</div>
+<div class="save-btn">
+<button>💾 Save</button>
+</div>
+</div>
+</article>
+</div>
+
+<!-- More post cards would be dynamically added here -->
+</main>
+
+
+<!-- Rest of the existing HTML remains the same -->
+<div class="bottom-navigation">
+<a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+<a
+href="profile-page.html"
+class="nav-profile-button"
+aria-label="Profile Page"
+>👤</a
+>
+<div class="nav-search-popup" onclick="toggleSearchPopup()">
+<span>🔍</span>
+</div>
+
+<div class="hamburger-menu-icon" aria-label="Open navigation menu">
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+</div>
+</div>
+
+<!-- The navigation menu that will show/hide -->
+<nav class="main-navigation">
+<ul>
+<!-- Categories dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="categories-dropdown"
+>
+Categories <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="anime-page.html">Anime 🌸</a></li>
+<hr />
+<li><a href="comics-page.html">Comics 💥</a></li>
+<hr />
+<li><a href="manga-page.html">Manga 📖</a></li>
+<hr />
+<li><a href="tv-page.html">Television 📺</a></li>
+<hr />
+<li><a href="metaverse-page.html">Metaverse 🎮</a></li>
+<hr />
+<li>
+<a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
+</li>
+</ul>
+</li>
+
+<!-- FanArcs Info dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="info-dropdown"
+>
+Fan Arc Info <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="about-page.html">About 🔎</a></li>
+<li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+<li><a href="community-page.html">Community</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+
+<div id="create-post-modal" class="modal">
+<!-- Modal content -->
+</div>
+</div>
+<footer>
+<p class="copyright">
+&copy; 2025 Fan Arc. All rights reserved.
+</p>
+</footer>
+<script src="../js/filter-interactions.js"></script>
+<script src="../js/menu-interaction.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+:root {
+  /* Colors */
+  --text-color: black;
+  --bg-color: white;
+  --fanarc-primary-color: #0F084B;
+  --fanarc-secondary-color: #A997DF;
+  --primarytxt-bg-color: #F5D9C2;
+  --secondarytxt-bg-color: beige;
+  --link-color: black;
+  --link-hover: #007bff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  /* Base Measurements */
+  --spacing-base: 0.5rem;
+  --spacing-large: 1rem;
+  --border-width: 0.1rem;
+  --border-radius-base: 0.5rem;
+  --border-radius-large: 1rem;
+  
+  /* Typography */
+  --font-size-base: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-header: 2rem;
+  --line-height-base: 1.5;
+  --letter-spacing: 0.065rem;
+  --word-spacing: 0.1rem;
+}

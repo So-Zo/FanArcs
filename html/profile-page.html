@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile | Fan Arc</title>
+
+    <link rel="stylesheet" href="../css/profile-style.css" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/root-variables.css" />
+</head>
+<body>
+    <div class="profile-page-wrapper">
+        <header class="profile-header">
+            <div class="profile-header-content">
+                <div class="profile-image-section">
+                    <div class="profile-image-container">
+                        <div class="profile-image-wrapper">
+                            <img
+                                id="user-profile-image"
+                                alt="User Profile Picture"
+                                src="default-profile.jpg"
+                            />
+                            <label for="profile-image-upload" class="profile-image-label">
+                                Change Profile Picture
+                            </label>
+                            <input
+                                type="file"
+                                id="profile-image-upload"
+                                accept="image/*"
+                                aria-label="Upload profile picture"
+                            />
+                        </div>
+                    </div>
+                    <div class="user-name-display">
+                        <h1>Hello, User</h1>
+                    </div>
+                </div>
+
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">42</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">256</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">128</span>
+                        <span class="stat-label">Following</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="profile-main">
+            <nav class="profile-options-bar">
+                <button class="profile-option-item active" data-target="comments">
+                    Comments
+                </button>
+                <button class="profile-option-item" data-target="posts">
+                    Posts
+                </button>
+                <button class="profile-option-item" data-target="work-requests">
+                    Work Requests
+                </button>
+                <button class="profile-option-item" data-target="settings">
+                    Settings
+                </button>
+            </nav>
+
+            <div class="profile-content-container">
+                <div id="comments" class="profile-content-section active">
+                    <h2>Recent Comments</h2>
+                    <!-- Dynamic comments content -->
+                    <div class="comment-placeholder">
+                        No comments yet.
+                    </div>
+                </div>
+
+                <div id="posts" class="profile-content-section">
+                    <h2>Your Posts</h2>
+                    <!-- Dynamic posts content -->
+                    <div class="posts-placeholder">
+                        No posts yet.
+                    </div>
+                </div>
+
+                <div id="work-requests" class="profile-content-section">
+                    <h2>Work Requests</h2>
+                    <!-- Dynamic work requests content -->
+                    <div class="work-requests-placeholder">
+                        No work requests.
+                    </div>
+                </div>
+
+                <div id="settings" class="profile-content-section">
+                    <h2>Account Settings</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" value="Current Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="user@example.com">
+                        </div>
+                        <button type="submit" class="save-settings-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="bottom-navigation">
+                <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+                <a href="profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
+                <div class="nav-search-popup" onclick="toggleSearchPopup()">
+                    <span>🔍</span>
+                </div>
+
+                <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                </div>
+            </div>
+
+            <nav class="main-navigation">
+                <ul>
+                    <li>
+                        <button
+                            class="nav-dropdown-toggle"
+                            aria-expanded="false"
+                            aria-controls="categories-dropdown"
+                        >
+                            Categories <span>►</span>
+                        </button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="anime-page.html">Anime</a></li>
+                            <li><a href="manga-page.html">Manga</a></li>
+                            <li><a href="metaverse-page.html">Metaverse</a></li>
+                            <li><a href="comics-page.html">Comics 💥</a></li>
+                            <li>
+                                <a href="worlds-universes-page.html">Worlds & Universes</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button
+                            class="nav-dropdown-toggle"
+                            aria-expanded="false"
+                            aria-controls="info-dropdown"
+                        >
+                            Fan Arc Info <span>►</span>
+                        </button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="about-page.html">About</a></li>
+                            <li><a href="contribute-page.html">Help Fan Arc</a></li>
+                            <li><a href="community-page.html">Community</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <p class="copyright">
+                &copy; 2025 Fan Arc. All rights reserved.
+            </p>
+        </footer>
+
+        <button class="create-post-button" aria-label="Create New Post">+</button>
+    </div>
+
+    <script src="../js/profile-interact.js"></script>
+    <script src="../js/menu-interaction.js"></script>
+    <script src="../js/profile-load.js"></script>
+</body>
+</html>

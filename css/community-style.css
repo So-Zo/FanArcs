@@ -1,0 +1,15 @@
+body {
+  background: radial-gradient(
+      circle at 50% 15%,
+      rgba(42, 26, 111, 0.9) 20%,
+      /* Rich indigo glow at the top */ rgba(0, 0, 92, 0) 60%
+        /* Fades into transparent */
+    ),
+    linear-gradient(
+      to bottom,
+      #4b0082 5%,
+      #330066 30%,
+      #1d004d 60%,
+      #2a1a6f 100% /* Use the new color here */
+    );
+}
