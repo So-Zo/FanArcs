@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+<meta
+name="description"
+content="Your go-to site for anime, manga, comics, TV, and fanfiction. Explore deep dives, character bios, and user-generated content all in one place!"
+/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="../css/home-page.css" />
+<link rel="stylesheet" href="../css/universal-style.css" />
+<link rel="stylesheet" href="../css/section-buttons.css" />
+<link rel="stylesheet" href="../css/section-content.css" />
+<link rel="stylesheet" href="../css/search-bar.css" />
+<link rel="stylesheet" href="../css/navigation.css" />
+<link rel="stylesheet" href="../css/root-variables.css" />
+
+<title>Fan Arc</title>
+</head>
+
+<body>
+<!-- Header Section: Site title, Search bar, Navigation links -->
+<header>
+<div class="header-logo">
+<img src="logo-image.jpg" alt="The Fan Arc Logo" />
+</div>
+
+<input
+type="search"
+id="site-search-bar"
+aria-label="Search Site Wide"
+placeholder="Search for Characters, Universes, etc."
+/>
+</header>
+<main>
+<hr />
+<!--Main Body sections-->
+<section class="content-intro">
+<h1>About the Site</h1>
+<p>
+Welcome to Fan Arc! The comprehensive collection and playground for
+Deep Dives, Fan Fiction, and even Power Comparisons! We are excited to
+see what you bring
+</p>
+</section>
+<hr />
+
+<section class="section-anime">
+<a class="nav-button" href="anime-page.html">Anime</a>
+<p>
+Explore the Origins or the Fan Lore behind some of your favorite
+stories!
+</p>
+</section>
+<hr />
+
+<section class="section-comics">
+<a class="nav-button" href="comics-page.html">Comics</a>
+<p>
+Comics superheroes and more! Which one will you explore?
+</p>
+</section>
+
+<hr />
+
+<section class="section-manga">
+<a class="nav-button" href="manga-page.html">Manga</a>
+<p>
+Explore the Origins or the Fan Lore behind some of your favorite
+stories!
+</p>
+</section>
+<hr />
+
+<section class="section-tv">
+<a class="nav-button" href="tv-page.html">Television</a>
+<p>
+Learn about the origins of your favorite Characters, Stories, and
+Universes!
+</p>
+</section>
+<hr />
+
+<section class="section-metaverse">
+<a class="nav-button" href="metaverse-page.html">Metaverse</a>
+<p>
+See the differences and similarities, or uprisings of your favorite
+Games and Characters from the ages!
+</p>
+</section>
+<hr />
+
+<section class="section-worlds-universes">
+<a class="nav-button" href="worlds-universes-page.html"
+>Worlds & Universes</a
+>
+<p>
+Explore the Most Popular Characters, Worlds, and Story spinoffs!
+</p>
+</section>
+</main>
+
+<!-- Optional Footer Section -->
+<footer>
+<!-- Bottom navigation bar -->
+<div class="bottom-navigation">
+<a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+<a
+href="profile-page.html"
+class="nav-profile-button"
+aria-label="Profile Page"
+>👤</a
+>
+<div class="nav-search-popup" onclick="toggleSearchPopup()">
+<span>🔍</span>
+</div>
+
+<div class="hamburger-menu-icon" aria-label="Open navigation menu">
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+</div>
+</div>
+
+<!-- The navigation menu that will show/hide -->
+<nav class="main-navigation">
+<ul>
+<ul>
+<li><a href="index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
+</ul>
+<!-- Categories dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="categories-dropdown"
+>
+Categories <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="anime-page.html">Anime 🌸</a></li>
+<hr />
+<li><a href="comics-page.html">Comics 💥</a></li>
+<hr />
+<li><a href="manga-page.html">Manga 📖</a></li>
+<hr />
+<li><a href="tv-page.html">Television 📺</a></li>
+<hr />
+<li><a href="metaverse-page.html">Metaverse 🎮</a></li>
+<hr />
+<li>
+<a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
+</li>
+</ul>
+</li>
+
+<!-- FanArcs Info dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="info-dropdown"
+>
+Fan Arc Info <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="about-page.html">About 🔎</a></li>
+<li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+<li><a href="community-page.html">Community</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+
+<p>
+&copy; 2025 Fan Arc. All rights reserved.
+</p>
+</footer>
+
+<script src="../js/menu-interaction.js"></script>
+<script src="../js/firebase-config.js"></script>
+<script src="../js/search-functionality.js"></script>
+</body>
+</html>
