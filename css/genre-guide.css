@@ -1,0 +1,148 @@
+/* Genre Guide Styling */
+.genre-navigation {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.genre-nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.genre-nav-button {
+  background-color: var(--accent-color, #4b0082);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.genre-nav-button:hover {
+  background-color: var(--accent-color-hover, #5a1b8b);
+}
+
+.genre-section {
+  margin-bottom: 2rem;
+}
+
+.genre-card {
+  background: linear-gradient(to bottom, #d5d4d0, #e9e9e7);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.genre-card h4 {
+  color: var(--accent-color, #4b0082);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.genre-content {
+  padding: 0.5rem;
+}
+
+.genre-examples, .genre-characteristics {
+  margin: 0.75rem 0;
+}
+
+.genre-characteristics ul {
+  margin-top: 0.25rem;
+  padding-left: 1.5rem;
+}
+
+.community-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--accent-color, #4b0082);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.community-link:hover {
+  color: var(--accent-color-hover, #5a1b8b);
+  text-decoration: underline;
+}
+
+.genre-list-compact {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.two-column-list {
+  column-count: 2;
+  column-gap: 2rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.two-column-list li {
+  margin-bottom: 0.75rem;
+  break-inside: avoid;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.demographic-card {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.demographic-card h4 {
+  color: var(--accent-color, #4b0082);
+  margin-bottom: 0.5rem;
+}
+
+.genre-resources {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.resource-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.resource-links li {
+  margin-bottom: 0.5rem;
+}
+
+.resource-link {
+  color: var(--accent-color, #4b0082);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+  color: var(--accent-color-hover, #5a1b8b);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .two-column-list {
+    column-count: 1;
+  }
+  
+  .genre-grid {
+    grid-template-columns: 1fr;
+  }
+}

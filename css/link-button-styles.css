@@ -1,0 +1,152 @@
+/* Simplified Link and Button Styles for Fan Arc
+   This file defines two main styles: one for links and one for buttons */
+
+/* Standard link style for ALL links across the site */
+a {
+  display: inline-block;
+  background-color: rgba(75, 0, 130, 0.1);
+  color: var(--accent-color, #4b0082);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-base, 0.5rem);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid var(--accent-color, #4b0082);
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+a:hover {
+  background-color: rgba(75, 0, 130, 0.2);
+  color: var(--accent-color-hover, #5a1b8b);
+  transform: translateY(-2px);
+}
+
+a:active {
+  transform: translateY(0);
+}
+
+/* Button style for all actual button elements */
+button {
+  display: inline-block;
+  background-color: var(--accent-color, #4b0082);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-base, 0.5rem);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  background-color: var(--accent-color-hover, #5a1b8b);
+  color: white;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Exceptions for navigation and other special links that shouldn't look like buttons */
+.nav-dropdown-menu a,
+.main-navigation a,
+.bottom-navigation a,
+.footer-bottom a,
+.social-links a,
+.anime-series-list a,
+.anime-category a,
+.non-existent-page,
+.footer-section a,
+.genre-examples a,
+.genre-characteristics a,
+.demographic-card a:not(.community-link),
+.anime-categories a {
+  background-color: transparent;
+  border: none;
+  padding: 0.25rem;
+  margin: 0;
+  color: inherit;
+  font-weight: normal;
+  text-align: left;
+}
+
+.nav-dropdown-menu a:hover,
+.main-navigation a:hover,
+.bottom-navigation a:hover,
+.footer-bottom a:hover,
+.social-links a:hover,
+.anime-series-list a:hover,
+.anime-category a:hover,
+.non-existent-page:hover,
+.footer-section a:hover,
+.genre-examples a:hover,
+.genre-characteristics a:hover,
+.demographic-card a:not(.community-link):hover,
+.anime-categories a:hover {
+  background-color: transparent;
+  transform: none;
+  text-decoration: underline;
+}
+
+/* Exception for the nav-button class used on homepage */
+.nav-button {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--accent-color, #4b0082);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-base, 0.5rem);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  border: 2px solid var(--accent-color, #4b0082);
+  cursor: pointer;
+  margin: 0.5rem;
+  width: auto;
+}
+
+.nav-button:hover {
+  background-color: var(--accent-color, #4b0082);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  a, button, .nav-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  /* Keep these links as inline elements even on mobile */
+  .nav-dropdown-menu a,
+  .main-navigation a,
+  .bottom-navigation a,
+  .footer-bottom a,
+  .social-links a,
+  .anime-series-list a,
+  .anime-category a,
+  .non-existent-page,
+  .footer-section a,
+  .genre-examples a,
+  .genre-characteristics a,
+  .demographic-card a:not(.community-link),
+  .anime-categories a {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+  }
+}
