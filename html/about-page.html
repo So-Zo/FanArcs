@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/universal-style.css" />
-    <link rel="stylesheet" href="../css/section-buttons.css" />
-    <link rel="stylesheet" href="../css/section-content.css" />
-    <link rel="stylesheet" href="../css/search-bar.css" />
-    <link rel="stylesheet" href="../css/navigation.css" />
-    <link rel="stylesheet" href="../css/root-variables.css" />
-    <link rel="stylesheet" href="../css/footer-style.css" />
-    <title>About Fan Arc</title>
+    <!-- Main CSS framework -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/pages/about-style.css" />
+    <title>About FanArcs</title>
   </head>
   <body>
     <header>
@@ -21,37 +19,103 @@
     </header>
     <hr />
     <main>
-      <section>
-        <h2>Why It Exists?</h2>
+      <section class="about-intro">
+        <h1>About FanArcs</h1>
+        <p class="lead-text">
+          FanArcs is a platform built by fans, for fans—designed to be clean, accessible, and focused on what matters most: the content you love.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>Our Mission</h2>
+        <p>
+          FanArcs exists to create a space where fans can explore, create, and share content across multiple media types without the clutter and confusion of traditional fan sites. We believe that fandoms of all sizes deserve a platform that puts their needs first.
+        </p>
+        <div class="mission-values">
+          <div class="mission-value">
+            <h3>Accessibility</h3>
+            <p>We design with all users in mind, regardless of device or ability.</p>
+          </div>
+          <div class="mission-value">
+            <h3>Community</h3>
+            <p>We foster connections between fans through shared interests and collaborative creation.</p>
+          </div>
+          <div class="mission-value">
+            <h3>Quality</h3>
+            <p>We prioritize well-organized, thoughtful content over quantity.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="about-section">
+        <h2>Why Fan Arc Exists</h2>
         <p>
           The internet is bloated, cluttered, and full of half-functional tools
           that assume everyone's using a high-end desktop with unlimited plugins
-          and extensions. I don't have that luxury. A lot of people don't. So
-          instead of waiting for someone else to fix it, I decided to build
-          something better. This site exists because fandoms of all
-          sizes, deserve more than a mess of ads, broken navigation, and
+          and extensions. Many people don't have that luxury. So
+          instead of waiting for someone else to fix it, we decided to build
+          something better.
+        </p>
+        <p>
+          This site exists because fandoms of all
+          sizes deserve more than a mess of ads, broken navigation, and
           inconsistent information. It exists because people should be able to
           explore, connect, and understand without fighting the very tools meant
           to help them.
         </p>
       </section>
+
       <hr />
-      <section>
-        <h2>How are we Different?</h2>
+
+      <section class="about-section">
+        <h2>How We're Different</h2>
         <p>
           Most fandom sites are built to host content, not help people find it.
           They expect users to adapt to them, instead of the other way around.
-          This site is built for clarity, accessibility, and ease of use. No
+          FanArcs is built for clarity, accessibility, and ease of use. No
           clutter, no confusion, no corporate bloat—just clean, structured
-          information that's easy to navigate. Whether you're looking for deep
-          dives, fan theories, or discussions, everything is designed to make
-          sense from the first click.
+          information that's easy to navigate.
         </p>
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Cross-Media Support</h3>
+            <p>Explore content across anime, manga, comics, TV, and more—all with consistent navigation and organization.</p>
+          </div>
+          <div class="feature">
+            <h3>User-Generated Content</h3>
+            <p>Create and share your own theories, analyses, and fan fiction with proper attribution.</p>
+          </div>
+          <div class="feature">
+            <h3>Power Room</h3>
+            <p>Compare characters from different universes with our unique character comparison tool.</p>
+          </div>
+          <div class="feature">
+            <h3>Responsive Design</h3>
+            <p>Enjoy a consistent experience whether you're on a phone, tablet, or desktop.</p>
+          </div>
+        </div>
       </section>
+
       <hr />
-      <section>
-        <h2>Contact Me</h2>
-        <p>dev.to instagram, email, linkedin,</p>
+
+      <section class="about-section">
+        <h2>Contact Us</h2>
+        <div class="contact-options">
+          <div class="contact-option">
+            <h3>Email</h3>
+            <p><a href="mailto:Official.devanb13@gmail.com" class="default-links">Official.devanb13@gmail.com</a></p>
+          </div>
+          <div class="contact-option">
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/So-Zo/FanArcs" class="default-links" target="_blank">github.com/So-Zo/FanArcs</a></p>
+          </div>
+          <div class="contact-option">
+            <h3>Social Media</h3>
+            <p>Follow us on <a href="#" class="default-links">Twitter</a>, <a href="#" class="default-links">Instagram</a>, and <a href="#" class="default-links">Discord</a></p>
+          </div>
+        </div>
       </section>
       <hr />
     </main>
@@ -60,8 +124,8 @@
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-section footer-about">
-          <img src="logo-image.jpg" alt="Fan Arc Logo" class="footer-logo">
-          <p>Fan Arc is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+          <img src="logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+          <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
           <div class="social-links">
             <a href="#" class="social-icon" aria-label="Facebook">📘</a>
             <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
@@ -85,7 +149,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+        <p>&copy; 2025 FanArcs. All rights reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
       </div>
 
@@ -140,11 +204,11 @@
               aria-expanded="false"
               aria-controls="info-dropdown"
             >
-              Fan Arc Info <span>►</span>
+              FanArcs Info <span>►</span>
             </button>
             <ul class="nav-dropdown-menu">
               <li><a href="about-page.html">About 🔎</a></li>
-              <li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+              <li><a href="contribute-page.html">Help FanArcs ⁉️ </a></li>
               <li><a href="community-page.html">Community</a></li>
             </ul>
           </li>

@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contribute to Fan Arc</title>
-    <link rel="stylesheet" href="../css/universal-style.css" />
-    <link rel="stylesheet" href="../css/section-buttons.css" />
-    <link rel="stylesheet" href="../css/section-content.css" />
-    <link rel="stylesheet" href="../css/search-bar.css" />
-    <link rel="stylesheet" href="../css/navigation.css" />
-    <link rel="stylesheet" href="../css/root-variables.css" />
-    <link rel="stylesheet" href="../css/footer-style.css" />
+    <title>Contribute to FanArcs</title>
+    <!-- Main CSS framework -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/pages/contribute-style.css" />
   </head>
   <body>
     <header>
@@ -20,73 +18,121 @@
     </header>
     <hr />
     <main>
-      <section>
-        <h2>How You Can Help</h2>
+      <section class="contribute-intro">
+        <h1>Contribute to FanArcs</h1>
+        <p class="lead-text">
+          FanArcs thrives on community contributions. Whether you're a writer, artist, coder, or just have great ideas, there's a place for you to help build this platform.
+        </p>
+      </section>
+
+      <section class="contribute-section">
+        <h2>Ways to Contribute</h2>
         <p>
           If you're reading this, thank you for taking the time to even consider
-          helping out Fan Arc. Truly, I appreciate it.
+          helping out FanArcs. Truly, we appreciate it.
         </p>
 
-        <p>
-          Now to get down to it, as of right now there are a couple ways to
-          contribute, depending on what you would like to do.
-        </p>
+        <div class="contribution-types">
+          <div class="contribution-type">
+            <h3>Content Creation</h3>
+            <p>
+              Have a deep dive on a character, a show analysis, fan theory, or fan fiction? Great! Write it out
+              in your own words—short or lengthy, detailed or surface level, it's all up to you!
+            </p>
+            <a href="#submit-content" class="default-links">Learn how to submit content →</a>
+          </div>
 
-        <ul>
-          <li>
-            <strong>Write and Share Content</strong>: Have a deep dive on a
-            character, a show a fan theory, or fan fiction? Great! Write it out
-            in your own words, short or lengthy, detalied or surface level its
-            all up to you!
-          </li>
-          <li>
-            <strong>Submit Artwork</strong>: Are you an artist? Do you want your
-            work front and center for people to see? Do you want them to know
-            you made it? Well so do I and I will do my utmost to ensure your
-            work gets the credit it deserves!
-          </li>
-          <li>
-            <strong>Improve the Code</strong>: If you're into coding, Well, then
-            you probably know more then I do and i'd love to have some help!
-            whether you know one lanuage, one line or a million of them, Fan Arc
-            would Love your help!
-          </li>
-          <li>
-            <strong>Share Ideas</strong>: Have an idea for a feature or
-            improvement? Let us know! We're always looking for ways to make the
-            site better.
-          </li>
-        </ul>
+          <div class="contribution-type">
+            <h3>Artwork & Design</h3>
+            <p>
+              Are you an artist? Do you want your work front and center for people to see? We'll ensure your
+              work gets the credit it deserves with proper attribution and visibility.
+            </p>
+            <a href="#submit-content" class="default-links">Submit your artwork →</a>
+          </div>
+
+          <div class="contribution-type">
+            <h3>Code & Development</h3>
+            <p>
+              If you're into coding, your skills are valuable here! Whether you know one language or many,
+              FanArcs would love your help with features, fixes, and improvements.
+            </p>
+            <a href="https://github.com/So-Zo/FanArcs" class="default-links" target="_blank">Contribute on GitHub →</a>
+          </div>
+
+          <div class="contribution-type">
+            <h3>Ideas & Feedback</h3>
+            <p>
+              Have an idea for a feature or improvement? Spotted something that could work better?
+              Your feedback helps us make Fan Arc the best it can be.
+            </p>
+            <a href="#contact" class="default-links">Share your ideas →</a>
+          </div>
+        </div>
       </section>
+
       <hr />
-      <section>
-        <h2>How Do I send my work?</h2>
+
+      <section class="contribute-section" id="submit-content">
+        <h2>How to Submit Your Work</h2>
         <p>You can send your content in the following ways:</p>
-        <ul>
-          <li>
-            <strong>Email</strong>: Send your work to,
-            <a href="mailto:Official.devanb13@gmail.com">My Email</a>. Make sure
-            to include any details you'd like in the credit such as, socials,
-            name , etc.
-          </li>
 
-          <li>
-            <strong>GitHub</strong>:If you are familiar with GitHub you can Fork
-            our repository, make changes, and submit a pull request.<a
-              href="https://github.com/So-Zo/FanArcs"
-              target="_blank"
-              >Contribute on GitHub</a
-            >
-          </li>
-          <li>
-            <strong>Google Form</strong>: If you'd prefer a more structured
-            submission, fill out our form [Insert Google Form link here].
-          </li>
-        </ul>
+        <div class="submission-methods">
+          <div class="submission-method">
+            <h3>Email Submission</h3>
+            <p>
+              Send your work to <a href="mailto:Official.devanb13@gmail.com" class="default-links">Official.devanb13@gmail.com</a>.
+              Make sure to include any details you'd like in the credit such as socials, name, etc.
+            </p>
+            <div class="method-steps">
+              <ol>
+                <li>Prepare your content in a common format (DOC, PDF, JPG, PNG)</li>
+                <li>Include a title and brief description</li>
+                <li>Specify which section of the site it belongs to</li>
+                <li>Add your preferred attribution details</li>
+                <li>Send to our email with "Fan Arc Submission" in the subject line</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="submission-method">
+            <h3>GitHub Contribution</h3>
+            <p>
+              If you are familiar with GitHub, you can fork our repository, make changes, and submit a pull request.
+            </p>
+            <div class="method-steps">
+              <ol>
+                <li>Fork the <a href="https://github.com/So-Zo/FanArcs" class="default-links" target="_blank">Fan Arc repository</a></li>
+                <li>Create a new branch for your changes</li>
+                <li>Make your additions or improvements</li>
+                <li>Submit a pull request with a clear description</li>
+                <li>Wait for review and feedback</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="submission-method">
+            <h3>Submission Form</h3>
+            <p>
+              If you'd prefer a more structured submission process, fill out our content submission form.
+            </p>
+            <div class="method-steps">
+              <ol>
+                <li>Go to our <a href="#" class="default-links">submission form</a> (coming soon)</li>
+                <li>Fill out the required fields</li>
+                <li>Upload any necessary files</li>
+                <li>Submit the form</li>
+                <li>Receive a confirmation email</li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
+
       <hr />
-      <section>
-        <h2>Then What?</h2>
+
+      <section class="contribute-section">
+        <h2>What Happens Next?</h2>
         <p>
           Once we receive your submission, we'll review it and get back to you
           as soon as possible. If everything checks out, we'll add it to the
@@ -94,25 +140,60 @@
         </p>
         <p>
           Everyone who contributes will get special recognition—whether it's
-          through a tag, a mention in the content itself or any other requests
+          through a tag, a mention in the content itself, or any other requests
           you may have. We want to make sure your hard work is noticed!
         </p>
+
+        <div class="review-process">
+          <div class="process-step">
+            <h3>1. Review</h3>
+            <p>We'll review your submission for quality, relevance, and appropriateness.</p>
+          </div>
+          <div class="process-step">
+            <h3>2. Feedback</h3>
+            <p>We may provide feedback or suggestions for improvements if needed.</p>
+          </div>
+          <div class="process-step">
+            <h3>3. Publication</h3>
+            <p>Once approved, we'll publish your content with proper attribution.</p>
+          </div>
+          <div class="process-step">
+            <h3>4. Promotion</h3>
+            <p>We'll help promote your contribution across our platform.</p>
+          </div>
+        </div>
       </section>
+
       <hr />
-      <section>
-        <h2>Contact Me</h2>
+
+      <section class="contribute-section" id="contact">
+        <h2>Contact Us</h2>
         <p>
-          If you have any questions or need help, feel free to reach out. dev.to
-          instagram, email, linkedin,
+          If you have any questions or need help with your contribution, feel free to reach out.
         </p>
+
+        <div class="contact-options">
+          <div class="contact-option">
+            <h3>Email</h3>
+            <p><a href="mailto:Official.devanb13@gmail.com" class="default-links">Official.devanb13@gmail.com</a></p>
+          </div>
+          <div class="contact-option">
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/So-Zo/FanArcs" class="default-links" target="_blank">github.com/So-Zo/FanArcs</a></p>
+          </div>
+          <div class="contact-option">
+            <h3>Social Media</h3>
+            <p>Follow us on <a href="#" class="default-links">Twitter</a>, <a href="#" class="default-links">Instagram</a>, and <a href="#" class="default-links">Discord</a></p>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Footer Section -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-section footer-about">
-          <img src="logo-image.jpg" alt="Fan Arc Logo" class="footer-logo">
-          <p>Fan Arc is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+          <img src="logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+          <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
           <div class="social-links">
             <a href="#" class="social-icon" aria-label="Facebook">📘</a>
             <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
@@ -136,7 +217,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+        <p>&copy; 2025 FanArcs. All rights reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
       </div>
 
@@ -191,11 +272,11 @@
               aria-expanded="false"
               aria-controls="info-dropdown"
             >
-              Fan Arc Info <span>►</span>
+              FanArcs Info <span>►</span>
             </button>
             <ul class="nav-dropdown-menu">
               <li><a href="about-page.html">About 🔎</a></li>
-              <li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
+              <li><a href="contribute-page.html">Help FanArcs ⁉️ </a></li>
               <li><a href="community-page.html">Community</a></li>
             </ul>
           </li>
