@@ -1,4 +1,9 @@
-/* Section Content Styles - For content inside individual pages */
+/*
+ * Content Block Styles for Fan Arc
+ * This file contains styling for content blocks and sections
+ */
+
+/* Base content block styles */
 .section-content,
 .Type_Content,
 .sectionworlds,
@@ -10,11 +15,11 @@
 .discussion-thread,
 .comment-item,
 .add-comment,
-section:not(.section-anime):not(.section-comics):not(.section-manga):not(.section-tv):not(.section-metaverse):not(.section-worlds-universes):not(.section-power-room):not(.content-intro) {
-  background-color: #ffffff;
+section {
+  background-image: var(--bg-gradient-light);
   padding: 1.5rem;
   border-radius: var(--border-radius-base);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   margin-bottom: 1.5rem;
 }
 
@@ -107,5 +112,76 @@ section:not(.section-anime):not(.section-comics):not(.section-manga):not(.sectio
 .sidebar-block p,
 .editable-content p {
   color: var(--text-color, #555);
-  line-height: 1.5;
+  line-height: var(--line-height-base);
+  margin-bottom: 1rem;
+}
+
+/* Content block with hover effect */
+.hover-block {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-block:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-md);
+}
+
+/* Content block with border */
+.bordered-block {
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+}
+
+/* Content block with rounded corners */
+.rounded-block {
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+}
+
+/* Content block with padding variations */
+.block-padding-sm {
+  padding: 0.75rem;
+}
+
+.block-padding-lg {
+  padding: 2rem;
+}
+
+/* Content block with background variations */
+.block-bg-primary {
+  background-color: var(--fanarc-primary-color);
+  color: white;
+}
+
+.block-bg-secondary {
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+}
+
+/* Content block with transparent background */
+.block-transparent {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Content block with grid layout */
+.grid-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-sm)) {
+  .section-content,
+  .Type_Content,
+  .sectionworlds,
+  .content-section,
+  .content-block,
+  .sidebar-block {
+    padding: 1rem;
+  }
+  
+  .block-padding-lg {
+    padding: 1.5rem;
+  }
 }

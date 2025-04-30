@@ -13,18 +13,7 @@
   margin-top: 0.5rem;
 }
 
-.genre-nav-button {
-  background-color: var(--accent-color, #4b0082);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.genre-nav-button:hover {
-  background-color: var(--accent-color-hover, #5a1b8b);
-}
+/* Genre nav buttons now use the default-link class from link-button-styles.css */
 
 .genre-section {
   margin-bottom: 2rem;
@@ -58,19 +47,7 @@
   padding-left: 1.5rem;
 }
 
-.community-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  color: var(--accent-color, #4b0082);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.community-link:hover {
-  color: var(--accent-color-hover, #5a1b8b);
-  text-decoration: underline;
-}
+/* Community links now use the content-link class from link-button-styles.css */
 
 .genre-list-compact {
   background-color: rgba(0, 0, 0, 0.05);
@@ -125,23 +102,14 @@
   margin-bottom: 0.5rem;
 }
 
-.resource-link {
-  color: var(--accent-color, #4b0082);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.resource-link:hover {
-  color: var(--accent-color-hover, #5a1b8b);
-  text-decoration: underline;
-}
+/* Resource links now use the resource-link class from link-button-styles.css */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .two-column-list {
     column-count: 1;
   }
-  
+
   .genre-grid {
     grid-template-columns: 1fr;
   }

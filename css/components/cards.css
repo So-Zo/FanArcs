@@ -1,0 +1,243 @@
+/*
+ * Card Styles for Fan Arc
+ * This file contains styling for card-based UI elements
+ */
+
+/* Base card styles */
+.card {
+  background-color: white;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card image */
+.card-image {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+}
+
+/* Card content */
+.card-content {
+  padding: 1.25rem;
+}
+
+/* Card title */
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--fanarc-primary-color);
+}
+
+/* Card description */
+.card-description {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: var(--line-height-base);
+}
+
+/* Card footer */
+.card-footer {
+  padding: 1rem 1.25rem;
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card badge */
+.card-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* Card with horizontal layout */
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  height: 10rem;
+}
+
+.card-horizontal .card-image {
+  width: 10rem;
+  height: 100%;
+}
+
+.card-horizontal .card-content {
+  flex: 1;
+}
+
+/* Card with overlay text */
+.card-overlay {
+  position: relative;
+}
+
+.card-overlay .card-image {
+  height: 18.75rem;
+}
+
+.card-overlay .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 1.5rem;
+}
+
+.card-overlay .card-title {
+  color: white;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card sizes */
+.card-sm {
+  max-width: 15rem;
+}
+
+.card-md {
+  max-width: 20rem;
+}
+
+.card-lg {
+  max-width: 25rem;
+}
+
+/* Card with border */
+.card-bordered {
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+/* Card with rounded corners */
+.card-rounded {
+  border-radius: var(--border-radius-large);
+}
+
+/* Card with no hover effect */
+.card-static:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Content card - for sections with light background */
+.content-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-base);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-xs);
+  margin-bottom: 1.5rem;
+}
+
+/* Section card - for main content sections */
+.section-card {
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  background-image: var(--bg-gradient-light);
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--section-shadow);
+}
+
+/* Character card - specific styling for character displays */
+.character-card {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.character-card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.character-card .character-image {
+  width: 6.25rem;
+  height: 9.375rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.character-card .character-info {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-sm)) {
+  /* Card grid adjustments */
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+  }
+
+  /* Horizontal card adjustments */
+  .card-horizontal {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-horizontal .card-image {
+    width: 100%;
+    height: 10rem;
+  }
+
+  /* Character card adjustments */
+  .character-card {
+    flex-direction: column;
+  }
+
+  .character-card .character-image {
+    width: 100%;
+    height: 12.5rem;
+  }
+
+  /* Content card adjustments */
+  .content-card,
+  .section-card {
+    padding: 1rem;
+  }
+
+  .section-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: var(--breakpoint-xs)) {
+  /* Further adjustments for extra small screens */
+  .card-title {
+    font-size: var(--font-size-md);
+  }
+
+  .card-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+}

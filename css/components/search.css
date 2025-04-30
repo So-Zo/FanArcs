@@ -1,0 +1,96 @@
+/*
+ * Search Styles for Fan Arc
+ * This file contains styling for search elements
+ */
+
+/* Basic search bar */
+#site-search-bar {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: var(--font-size-base);
+  border: var(--border-width-base) solid var(--text-color);
+  border-radius: var(--border-radius-base);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* Search bar focus state */
+#site-search-bar:focus {
+  border-color: var(--fanarc-secondary-color);
+  outline: 0.125rem solid var(--fanarc-secondary-color);
+  outline-offset: 0.125rem;
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search button */
+.search-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--fanarc-primary-color);
+  font-size: 1.25rem;
+  transition: color var(--transition-base);
+}
+
+.search-button:hover {
+  color: var(--fanarc-secondary-color);
+}
+
+/* Search results container */
+.search-results {
+  margin-top: 1rem;
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+}
+
+/* Search result item */
+.search-result-item {
+  padding: 1rem;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-base);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.search-result-title {
+  font-weight: bold;
+  color: var(--fanarc-primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.search-result-description {
+  font-size: var(--font-size-sm);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* No results message */
+.no-results {
+  padding: 2rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-sm)) {
+  #site-search-bar {
+    height: 2.25rem;
+    font-size: var(--font-size-sm);
+  }
+}

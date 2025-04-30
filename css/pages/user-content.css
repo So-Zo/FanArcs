@@ -7,7 +7,7 @@
 
 .content-header-image {
   width: 100%;
-  height: 250px;
+  height: 15.625rem;
   object-fit: cover;
   border-radius: var(--border-radius-base);
 }
@@ -21,7 +21,7 @@
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-base);
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
 }
 
 .content-header {
@@ -51,7 +51,14 @@
 
 /* Content Tabs */
 .content-tabs {
-  background-color: #f5f5f5;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   border-radius: var(--border-radius-base);
   margin: 0 1rem 1.5rem;
   overflow-x: auto;
@@ -98,11 +105,11 @@
 .content-main {
   flex: 1;
   min-width: 0;
-  min-width: 300px;
+  min-width: 18.75rem;
 }
 
 .content-sidebar {
-  width: 300px;
+  width: 18.75rem;
 }
 
 /* Content Sections */
@@ -114,13 +121,7 @@
   display: block;
 }
 
-.content-block {
-  background-color: white;
-  border-radius: var(--border-radius-base);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+
 
 .content-block h2 {
   margin-top: 0;
@@ -138,24 +139,31 @@
 /* Character Grid */
 .character-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
   gap: 1.5rem;
 }
 
 .character-card {
-  background-color: #f9f9f9;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   border-radius: var(--border-radius-base);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .character-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
 }
 
 .character-image {
-  height: 150px;
+  height: 9.375rem;
   overflow: hidden;
 }
 
@@ -180,20 +188,7 @@
   margin-bottom: 1rem;
 }
 
-.character-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--fanarc-secondary-color, #A997DF);
-  color: white;
-  text-decoration: none;
-  border-radius: var(--border-radius-small);
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-.character-link:hover {
-  background-color: var(--fanarc-primary-color, #0F084B);
-}
+/* Character links now use the default-link class from link-button-styles.css */
 
 /* Episode List */
 .episode-list {
@@ -205,7 +200,14 @@
 .episode-item {
   display: flex;
   align-items: center;
-  background-color: #f9f9f9;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   border-radius: var(--border-radius-base);
   padding: 1rem;
   transition: background-color 0.3s;
@@ -219,7 +221,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--fanarc-primary-color, #0F084B);
-  width: 50px;
+  width: 3.125rem;
   text-align: center;
 }
 
@@ -240,24 +242,11 @@
 }
 
 .episode-actions {
-  width: 80px;
+  width: 5rem;
   text-align: right;
 }
 
-.episode-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--fanarc-secondary-color, #A997DF);
-  color: white;
-  text-decoration: none;
-  border-radius: var(--border-radius-small);
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-.episode-link:hover {
-  background-color: var(--fanarc-primary-color, #0F084B);
-}
+/* Episode links now use the default-link class from link-button-styles.css */
 
 /* Theory List */
 .theory-list {
@@ -267,7 +256,14 @@
 }
 
 .theory-item {
-  background-color: #f9f9f9;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   border-radius: var(--border-radius-base);
   padding: 1.5rem;
   transition: background-color 0.3s;
@@ -295,20 +291,7 @@
   line-height: 1.5;
 }
 
-.theory-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--fanarc-secondary-color, #A997DF);
-  color: white;
-  text-decoration: none;
-  border-radius: var(--border-radius-small);
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-.theory-link:hover {
-  background-color: var(--fanarc-primary-color, #0F084B);
-}
+/* Theory links now use the default-link class from link-button-styles.css */
 
 .add-theory {
   margin-top: 1.5rem;
@@ -344,8 +327,8 @@
 }
 
 .comment-avatar {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -359,7 +342,14 @@
 
 .comment-content {
   flex: 1;
-  background-color: #f9f9f9;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   border-radius: var(--border-radius-base);
   padding: 1rem;
 }
@@ -415,9 +405,9 @@
 
 .comment-input {
   width: 100%;
-  min-height: 100px;
+  min-height: 6.25rem;
   padding: 1rem;
-  border: 1px solid #ddd;
+  border: 0.0625rem solid #ddd;
   border-radius: var(--border-radius-base);
   font-family: inherit;
   font-size: 0.95rem;
@@ -440,21 +430,13 @@
   background-color: #1a0f6b;
 }
 
-/* Sidebar */
-.sidebar-block {
-  background-color: white;
-  border-radius: var(--border-radius-base);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
 
 .sidebar-block h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   color: var(--fanarc-primary-color, #0F084B);
   font-size: 1.2rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   padding-bottom: 0.5rem;
 }
 
@@ -466,7 +448,7 @@
 
 .info-list li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 0.0625rem solid #f0f0f0;
 }
 
 .info-list li:last-child {
@@ -483,16 +465,7 @@
   padding: 0.5rem 0;
 }
 
-.related-list a {
-  color: var(--fanarc-secondary-color, #A997DF);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.related-list a:hover {
-  color: var(--fanarc-primary-color, #0F084B);
-  text-decoration: underline;
-}
+/* Related list links now use the content-link class from link-button-styles.css */
 
 .tag-cloud {
   display: flex;
@@ -503,7 +476,14 @@
 .tag {
   display: inline-block;
   padding: 0.5rem 0.75rem;
-  background-color: #f0f0f0;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   color: #666;
   border-radius: var(--border-radius-small);
   font-size: 0.8rem;
@@ -521,7 +501,14 @@
   width: 100%;
   padding: 0.75rem 1rem;
   margin-bottom: 0.75rem;
-  background-color: #f0f0f0;
+  background-image: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
   color: #333;
   border: none;
   border-radius: var(--border-radius-base);
@@ -550,112 +537,79 @@
   color: white;
 }
 
-/* Non-existent page links */
-.non-existent-page {
-  border-bottom: 1px dotted #e74c3c;
-  position: relative;
-}
-
-.non-existent-page:hover::after {
-  content: "Page doesn't exist yet - Click to create";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: white;
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--border-radius-small);
-  font-size: 0.8rem;
-  white-space: nowrap;
-  z-index: 10;
-  margin-bottom: 5px;
-}
-
-.non-existent-page:hover::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
-  margin-bottom: -5px;
-  z-index: 10;
-}
+/* Non-existent page links are now defined in link-button-styles.css */
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
+@media (max-width: var(--breakpoint-md)) {
   .content-container {
     flex-direction: column;
   }
-  
+
   .content-sidebar {
     width: 100%;
   }
-  
+
   .content-tabs {
     overflow-x: auto;
   }
-  
+
   .content-tabs ul {
     width: max-content;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-sm)) {
   .content-title {
     font-size: 2rem;
   }
-  
+
   .character-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(9.375rem, 1fr));
   }
-  
+
   .episode-item {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .episode-number {
     width: auto;
     text-align: left;
     margin-bottom: 0.5rem;
   }
-  
+
   .episode-details {
     padding: 0;
     margin-bottom: 1rem;
   }
-  
+
   .episode-actions {
     width: auto;
     text-align: left;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: var(--breakpoint-xs)) {
   .content-header-image {
-    height: 180px;
+    height: 11.25rem;
   }
-  
+
   .content-title {
     font-size: 1.75rem;
   }
-  
+
   .content-tabs a {
     padding: 0.75rem 1rem;
   }
-  
+
   .character-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .comment-item {
     flex-direction: column;
   }
-  
+
   .comment-avatar {
     margin-bottom: 0.5rem;
   }

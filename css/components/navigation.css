@@ -1,3 +1,8 @@
+/*
+ * Navigation Styles for Fan Arc
+ * This file contains styling for navigation elements across the website
+ */
+
 /* Bottom navigation styles */
 .bottom-navigation {
   position: fixed;
@@ -6,7 +11,7 @@
   width: 100%;
   height: 3rem;
   background-color: black;
-  z-index: 9999;
+  z-index: var(--z-index-fixed);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,7 +32,8 @@
   width: 100%;
   height: 0.3rem;
   background-color: white;
-  border-radius: 2px;
+  border-radius: 0.125rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 /* Navigation buttons */
@@ -49,14 +55,14 @@
   height: 65vh;
   max-height: 95vh;
   overflow-y: auto;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
-  z-index: 150;
+  box-shadow: 0 -0.125rem 0.3125rem rgba(0, 0, 0, 0.4);
+  z-index: var(--z-index-dropdown);
   -webkit-overflow-scrolling: touch;
   transform: translateY(100%);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease;
   pointer-events: none; /* Prevents interaction while hidden */
   background: linear-gradient(to right, #4b0082, #330066);
-  border-radius: 1rem 1rem 0 0;
+  border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
 }
 
 .main-navigation.active {
@@ -68,7 +74,7 @@
   list-style: none;
   padding: 0.5rem;
   margin: 0.5rem;
-  border-radius: 1rem;
+  border-radius: var(--border-radius-large);
 }
 
 /* Dropdown toggle button */
@@ -94,7 +100,7 @@
   padding-left: 1rem;
   margin-top: -2rem;
   transform: translateY(-100%);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease;
   pointer-events: none;
   opacity: 0;
   overflow: hidden;
@@ -114,15 +120,15 @@
 
 .nav-dropdown-menu a {
   text-decoration: none;
-  color: #e0dedec0;
+  color: rgba(224, 222, 222, 0.75);
   font-size: 1.5rem;
   display: block;
-  letter-spacing: 0.065rem;
-  border-radius: 1rem;
+  letter-spacing: var(--letter-spacing);
+  border-radius: var(--border-radius-large);
 }
 
 /* Media queries for responsive design */
-@media (min-width: 992px) {
+@media (min-width: var(--breakpoint-md)) {
   /* Transform bottom navigation into sidebar for larger screens */
   .bottom-navigation {
     display: flex;
@@ -131,45 +137,45 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 60px;
-    background-color: #0F084B;
+    width: 3.75rem;
+    background-color: var(--fanarc-primary-color);
     color: #fff;
     padding: 1rem 0;
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 200;
+    box-shadow: 0.125rem 0 0.625rem rgba(0, 0, 0, 0.2);
+    z-index: var(--z-index-fixed);
   }
 
   /* Adjust main content to make room for sidebar */
   main {
-    margin-left: 60px;
+    margin-left: 3.75rem;
   }
 
   /* Adjust header to make room for sidebar */
   header {
-    margin-left: 60px;
-    width: calc(100% - 60px);
+    margin-left: 3.75rem;
+    width: calc(100% - 3.75rem);
   }
 
   /* Adjust footer to make room for sidebar */
   .site-footer {
-    margin-left: 60px;
-    width: calc(100% - 60px);
+    margin-left: 3.75rem;
+    width: calc(100% - 3.75rem);
   }
 
   /* Adjust navigation menu position */
   .main-navigation {
-    left: 60px;
+    left: 3.75rem;
     bottom: auto;
     top: 0;
     height: 100%;
-    width: 250px;
+    width: 15.625rem;
     transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease;
     border-radius: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 0.0625rem solid rgba(255, 255, 255, 0.1);
   }
 
   .main-navigation.active {
@@ -187,11 +193,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--border-radius-circle);
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.2s ease, transform 0.2s ease;
   }
 
   .nav-home-button:hover,
@@ -205,33 +211,33 @@
   /* Position hamburger menu at the bottom of sidebar */
   .hamburger-menu-icon {
     margin-top: auto;
-    width: 30px;
-    height: 24px;
+    width: 1.875rem;
+    height: 1.5rem;
   }
 }
 
 /* Larger screens with more space */
-@media (min-width: 1200px) {
+@media (min-width: var(--breakpoint-lg)) {
   .bottom-navigation {
-    width: 70px;
+    width: 4.375rem;
   }
 
   main, header, .site-footer {
-    margin-left: 70px;
-    width: calc(100% - 70px);
+    margin-left: 4.375rem;
+    width: calc(100% - 4.375rem);
   }
 
   .main-navigation {
-    left: 70px;
-    width: 300px;
+    left: 4.375rem;
+    width: 18.75rem;
   }
 
   .nav-home-button,
   .nav-profile-button,
   .nav-social-button,
   .nav-search-popup {
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem;
+    height: 2.8125rem;
     font-size: 2rem;
   }
 }

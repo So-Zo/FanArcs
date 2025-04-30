@@ -1,0 +1,102 @@
+/*
+ * Link Styles for FanArcs
+ * This file contains styling for links across the website
+ */
+
+/* Default link styling */
+.default-links {
+  color: var(--fanarc-secondary-color, #A997DF);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-base);
+  display: inline-block;
+}
+
+/* Add arrow symbol after links */
+.default-links::after {
+  content: " →";
+  display: inline-block;
+  margin-left: 0.25rem;
+  transition: transform var(--transition-base);
+}
+
+/* Hover effect for links */
+.default-links:hover {
+  color: var(--fanarc-secondary-color);
+}
+
+/* Hover effect for arrow - slight movement */
+.default-links:hover::after {
+  transform: translateX(0.1875rem);
+}
+
+/* Underline animation */
+.default-links::before {
+  content: "";
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: var(--fanarc-secondary-color);
+  transition: width var(--transition-base);
+}
+
+/* Expand underline on hover */
+.default-links:hover::before {
+  width: 100%;
+}
+
+/* Visited links */
+.default-links:visited {
+  color: var(--fanarc-primary-color);
+}
+
+/* Active links */
+.default-links:active {
+  color: var(--fanarc-secondary-color);
+}
+
+/* Focus state for accessibility */
+.default-links:focus {
+  outline: 0.125rem dotted var(--fanarc-secondary-color);
+  outline-offset: 0.125rem;
+}
+
+/* Footer links */
+.footer-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.footer-link:hover {
+  color: var(--fanarc-secondary-color);
+}
+
+/* Navigation links */
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+}
+
+/* Media queries for responsive design */
+@media (max-width: var(--breakpoint-sm)) {
+  .default-links {
+    padding: 0.25rem 0;
+  }
+}

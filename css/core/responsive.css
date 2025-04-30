@@ -1,0 +1,159 @@
+/* 
+ * Responsive Utilities for Fan Arc
+ * Responsive utilities and helper classes
+ */
+
+/* Hide on different screen sizes */
+.hide-xs {
+  display: none;
+}
+
+@media (min-width: var(--breakpoint-xs)) {
+  .hide-xs {
+    display: initial;
+  }
+  
+  .show-xs {
+    display: none;
+  }
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .hide-md {
+    display: none;
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .hide-xl {
+    display: none;
+  }
+}
+
+/* Show only on specific screen sizes */
+.show-xs-only {
+  display: none;
+}
+
+@media (max-width: var(--breakpoint-xs)) {
+  .show-xs-only {
+    display: initial;
+  }
+}
+
+.show-sm-only {
+  display: none;
+}
+
+@media (min-width: var(--breakpoint-xs)) and (max-width: var(--breakpoint-sm)) {
+  .show-sm-only {
+    display: initial;
+  }
+}
+
+.show-md-only {
+  display: none;
+}
+
+@media (min-width: var(--breakpoint-sm)) and (max-width: var(--breakpoint-md)) {
+  .show-md-only {
+    display: initial;
+  }
+}
+
+.show-lg-only {
+  display: none;
+}
+
+@media (min-width: var(--breakpoint-md)) and (max-width: var(--breakpoint-lg)) {
+  .show-lg-only {
+    display: initial;
+  }
+}
+
+.show-xl-only {
+  display: none;
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .show-xl-only {
+    display: initial;
+  }
+}
+
+/* Responsive text alignment */
+@media (max-width: var(--breakpoint-sm)) {
+  .text-center-sm {
+    text-align: center;
+  }
+  
+  .text-left-sm {
+    text-align: left;
+  }
+  
+  .text-right-sm {
+    text-align: right;
+  }
+}
+
+/* Responsive order */
+@media (max-width: var(--breakpoint-sm)) {
+  .order-1-sm {
+    order: 1;
+  }
+  
+  .order-2-sm {
+    order: 2;
+  }
+  
+  .order-3-sm {
+    order: 3;
+  }
+}
+
+/* Responsive width */
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .w-100-sm {
+    width: 100%;
+  }
+  
+  .w-75-sm {
+    width: 75%;
+  }
+  
+  .w-50-sm {
+    width: 50%;
+  }
+  
+  .w-25-sm {
+    width: 25%;
+  }
+}

@@ -1,17 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --bg-primary: #2a1a6f;
-  --bg-secondary: #1d004d;
-  --text-primary: #ffffff;
-  --accent-color: #4b0082;
-  --border-color: #330066;
-}
-
+/* Profile Page Styles */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background:
@@ -322,42 +309,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Bottom Navigation and Footer Styles */
-.bottom-navigation {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
-  z-index: 100;
-}
-
-.nav-home-button,
-.nav-profile-button,
-.nav-search-popup {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.hamburger-menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 1.5rem;
-  height: 1.25rem;
-  cursor: pointer;
-}
-
-.hamburger-bar {
-  height: 0.25rem;
-  background-color: var(--text-primary);
-  border-radius: 0.125rem;
-}
-
 footer {
   text-align: center;
   padding: 1rem;
@@ -366,17 +317,6 @@ footer {
 
 .copyright {
   margin-top: 1rem;
-}
-
-/* Navigation Dropdown Styles */
-.main-navigation {
-  display: none; /* Hidden by default, can be shown with JavaScript */
-  position: fixed;
-  bottom: 4rem;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 99;
 }
 
 .main-navigation ul {
@@ -410,14 +350,13 @@ footer {
 
 .nav-dropdown-menu li a:hover {
   background-color: var(--accent-color);
-}
+}*/
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .profile-stats {
     gap: 1rem;
   }
-
   .profile-options-bar {
     flex-direction: column;
     align-items: stretch;
@@ -427,3 +366,4 @@ footer {
     text-align: center;
   }
 }
+

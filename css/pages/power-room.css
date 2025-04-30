@@ -1,32 +1,38 @@
+/*
+ * Power Room Page Styles for Fan Arc
+ * This file contains styles specific to the Power Room page
+ */
+
+/* Page background */
 /* Power Room specific styles */
 body {
   background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 255, 255, 0.08) 35%,
-    rgba(255, 255, 255, 0.05) 70%
-  ),
-  linear-gradient(
-    45deg,
-    #0c0c0c 0%,
-    #101010 50%,
-    #0c0c0c 100%
-  );
+      circle at 50% 30%,
+      rgba(111, 26, 91, 0.9) 10%,
+      rgba(0, 0, 0, 0.9) 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #820082 5%,
+      #660066 30%,
+      #4d004d 60%,
+      #6f1a5f 100%
+    );
 }
 
 .power-room-intro {
   text-align: center;
   padding: 1rem;
   margin-bottom: 2rem;
-  background-color: rgba(250, 250, 250, 0.5);
+  background: var(--bg-color);
   border-radius: var(--border-radius-large);
 }
 
 .power-room-intro h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #f8f8f8;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: #0d0d0d;
+  text-shadow: 0 0 0.625rem rgba(240, 31, 146, 0.571);
   justify-content: center;
 }
 
@@ -49,8 +55,8 @@ body {
 /* Character panels */
 .character-panel {
   flex: 1;
-  min-width: 300px;
-  background-color: rgba(246, 244, 244, 0.7);
+  min-width: 18.75rem;
+  background-color: rgba(20, 20, 20, 0.7);
   border-radius: var(--border-radius-large);
   padding: 1.5rem;
   position: relative;
@@ -61,7 +67,7 @@ body {
 
 .character-image {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   overflow: hidden;
   border-radius: var(--border-radius-base);
   margin-bottom: 1rem;
@@ -102,23 +108,23 @@ body {
 }
 
 .stat-label {
-  width: 100px;
+  width: 6.25rem;
   font-weight: bold;
   text-align: right;
 }
 
 .stat-bar {
   flex: 1;
-  height: 12px;
+  height: 0.75rem;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
+  border-radius: 0.375rem;
   overflow: hidden;
 }
 
 .stat-fill {
   height: 100%;
   background: linear-gradient(to right, #f8d210, #ff5e00);
-  border-radius: 6px;
+  border-radius: 0.375rem;
 }
 
 .left-character .stat-fill {
@@ -130,7 +136,7 @@ body {
 }
 
 .stat-value {
-  width: 30px;
+  width: 1.875rem;
   text-align: right;
 }
 
@@ -154,8 +160,8 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   font-size: 1.2rem;
   cursor: pointer;
@@ -178,8 +184,8 @@ body {
 .vs-divider span {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #f8f8f8;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: #0b0b0b;
+  text-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.5);
 }
 
 /* Character Selection Styles */
@@ -197,8 +203,8 @@ body {
 .character-search-input {
   flex: 1;
   padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px 0 0 4px;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem 0 0 0.25rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: #f8f8f8;
   font-size: 1rem;
@@ -207,9 +213,9 @@ body {
 .search-button {
   padding: 0.75rem 1rem;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
   border-left: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0.25rem 0.25rem 0;
   color: #f8f8f8;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -226,8 +232,8 @@ body {
 .universe-filter {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: #f8f8f8;
   font-size: 1rem;
@@ -240,10 +246,10 @@ body {
 }
 
 .character-list-container {
-  max-height: 200px;
+  max-height: 12.5rem;
   overflow-y: auto;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem;
   background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 1rem;
 }
@@ -256,7 +262,7 @@ body {
 
 .character-list li {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
   color: #f8f8f8;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -281,8 +287,8 @@ body {
 }
 
 .character-list .character-item img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 50%;
   margin-right: 0.75rem;
   object-fit: cover;
@@ -303,7 +309,7 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-sm)) {
   .power-comparison-container {
     flex-direction: column;
   }
@@ -316,8 +322,8 @@ body {
     margin: 1rem 0;
     padding: 1rem 0;
     width: 100%;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 0.125rem solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0.125rem solid rgba(255, 255, 255, 0.3);
   }
 
   .left-controls,
@@ -326,13 +332,13 @@ body {
   }
 
   .character-list-container {
-    max-height: 150px;
+    max-height: 9.375rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: var(--breakpoint-xs)) {
   .character-image {
-    height: 200px;
+    height: 12.5rem;
   }
 
   .power-room-intro h1 {
@@ -340,7 +346,7 @@ body {
   }
 
   .stat-label {
-    width: 80px;
+    width: 5rem;
   }
 
   .character-search {
@@ -348,12 +354,12 @@ body {
   }
 
   .character-search-input {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     margin-bottom: 0.5rem;
   }
 
   .search-button {
-    border-radius: 4px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.25rem;
+    border-left: 0.0625rem solid rgba(255, 255, 255, 0.3);
   }
 }

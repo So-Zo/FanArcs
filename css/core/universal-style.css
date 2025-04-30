@@ -39,12 +39,12 @@ h6 {
 
 
 nav a:hover {
-  color: var(--link-hover);
+  color: var(--link-hover-color);
   background-color: #f0f0f0;
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-sm)) {
   section,
   button {
     max-width: 100%;
@@ -55,7 +55,7 @@ nav a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: var(--breakpoint-xs)) {
   .page-header {
     font-size: 1.5rem;
   }
@@ -64,20 +64,13 @@ nav a:hover {
     padding: var(--spacing-base);
   }
 
-  #searchBar {
-    height: 2rem;
-  }
-
   button {
     font-size: 0.875rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: var(--breakpoint-md)) {
   section {
     max-width: 100%;
-  }
-  #searchBar {
-    height: 3.5rem;
   }
 }

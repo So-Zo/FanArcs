@@ -1,0 +1,117 @@
+/*
+ * Accessibility Utilities for Fan Arc
+ * This file contains accessibility helper classes
+ */
+
+/* Visually hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -3.125rem;
+  left: 0;
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus visible utility */
+.focus-visible:focus {
+  outline: 0.125rem solid var(--fanarc-secondary-color);
+  outline-offset: 0.125rem;
+}
+
+/* High contrast mode adjustments */
+@media (forced-colors: active) {
+  .high-contrast-border {
+    border: 0.125rem solid currentColor;
+  }
+  
+  .high-contrast-outline {
+    outline: 0.125rem solid currentColor;
+    outline-offset: 0.125rem;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Color contrast helpers */
+.text-contrast-high {
+  color: #000;
+  background-color: #fff;
+}
+
+.text-contrast-dark {
+  color: #fff;
+  background-color: #000;
+}
+
+/* ARIA attributes styling */
+[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+/* Focus trap for modals */
+.focus-trap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Keyboard focus indicator */
+:focus-visible {
+  outline: 0.125rem solid var(--fanarc-secondary-color);
+  outline-offset: 0.125rem;
+}
+
+/* Screen reader text for icons */
+.icon-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

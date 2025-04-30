@@ -1,0 +1,511 @@
+/*
+ * User Content Styles for FanArcs
+ * This file contains styles specific to user-generated content pages
+ */
+
+/* Content header */
+.content-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.content-title {
+  font-size: var(--font-size-xxxl);
+  color: var(--fanarc-primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.content-meta {
+  color: #666;
+  font-size: var(--font-size-sm);
+}
+
+/* Content tabs navigation */
+.content-tabs {
+  margin-bottom: 2rem;
+  border-bottom: var(--border-width-thin) solid #ddd;
+}
+
+.content-tabs ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.content-tabs li {
+  margin-right: 0.5rem;
+}
+
+.content-tabs a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #666;
+  text-decoration: none;
+  border-bottom: 0.25rem solid transparent;
+  transition: all var(--transition-base);
+}
+
+.content-tabs a:hover,
+.content-tabs a.active {
+  color: var(--fanarc-primary-color);
+  border-bottom-color: var(--fanarc-secondary-color);
+}
+
+/* Content container layout */
+.content-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+/* Main content area */
+.content-main {
+  min-width: 0; /* Fix for grid overflow */
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-block {
+  background-image: var(--bg-gradient-light);
+  border-radius: var(--border-radius-base);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.content-block h2 {
+  color: var(--fanarc-primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-xl);
+}
+
+.editable-content {
+  line-height: var(--line-height-base);
+}
+
+.editable-content p {
+  margin-bottom: 1rem;
+}
+
+.editable-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar */
+.content-sidebar {
+  min-width: 0; /* Fix for grid overflow */
+}
+
+.sidebar-block {
+  background-image: var(--bg-gradient-light);
+  border-radius: var(--border-radius-base);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.sidebar-block h3 {
+  color: var(--fanarc-primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-lg);
+}
+
+/* Character cards */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.character-card {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.character-card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.character-image {
+  width: 6.25rem;
+  height: 9.375rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-info {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.character-name {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size-md);
+  color: var(--fanarc-primary-color);
+}
+
+.character-role {
+  color: #666;
+  font-size: var(--font-size-sm);
+  margin-bottom: 0.75rem;
+}
+
+.character-link {
+  display: inline-block;
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+.character-link:hover {
+  text-decoration: underline;
+}
+
+/* Episode list */
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.episode-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-base);
+  padding: 1rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.episode-number {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: var(--fanarc-primary-color);
+  margin-right: 1rem;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.episode-details {
+  flex-grow: 1;
+}
+
+.episode-title {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size-md);
+  color: var(--fanarc-primary-color);
+}
+
+.episode-description {
+  color: #666;
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* Fan theories */
+.theory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.theory-item {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-base);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.theory-title {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size-lg);
+  color: var(--fanarc-primary-color);
+}
+
+.theory-meta {
+  color: #666;
+  font-size: var(--font-size-xs);
+  margin-bottom: 0.75rem;
+}
+
+.theory-summary {
+  margin-bottom: 1rem;
+}
+
+/* Discussion section */
+.discussion-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.comment-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.comment-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.comment-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-content {
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-base);
+  padding: 1rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.comment-header {
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size-sm);
+}
+
+.comment-author {
+  font-weight: bold;
+  color: var(--fanarc-primary-color);
+}
+
+.comment-date {
+  color: #666;
+}
+
+.comment-text {
+  margin-bottom: 0.75rem;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.reply-button,
+.like-button {
+  background: none;
+  border: none;
+  color: var(--fanarc-secondary-color);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  padding: 0;
+}
+
+.reply-button:hover,
+.like-button:hover {
+  text-decoration: underline;
+}
+
+.add-comment {
+  margin-top: 1.5rem;
+}
+
+.comment-input {
+  width: 100%;
+  min-height: 6rem;
+  padding: 0.75rem;
+  border: var(--border-width-thin) solid #ddd;
+  border-radius: var(--border-radius-base);
+  margin-bottom: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.post-comment-button {
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-base);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-base);
+}
+
+.post-comment-button:hover {
+  background-color: #1a0f6b;
+}
+
+/* Quick info sidebar */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: var(--border-width-thin) solid rgba(0, 0, 0, 0.1);
+}
+
+.info-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Related content sidebar */
+.related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.related-list li {
+  margin-bottom: 0.75rem;
+}
+
+.related-list a {
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+}
+
+.related-list a:hover {
+  text-decoration: underline;
+}
+
+/* Tags sidebar */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba(169, 151, 223, 0.2);
+  color: var(--fanarc-primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: background-color var(--transition-base);
+}
+
+.tag:hover {
+  background-color: rgba(169, 151, 223, 0.4);
+}
+
+/* Page actions sidebar */
+.action-button {
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: var(--border-width-thin) solid #ddd;
+  border-radius: var(--border-radius-base);
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  text-align: left;
+}
+
+.action-button:hover {
+  background-color: #f5f5f5;
+}
+
+.action-button:last-child {
+  margin-bottom: 0;
+}
+
+/* Media queries */
+@media (max-width: var(--breakpoint-md)) {
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-sidebar {
+    order: -1;
+  }
+  
+  .sidebar-block {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .content-title {
+    font-size: var(--font-size-xxl);
+  }
+  
+  .content-tabs ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .content-tabs a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .character-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  
+  .episode-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .episode-number {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: var(--breakpoint-xs)) {
+  .content-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .content-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .content-block {
+    padding: 1rem;
+  }
+  
+  .comment-item {
+    flex-direction: column;
+  }
+  
+  .comment-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
