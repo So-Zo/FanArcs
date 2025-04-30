@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main CSS framework -->
+  <link rel="stylesheet" href="../../css/main.css" />
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="../../css/pages/anime-style.css" />
+  <title>Anime Directory | FanArcs</title>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+  <header role="banner">
+    <div class="header-image">
+      <img src="../../images/anime/AnimeHeader.jpg" alt="Anime Directory" />
+    </div>
+
+    <input
+      type="search"
+      id="site-search-bar"
+      aria-label="Search Anime"
+      placeholder="Search for anime, characters, etc."
+    />
+  </header>
+
+  <main id="main-content" role="main">
+    <section class="directory-intro">
+      <h1>Anime Directory</h1>
+      <p>Browse our community-created collection of anime. Each page contains information, character listings, and fan-created content. Don't see your favorite anime? Add it yourself!</p>
+
+      <div class="directory-navigation">
+        <a href="#popular-series" class="directory-nav-button">Community Favorites</a>
+        <a href="#genres" class="directory-nav-button">Browse by Genre</a>
+        <a href="#alphabetical" class="directory-nav-button">Alphabetical List</a>
+        <a href="../contribute-page.html#create-content" class="directory-nav-button highlight-button">Add New Anime</a>
+      </div>
+    </section>
+
+    <!-- Community Favorites Section -->
+    <section id="popular-series" class="directory-section">
+      <h2>Community Favorites</h2>
+      <p>These anime series are highly rated and recommended by the FanArcs community.</p>
+
+      <!-- Show Grid -->
+      <div class="show-grid">
+        <!-- EXAMPLE CARD 1 - Copy this structure to add more -->
+        <div class="show-card">
+          <div class="show-image">
+            <img src="../../images/anime/shows/naruto.jpg" alt="Naruto" />
+          </div>
+          <div class="show-info">
+            <h3>Naruto</h3>
+            <p class="show-genres">Action, Adventure, Fantasy</p>
+            <p class="show-description">Follow Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.</p>
+            <div class="show-links">
+              <a href="naruto.html" class="default-links">View Page →</a>
+              <a href="../community-page.html#naruto" class="default-links">Fan Content →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXAMPLE CARD 2 - Copy this structure to add more -->
+        <div class="show-card">
+          <div class="show-image">
+            <img src="../../images/anime/shows/one-piece.jpg" alt="One Piece" />
+          </div>
+          <div class="show-info">
+            <h3>One Piece</h3>
+            <p class="show-genres">Action, Adventure, Comedy, Fantasy</p>
+            <p class="show-description">Monkey D. Luffy and his pirate crew explore the Grand Line in search of the world's ultimate treasure known as "One Piece" to become the next Pirate King.</p>
+            <div class="show-links">
+              <a href="one-piece.html" class="default-links">View Page →</a>
+              <a href="../community-page.html#one-piece" class="default-links">Fan Content →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXAMPLE CARD 3 - Copy this structure to add more -->
+        <div class="show-card">
+          <div class="show-image">
+            <img src="../../images/anime/shows/attack-on-titan.jpg" alt="Attack on Titan" />
+          </div>
+          <div class="show-info">
+            <h3>Attack on Titan</h3>
+            <p class="show-genres">Action, Drama, Fantasy, Horror</p>
+            <p class="show-description">In a world where humanity lives within cities surrounded by enormous walls due to the Titans, gigantic humanoid creatures who devour humans seemingly without reason.</p>
+            <div class="show-links">
+              <a href="attack-on-titan.html" class="default-links">View Page →</a>
+              <a href="../community-page.html#attack-on-titan" class="default-links">Fan Content →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADD MORE CARDS HERE BY COPYING THE STRUCTURE ABOVE -->
+      </div>
+    </section>
+
+    <!-- Genres Section -->
+    <section id="genres" class="directory-section">
+      <h2>Browse by Genre</h2>
+      <p>Find anime based on your preferred genres and themes.</p>
+
+      <div class="genre-directory">
+        <!-- EXAMPLE GENRE 1 - Copy this structure to add more genres -->
+        <div class="genre-category">
+          <h3>Action & Adventure</h3>
+          <ul class="show-list">
+            <li><a href="naruto.html" class="default-links">Naruto</a></li>
+            <li><a href="one-piece.html" class="default-links">One Piece</a></li>
+            <li><a href="fullmetal-alchemist.html" class="default-links">Fullmetal Alchemist: Brotherhood</a></li>
+            <li><a href="my-hero-academia.html" class="default-links">My Hero Academia</a></li>
+            <!-- Add more shows in this genre as needed -->
+          </ul>
+        </div>
+
+        <!-- EXAMPLE GENRE 2 - Copy this structure to add more genres -->
+        <div class="genre-category">
+          <h3>Romance & Slice of Life</h3>
+          <ul class="show-list">
+            <li><a href="your-lie-in-april.html" class="default-links">Your Lie in April</a></li>
+            <li><a href="toradora.html" class="default-links">Toradora!</a></li>
+            <li><a href="kimi-no-na-wa.html" class="default-links">Your Name</a></li>
+            <li><a href="horimiya.html" class="default-links">Horimiya</a></li>
+            <!-- Add more shows in this genre as needed -->
+          </ul>
+        </div>
+
+        <!-- EXAMPLE GENRE 3 - Copy this structure to add more genres -->
+        <div class="genre-category">
+          <h3>Fantasy & Supernatural</h3>
+          <ul class="show-list">
+            <li><a href="demon-slayer.html" class="default-links">Demon Slayer</a></li>
+            <li><a href="jujutsu-kaisen.html" class="default-links">Jujutsu Kaisen</a></li>
+            <li><a href="spirited-away.html" class="default-links">Spirited Away</a></li>
+            <li><a href="mushoku-tensei.html" class="default-links">Mushoku Tensei</a></li>
+            <!-- Add more shows in this genre as needed -->
+          </ul>
+        </div>
+
+        <!-- ADD MORE GENRE CATEGORIES HERE BY COPYING THE STRUCTURE ABOVE -->
+      </div>
+    </section>
+
+    <!-- Alphabetical Section -->
+    <section id="alphabetical" class="directory-section">
+      <h2>Alphabetical List</h2>
+      <p>Browse all anime in our community database alphabetically.</p>
+
+      <div class="alphabet-navigation">
+        <!-- Alphabet navigation -->
+        <a href="#a" class="alphabet-link">A</a>
+        <a href="#b" class="alphabet-link">B</a>
+        <a href="#c" class="alphabet-link">C</a>
+        <a href="#d" class="alphabet-link">D</a>
+        <a href="#e" class="alphabet-link">E</a>
+        <a href="#f" class="alphabet-link">F</a>
+        <a href="#g" class="alphabet-link">G</a>
+        <a href="#h" class="alphabet-link">H</a>
+        <a href="#i" class="alphabet-link">I</a>
+        <a href="#j" class="alphabet-link">J</a>
+        <a href="#k" class="alphabet-link">K</a>
+        <a href="#l" class="alphabet-link">L</a>
+        <a href="#m" class="alphabet-link">M</a>
+        <a href="#n" class="alphabet-link">N</a>
+        <a href="#o" class="alphabet-link">O</a>
+        <a href="#p" class="alphabet-link">P</a>
+        <a href="#q" class="alphabet-link">Q</a>
+        <a href="#r" class="alphabet-link">R</a>
+        <a href="#s" class="alphabet-link">S</a>
+        <a href="#t" class="alphabet-link">T</a>
+        <a href="#u" class="alphabet-link">U</a>
+        <a href="#v" class="alphabet-link">V</a>
+        <a href="#w" class="alphabet-link">W</a>
+        <a href="#x" class="alphabet-link">X</a>
+        <a href="#y" class="alphabet-link">Y</a>
+        <a href="#z" class="alphabet-link">Z</a>
+      </div>
+
+      <div class="alphabetical-listing">
+        <!-- EXAMPLE LETTER SECTION A - Copy this structure for other letters -->
+        <div id="a" class="letter-section">
+          <h3>A</h3>
+          <ul class="show-list-alpha">
+            <li><a href="attack-on-titan.html" class="default-links">Attack on Titan</a></li>
+            <li><a href="assassination-classroom.html" class="default-links">Assassination Classroom</a></li>
+            <!-- Add more shows starting with this letter -->
+          </ul>
+        </div>
+
+        <!-- EXAMPLE LETTER SECTION B - Copy this structure for other letters -->
+        <div id="b" class="letter-section">
+          <h3>B</h3>
+          <ul class="show-list-alpha">
+            <li><a href="bleach.html" class="default-links">Bleach</a></li>
+            <li><a href="black-clover.html" class="default-links">Black Clover</a></li>
+            <!-- Add more shows starting with this letter -->
+          </ul>
+        </div>
+
+        <!-- EXAMPLE LETTER SECTION C - Copy this structure for other letters -->
+        <div id="c" class="letter-section">
+          <h3>C</h3>
+          <ul class="show-list-alpha">
+            <li><a href="cowboy-bebop.html" class="default-links">Cowboy Bebop</a></li>
+            <li><a href="code-geass.html" class="default-links">Code Geass</a></li>
+            <!-- Add more shows starting with this letter -->
+          </ul>
+        </div>
+
+        <!-- ADD MORE LETTER SECTIONS HERE BY COPYING THE STRUCTURE ABOVE -->
+        <!-- Include sections for all letters A-Z -->
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="directory-help">
+      <h2>Can't Find What You're Looking For?</h2>
+      <div class="help-options">
+        <div class="help-option">
+          <h3>Use Search</h3>
+          <p>Try searching for specific anime or characters using the search bar at the top of the page.</p>
+        </div>
+
+        <div class="help-option">
+          <h3>Add It Yourself!</h3>
+          <p>Don't see an anime that should be included? Add it to our community database yourself!</p>
+          <a href="../contribute-page.html#create-content" class="default-links">Create New Anime Page →</a>
+        </div>
+
+        <div class="help-option">
+          <h3>Get Help</h3>
+          <p>Need assistance creating content or finding something specific? Our community is here to help.</p>
+          <a href="../community-page.html#help" class="default-links">Community Help →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-about">
+        <img src="../../images/logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+        <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="Discord">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p><span>📧</span> contact@fanarcs.com</p>
+        <p><span>📱</span> (555) 123-4567</p>
+        <p><span>🏢</span> 123 Fan Street, Anime City</p>
+
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FanArcs. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-navigation">
+    <a href="../index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+    <a href="../community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+    <a href="../profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
+    <div class="nav-search-popup" onclick="toggleSearchPopup()">
+      <span>🔍</span>
+    </div>
+
+    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </div>
+
+  <!-- The navigation menu that will show/hide -->
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="../index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
+      <!-- Categories dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+        >
+          Categories <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="categories-dropdown">
+          <li><a href="../anime/anime-page.html">Anime 🌸</a></li>
+          <hr />
+          <li><a href="../comics/comics-page.html">Comics 💥</a></li>
+          <hr />
+          <li><a href="../manga/manga-page.html">Manga 📖</a></li>
+          <hr />
+          <li><a href="../tv/tv-page.html">Television 📺</a></li>
+          <hr />
+          <li><a href="../metaverse/metaverse-page.html">Metaverse 🎮</a></li>
+          <hr />
+          <li>
+            <a href="../worlds-universes/worlds-universes-page.html">Worlds & Universes 🌌</a>
+          </li>
+          <hr />
+          <li>
+            <a href="../power-room.html">Power Room ⚔️</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- FanArcs Info dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="info-dropdown"
+        >
+          FanArcs Info <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="info-dropdown">
+          <li><a href="../about-page.html">About 🔎</a></li>
+          <li><a href="../contribute-page.html">Help FanArcs ⁉️</a></li>
+          <li><a href="../community-page.html">Community 👥</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- JavaScript for menu interactions only -->
+  <script src="../../js/menu-interaction.js"></script>
+</body>
+</html>

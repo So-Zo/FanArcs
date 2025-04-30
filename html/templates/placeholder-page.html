@@ -3,98 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Page Not Created Yet | Fan Arc</title>
-  
-  <link rel="stylesheet" href="../../css/universal-style.css" />
-  <link rel="stylesheet" href="../../css/section-buttons.css" />
-  <link rel="stylesheet" href="../../css/section-content.css" />
-  <link rel="stylesheet" href="../../css/search-bar.css" />
-  <link rel="stylesheet" href="../../css/navigation.css" />
-  <link rel="stylesheet" href="../../css/root-variables.css" />
-  <link rel="stylesheet" href="../../css/footer-style.css" />
-  <link rel="stylesheet" href="../../css/accessibility.css" />
-  
-  <style>
-    .placeholder-container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: white;
-      border-radius: var(--border-radius-large);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    
-    .placeholder-icon {
-      font-size: 5rem;
-      margin-bottom: 1rem;
-      color: var(--fanarc-secondary-color, #A997DF);
-    }
-    
-    .placeholder-title {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--fanarc-primary-color, #0F084B);
-    }
-    
-    .placeholder-message {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #666;
-      line-height: 1.6;
-    }
-    
-    .create-page-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: var(--fanarc-primary-color, #0F084B);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--border-radius-base);
-      font-size: 1.1rem;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .create-page-button:hover {
-      background-color: #1a0f6b;
-    }
-    
-    .placeholder-info {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: #f9f9f9;
-      border-radius: var(--border-radius-base);
-      text-align: left;
-    }
-    
-    .placeholder-info h3 {
-      margin-top: 0;
-      color: var(--fanarc-primary-color, #0F084B);
-    }
-    
-    .placeholder-info ul {
-      padding-left: 1.5rem;
-    }
-    
-    .placeholder-info li {
-      margin-bottom: 0.5rem;
-    }
-    
-    .back-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: var(--fanarc-secondary-color, #A997DF);
-      text-decoration: none;
-    }
-    
-    .back-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+
+  <title>Page Not Created Yet | FanArcs</title>
+
+  <!-- Main CSS framework -->
+  <link rel="stylesheet" href="../../css/main.css" />
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="../../css/pages/placeholder-style.css" />
+
+
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -102,7 +20,7 @@
     <div class="image-header">
       <img src="../../placeholder-header.jpg" alt="Placeholder Header" />
     </div>
-    
+
     <input
       type="search"
       id="site-search-bar"
@@ -110,7 +28,7 @@
       placeholder="Search for Characters, Universes, etc."
     />
   </header>
-  
+
   <main id="main-content" role="main">
     <div class="placeholder-container">
       <div class="placeholder-icon">📝</div>
@@ -118,9 +36,9 @@
       <p class="placeholder-message">
         The page you're looking for hasn't been created yet. Would you like to be the first to contribute to this topic?
       </p>
-      
+
       <button class="create-page-button" id="create-page-button">Create This Page</button>
-      
+
       <div class="placeholder-info">
         <h3>Page Information</h3>
         <ul>
@@ -128,18 +46,18 @@
           <li><strong>Type:</strong> <span id="page-type">[Page Type]</span></li>
           <li><strong>Category:</strong> <span id="page-category">[Category]</span></li>
         </ul>
-        
+
         <h3>References</h3>
         <p>This page has been referenced from:</p>
         <ul id="reference-list">
           <li><a href="#" id="reference-link">[Referencing Page]</a></li>
         </ul>
       </div>
-      
+
       <a href="javascript:history.back()" class="back-link">← Go Back</a>
     </div>
   </main>
-  
+
   <!-- Footer Section -->
   <footer class="site-footer">
     <div class="footer-container">
@@ -153,7 +71,7 @@
           <a href="#" class="social-icon" aria-label="Discord">💬</a>
         </div>
       </div>
-      
+
       <div class="footer-section footer-links-section">
         <h3>Quick Links</h3>
         <ul class="footer-links">
@@ -165,7 +83,7 @@
           <li><a href="../../power-room.html">Power Room</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-section footer-links-section">
         <h3>Community</h3>
         <ul class="footer-links">
@@ -177,13 +95,13 @@
           <li><a href="../../contribute-page.html">Contribute</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-section footer-contact">
         <h3>Contact Us</h3>
         <p><span>📧</span> contact@fanarc.com</p>
         <p><span>📱</span> (555) 123-4567</p>
         <p><span>🏢</span> 123 Fan Street, Anime City</p>
-        
+
         <h3>Newsletter</h3>
         <form class="newsletter-form">
           <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
@@ -191,7 +109,7 @@
         </form>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
       <p>&copy; 2025 Fan Arc. All rights reserved.</p>
       <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
@@ -267,17 +185,17 @@
       const pageCategory = urlParams.get('category') || '[Category]';
       const referenceTitle = urlParams.get('reference') || '[Referencing Page]';
       const referenceUrl = urlParams.get('referenceUrl') || '#';
-      
+
       // Update page elements
       document.title = `${pageTitle} (Not Created Yet) | Fan Arc`;
       document.getElementById('page-title').textContent = pageTitle;
       document.getElementById('page-type').textContent = pageType;
       document.getElementById('page-category').textContent = pageCategory;
-      
+
       const referenceLink = document.getElementById('reference-link');
       referenceLink.textContent = referenceTitle;
       referenceLink.href = referenceUrl;
-      
+
       // Create page button functionality
       document.getElementById('create-page-button').addEventListener('click', function() {
         // In a real application, this would redirect to a page creation form

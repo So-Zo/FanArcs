@@ -1,0 +1,98 @@
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section footer-about">
+      <img src="../images/logo-image.jpg" alt="Fan Arc Logo" class="footer-logo">
+      <p>Fan Arc is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+      <div class="social-links">
+        <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+        <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+        <a href="#" class="social-icon" aria-label="Discord">💬</a>
+      </div>
+    </div>
+
+    <div class="footer-section footer-contact">
+      <h3>Contact Us</h3>
+      <p><span>📧</span> contact@fanarc.com</p>
+      <p><span>📱</span> (555) 123-4567</p>
+      <p><span>🏢</span> 123 Fan Street, Anime City</p>
+
+      <h3>Newsletter</h3>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+  </div>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-navigation">
+    <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+    <a href="profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
+    <div class="nav-search-popup" onclick="toggleSearchPopup()">
+      <span>🔍</span>
+    </div>
+
+    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </div>
+
+  <!-- The navigation menu that will show/hide -->
+  <nav class="main-navigation">
+    <ul>
+      <!-- Categories dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+        >
+          Categories <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="categories-dropdown">
+          <li><a href="anime-page.html">Anime 🌸</a></li>
+          <hr />
+          <li><a href="comics-page.html">Comics 💥</a></li>
+          <hr />
+          <li><a href="manga-page.html">Manga 📖</a></li>
+          <hr />
+          <li><a href="tv-page.html">Television 📺</a></li>
+          <hr />
+          <li><a href="metaverse-page.html">Metaverse 🎮</a></li>
+          <hr />
+          <li>
+            <a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- FanArcs Info dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="info-dropdown"
+        >
+          Fan Arc Info <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="info-dropdown">
+          <li><a href="about-page.html">About 🔎</a></li>
+          <li><a href="contribute-page.html">Help Fan Arc ⁉️</a></li>
+          <li><a href="community-page.html">Community 👥</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<!-- JavaScript for interactions -->
+<script src="../js/menu-interaction.js"></script>
