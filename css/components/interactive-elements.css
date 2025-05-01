@@ -1,0 +1,204 @@
+/*
+ * Interactive Elements Component for FanArcs
+ * This file contains reusable styles for interactive UI elements
+ */
+
+/* Character controls */
+.character-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.prev-character,
+.next-character {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.prev-character:hover,
+.next-character:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* VS divider */
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.vs-divider span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0b0b0b;
+  text-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.5);
+}
+
+/* Character search */
+.character-search {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.character-search-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem 0 0 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-left: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Character filter */
+.character-filter {
+  margin-bottom: 1rem;
+}
+
+.universe-filter {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.universe-filter option {
+  background-color: #333;
+  color: var(--text-primary);
+}
+
+/* Alternate version button */
+.alt-versions-toggle {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+
+.alt-versions-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.alt-versions-toggle.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Comparison Tabs */
+.comparison-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.tab-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-small);
+  color: var(--text-primary);
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.tab-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-button.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* Comparison Panels */
+.comparison-panel {
+  display: none;
+}
+
+.comparison-panel.active {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vs-divider {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    width: 100%;
+    border-top: 0.125rem solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0.125rem solid rgba(255, 255, 255, 0.3);
+  }
+
+  .comparison-tabs {
+    justify-content: center;
+  }
+
+  .tab-button {
+    flex: 1;
+    min-width: 7.5rem;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-search {
+    flex-direction: column;
+  }
+
+  .character-search-input {
+    border-radius: var(--border-radius-small);
+    margin-bottom: 0.5rem;
+  }
+
+  .search-button {
+    border-radius: var(--border-radius-small);
+    border-left: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.25rem;
+  }
+}
