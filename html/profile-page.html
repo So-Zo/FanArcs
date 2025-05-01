@@ -13,6 +13,74 @@
 </head>
 <body>
     <div class="profile-page-wrapper">
+        <!-- Post Creation Modal -->
+        <div id="create-post-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Create New Post</h2>
+                    <button class="modal-close" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="post-creation-form" class="form-container">
+                        <div class="form-group">
+                            <label for="post-title" class="form-label">Post Title</label>
+                            <input type="text" id="post-title" class="form-input" placeholder="Give your post a title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post-category" class="form-label">Category</label>
+                            <select id="post-category" class="form-select" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="anime">Anime</option>
+                                <option value="manga">Manga</option>
+                                <option value="comics">Comics</option>
+                                <option value="metaverse">Metaverse</option>
+                                <option value="worlds">Worlds & Universes</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post-content" class="form-label">Post Content</label>
+                            <textarea id="post-content" class="form-textarea" rows="5" placeholder="Share your thoughts, theories, or creations..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="post-media" class="form-label">Add Media (Optional)</label>
+                            <div class="media-upload-container">
+                                <input type="file" id="post-media" class="media-upload-input" accept="image/*">
+                                <label for="post-media" class="media-upload-label">
+                                    <span class="media-upload-icon">📷</span>
+                                    <span class="media-upload-text">Click to upload image</span>
+                                </label>
+                                <div id="media-preview" class="media-preview"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Post Visibility</label>
+                            <div class="form-radio">
+                                <input type="radio" id="visibility-public" name="post-visibility" value="public" checked>
+                                <label for="visibility-public">Public - Anyone can see this post</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="visibility-followers" name="post-visibility" value="followers">
+                                <label for="visibility-followers">Followers Only - Only your followers can see this post</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="visibility-private" name="post-visibility" value="private">
+                                <label for="visibility-private">Private - Only you can see this post</label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline cancel-post-btn">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Create Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <header class="profile-header">
             <div class="profile-header-content">
                 <div class="profile-image-section">
@@ -95,31 +163,209 @@
 
                 <div id="settings" class="profile-content-section">
                     <h2>Account Settings</h2>
+
+                    <!-- Account Information -->
                     <div class="settings-group">
-                        <h3>Site Theme</h3>
-                        <ul class="theme-options-list">
+                        <h3>Account Information</h3>
+                        <div class="form-group">
+                            <label for="display-name">Display Name</label>
+                            <input type="text" id="display-name" name="display-name" value="User" />
+                        </div>
+                        <div class="form-group">
+                            <label for="user-email">Email Address</label>
+                            <input type="email" id="user-email" name="user-email" value="user@example.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="user-bio">Bio</label>
+                            <textarea id="user-bio" name="user-bio" rows="3" class="settings-textarea" placeholder="Tell us about yourself..."></textarea>
+                            <p class="setting-description">Your bio appears on your public profile.</p>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="secondary-btn">Change Password</button>
+                        </div>
+                    </div>
+
+                    <!-- Display Preferences -->
+                    <div class="settings-group">
+                        <h3>Display Preferences</h3>
+                        <div class="settings-subgroup">
+                            <h4>Site Theme</h4>
+                            <ul class="theme-options-list">
+                                <li>
+                                    <label for="light-theme">Light Theme</label>
+                                    <input type="radio" id="light-theme" name="theme" value="light" />
+                                </li>
+                                <li>
+                                    <label for="dark-theme">Dark Theme</label>
+                                    <input type="radio" id="dark-theme" name="theme" value="dark" />
+                                </li>
+                                <li>
+                                    <label for="system-theme">Use System Preference</label>
+                                    <input type="radio" id="system-theme" name="theme" value="system" />
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="settings-subgroup">
+                            <h4>Section Content Theme</h4>
+                            <div class="dropdown-container">
+                                <label for="section-content-theme">Choose how section content appears:</label>
+                                <select id="section-content-theme" name="section-content-theme" class="settings-dropdown">
+                                    <option value="light">Light Background</option>
+                                    <option value="dark">Dark Background</option>
+                                    <option value="auto">Match Site Theme</option>
+                                </select>
+                            </div>
+                            <p class="setting-description">This affects the background color of content sections across the site.</p>
+                        </div>
+
+                        <div class="settings-subgroup">
+                            <h4>Content Layout</h4>
+                            <div class="dropdown-container">
+                                <label for="content-layout">Default content view:</label>
+                                <select id="content-layout" name="content-layout" class="settings-dropdown">
+                                    <option value="grid">Grid View</option>
+                                    <option value="list">List View</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Settings -->
+                    <div class="settings-group">
+                        <h3>Privacy Settings</h3>
+                        <ul class="settings-toggle-list">
                             <li>
-                                <label for="light-theme">Light Theme</label>
-                                <input type="radio" id="light-theme" name="theme" value="light" />
+                                <span class="setting-label">Show my profile to everyone</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="public-profile" name="public-profile" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
                             </li>
                             <li>
-                                <label for="dark-theme">Dark Theme</label>
-                                <input type="radio" id="dark-theme" name="theme" value="dark" />
+                                <span class="setting-label">Show my online status</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="show-online-status" name="show-online-status" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="setting-label">Allow others to tag me in posts</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="allow-tagging" name="allow-tagging" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
                             </li>
                         </ul>
                     </div>
 
+                    <!-- Notification Preferences -->
                     <div class="settings-group">
-                        <h3>Section Content Theme</h3>
-                        <div class="dropdown-container">
-                            <label for="section-content-theme">Choose how section content appears:</label>
-                            <select id="section-content-theme" name="section-content-theme" class="settings-dropdown">
-                                <option value="light">Light Background</option>
-                                <option value="dark">Dark Background</option>
-                                <option value="auto">Match Site Theme</option>
+                        <h3>Notification Preferences</h3>
+                        <ul class="settings-toggle-list">
+                            <li>
+                                <span class="setting-label">Email notifications</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="email-notifications" name="email-notifications" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="setting-label">Comment replies</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="comment-notifications" name="comment-notifications" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="setting-label">New followers</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="follower-notifications" name="follower-notifications" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="setting-label">Content updates</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="content-notifications" name="content-notifications" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Accessibility Options -->
+                    <div class="settings-group">
+                        <h3>Accessibility Options</h3>
+                        <div class="form-group">
+                            <label for="font-size">Text Size</label>
+                            <select id="font-size" name="font-size" class="settings-dropdown">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                                <option value="x-large">Extra Large</option>
                             </select>
                         </div>
-                        <p class="setting-description">This affects the background color of content sections across the site.</p>
+                        <ul class="settings-toggle-list">
+                            <li>
+                                <span class="setting-label">Reduce animations</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="reduce-animations" name="reduce-animations" />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="setting-label">High contrast mode</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="high-contrast" name="high-contrast" />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Language Settings -->
+                    <div class="settings-group">
+                        <h3>Language Settings</h3>
+                        <div class="form-group">
+                            <label for="interface-language">Interface Language</label>
+                            <select id="interface-language" name="interface-language" class="settings-dropdown">
+                                <option value="en" selected>English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="ja">日本語</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Connected Accounts -->
+                    <div class="settings-group">
+                        <h3>Connected Accounts</h3>
+                        <div class="connected-account">
+                            <div class="connected-account-info">
+                                <span class="connected-account-icon">🔗</span>
+                                <span class="connected-account-name">Google</span>
+                                <span class="connected-account-status">Not Connected</span>
+                            </div>
+                            <button type="button" class="connect-btn">Connect</button>
+                        </div>
+                        <div class="connected-account">
+                            <div class="connected-account-info">
+                                <span class="connected-account-icon">🔗</span>
+                                <span class="connected-account-name">Discord</span>
+                                <span class="connected-account-status">Not Connected</span>
+                            </div>
+                            <button type="button" class="connect-btn">Connect</button>
+                        </div>
+                        <div class="connected-account">
+                            <div class="connected-account-info">
+                                <span class="connected-account-icon">🔗</span>
+                                <span class="connected-account-name">Twitter</span>
+                                <span class="connected-account-status">Not Connected</span>
+                            </div>
+                            <button type="button" class="connect-btn">Connect</button>
+                        </div>
                     </div>
 
                     <button type="submit" class="save-settings-btn">Save Changes</button>

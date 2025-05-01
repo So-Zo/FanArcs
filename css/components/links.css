@@ -3,9 +3,17 @@
  * This file contains styling for links across the website
  */
 
+/* Variables specific to links */
+:root {
+  --non-existent-link-color: #FF6B6B;
+  --non-existent-link-hover-color: #FF8E8E;
+  --non-existent-link-border: #FF6B6B;
+  --non-existent-link-icon-color: #FF6B6B;
+}
+
 /* Default link styling */
 .default-links {
-  color: var(--fanarc-secondary-color, #A997DF);
+  color: #4a2bfd;
   text-decoration: none;
   position: relative;
   transition: color var(--transition-base);
@@ -22,7 +30,7 @@
 
 /* Hover effect for links */
 .default-links:hover {
-  color: var(--fanarc-secondary-color);
+  color: #a107fa;
 }
 
 /* Hover effect for arrow - slight movement */
@@ -38,7 +46,7 @@
   left: 0;
   width: 0;
   height: 0.125rem;
-  background-color: var(--fanarc-secondary-color);
+  background-color: #4B3F72;
   transition: width var(--transition-base);
 }
 
@@ -94,9 +102,78 @@
   color: white;
 }
 
+/* Non-existent page links */
+.non-existent-link {
+  color: var(--non-existent-link-color);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-base);
+  display: inline-block;
+  border-bottom: 1px dashed var(--non-existent-link-border);
+  cursor: pointer;
+}
+
+/* Add plus symbol after non-existent links */
+.non-existent-link::after {
+  content: " +";
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-weight: bold;
+  transition: transform var(--transition-base);
+}
+
+/* Hover effect for non-existent links */
+.non-existent-link:hover {
+  color: var(--non-existent-link-hover-color);
+}
+
+/* Hover effect for plus symbol - slight movement */
+.non-existent-link:hover::after {
+  transform: scale(1.2);
+}
+
+/* Tooltip for non-existent links */
+.non-existent-link::before {
+  content: "Create this page";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-xs);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+  white-space: nowrap;
+  z-index: var(--z-index-tooltip);
+  pointer-events: none;
+}
+
+/* Show tooltip on hover */
+.non-existent-link:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Focus state for accessibility */
+.non-existent-link:focus {
+  outline: 0.125rem dotted var(--non-existent-link-color);
+  outline-offset: 0.125rem;
+}
+
 /* Media queries for responsive design */
 @media (max-width: var(--breakpoint-sm)) {
   .default-links {
     padding: 0.25rem 0;
+  }
+
+  /* Adjust tooltip position for small screens */
+  .non-existent-link::before {
+    bottom: auto;
+    top: 100%;
+    margin-top: 0.25rem;
   }
 }

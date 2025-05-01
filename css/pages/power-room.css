@@ -1,10 +1,10 @@
 /*
  * Power Room Page Styles for Fan Arc
  * This file contains styles specific to the Power Room page
+ * Most component styles have been moved to reusable components
  */
 
 /* Page background */
-/* Power Room specific styles */
 body {
   background: radial-gradient(
       circle at 50% 30%,
@@ -20,24 +20,25 @@ body {
     );
 }
 
+/* Power Room intro section */
 .power-room-intro {
   text-align: center;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
   background: var(--bg-color);
   border-radius: var(--border-radius-large);
 }
 
 .power-room-intro h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-xxxl);
+  margin-bottom: var(--spacing-md);
   color: #0d0d0d;
   text-shadow: 0 0 0.625rem rgba(240, 31, 146, 0.571);
   justify-content: center;
 }
 
 .power-room-intro p {
-  font-size: 1.1rem;
+  font-size: var(--font-size-md);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -45,321 +46,140 @@ body {
 /* Power comparison container */
 .power-comparison-container {
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xxl);
+}
+
+/* Character Selection Area */
+.character-selection-area {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  margin-bottom: 3rem;
+  gap: var(--spacing-md);
 }
 
-/* Character panels */
-.character-panel {
-  flex: 1;
-  min-width: 18.75rem;
-  background-color: rgba(20, 20, 20, 0.7);
-  border-radius: var(--border-radius-large);
-  padding: 1.5rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.character-image {
-  width: 100%;
-  height: 18.75rem;
-  overflow: hidden;
-  border-radius: var(--border-radius-base);
-  margin-bottom: 1rem;
-}
-
-.character-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.character-info h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #f8f8f8;
-  justify-content: center;
-}
-
-.character-info h3 {
-  font-size: 1.2rem;
-  color: #cccccc;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  justify-content: center;
-}
-
-/* Stats styling */
-.character-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.stat-label {
-  width: 6.25rem;
-  font-weight: bold;
-  text-align: right;
-}
-
-.stat-bar {
-  flex: 1;
-  height: 0.75rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0.375rem;
-  overflow: hidden;
-}
-
-.stat-fill {
-  height: 100%;
-  background: linear-gradient(to right, #f8d210, #ff5e00);
-  border-radius: 0.375rem;
-}
-
-.left-character .stat-fill {
-  background: linear-gradient(to right, #00b4db, #0083b0);
-}
-
-.right-character .stat-fill {
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
-}
-
-.stat-value {
-  width: 1.875rem;
-  text-align: right;
-}
-
-/* Character controls */
-.character-controls {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.left-controls {
-  justify-content: flex-start;
-}
-
-.right-controls {
-  justify-content: flex-end;
-}
-
-.prev-character,
-.next-character {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.prev-character:hover,
-.next-character:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-/* VS divider */
-.vs-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-}
-
-.vs-divider span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #0b0b0b;
-  text-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.5);
-}
-
-/* Character Selection Styles */
+/* Character Selection */
 .character-selection {
   margin-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 1.5rem;
 }
 
-.character-search {
+/* Wiki Controls Styling */
+.wiki-controls-container {
   display: flex;
+  justify-content: flex-end;
   margin-bottom: 1rem;
-}
-
-.character-search-input {
-  flex: 1;
-  padding: 0.75rem;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.25rem 0 0 0.25rem;
+  padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #f8f8f8;
-  font-size: 1rem;
+  border-radius: var(--border-radius-small);
 }
 
-.search-button {
+/* Panel Header Styling */
+.comparison-panel-header {
   padding: 0.75rem 1rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-  border-left: none;
-  border-radius: 0 0.25rem 0.25rem 0;
-  color: #f8f8f8;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+  margin-bottom: 0;
 }
 
-.search-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.character-filter {
-  margin-bottom: 1rem;
-}
-
-.universe-filter {
-  width: 100%;
-  padding: 0.75rem;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #f8f8f8;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.universe-filter option {
-  background-color: #333;
-  color: #f8f8f8;
-}
-
-.character-list-container {
-  max-height: 12.5rem;
-  overflow-y: auto;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-  border-radius: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin-bottom: 1rem;
-}
-
-.character-list {
-  list-style: none;
-  padding: 0;
+.comparison-panel-header h3 {
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
 
-.character-list li {
-  padding: 0.75rem 1rem;
-  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
-  color: #f8f8f8;
-  cursor: pointer;
-  transition: background-color 0.3s;
+/* Section Edit Controls */
+.section-edit-control {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+  margin-left: 0.5rem;
 }
 
-.character-list li:last-child {
-  border-bottom: none;
+.section-edit-control:hover {
+  opacity: 1;
+  color: white;
 }
 
-.character-list li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+/* Pencil icon for section edit */
+.section-edit-control::before {
+  content: "✏️";
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
 }
 
-.character-list li.selected {
-  background-color: rgba(255, 255, 255, 0.3);
-  font-weight: bold;
+/* Contributor Footer */
+.contributor-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius-small);
 }
 
-.character-list .character-item {
+.contributor-info {
   display: flex;
   align-items: center;
 }
 
-.character-list .character-item img {
-  width: 1.875rem;
-  height: 1.875rem;
+.contributor-avatar {
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
-  margin-right: 0.75rem;
-  object-fit: cover;
+  margin-right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.character-list .character-item .character-details {
-  flex: 1;
+.page-history-link {
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
 }
 
-.character-list .character-item .character-name {
-  font-weight: bold;
-  margin-bottom: 0.25rem;
+.page-history-link:hover {
+  text-decoration: underline;
 }
 
-.character-list .character-item .character-universe {
-  font-size: 0.8rem;
-  opacity: 0.8;
+/* Editable content styling */
+.editable-content.editing {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  min-height: 100px;
+  border-radius: var(--border-radius-small);
 }
 
-/* Responsive design */
-@media (max-width: var(--breakpoint-sm)) {
-  .power-comparison-container {
-    flex-direction: column;
-  }
-
-  .character-panel {
-    width: 100%;
-  }
-
-  .vs-divider {
-    margin: 1rem 0;
-    padding: 1rem 0;
-    width: 100%;
-    border-top: 0.125rem solid rgba(255, 255, 255, 0.3);
-    border-bottom: 0.125rem solid rgba(255, 255, 255, 0.3);
-  }
-
-  .left-controls,
-  .right-controls {
-    justify-content: center;
-  }
-
-  .character-list-container {
-    max-height: 9.375rem;
-  }
+.editable-content.editing:focus {
+  outline: 2px solid var(--fanarc-secondary-color);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: var(--breakpoint-xs)) {
-  .character-image {
-    height: 12.5rem;
-  }
+/* Section save button */
+.section-save-button {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
 
-  .power-room-intro h1 {
-    font-size: 2rem;
-  }
-
-  .stat-label {
-    width: 5rem;
-  }
-
-  .character-search {
-    flex-direction: column;
-  }
-
-  .character-search-input {
-    border-radius: 0.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .search-button {
-    border-radius: 0.25rem;
-    border-left: 0.0625rem solid rgba(255, 255, 255, 0.3);
-  }
+.section-save-button:hover {
+  background-color: var(--fanarc-primary-color);
 }

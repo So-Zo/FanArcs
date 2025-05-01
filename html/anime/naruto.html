@@ -391,61 +391,71 @@
   </footer>
 
   <!-- Bottom navigation bar -->
-  <div class="bottom-navigation">
-    <a href="../../community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
-    <a href="../../profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
-    <div class="nav-search-popup" onclick="toggleSearchPopup()">
-      <span>🔍</span>
-    </div>
+<div class="bottom-navigation">
+  <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+<a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+<a href="profile-page.html"class="nav-profile-button"aria-label="Profile Page">👤</a>
+<div class="nav-search-popup" onclick="toggleSearchPopup()">
+<span>🔍</span>
+</div>
 
-    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-    </div>
-  </div>
+<div class="hamburger-menu-icon" aria-label="Open navigation menu">
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+</div>
+</div>
 
-  <!-- The navigation menu that will show/hide -->
-  <nav class="main-navigation">
-    <ul>
-      <ul>
-        <li><a href="../../index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
-      </ul>
-      <!-- Categories dropdown -->
-      <li>
-        <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="categories-dropdown">
-          Categories <span>►</span>
-        </button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="../../anime-page.html">Anime 🌸</a></li>
-          <hr />
-          <li><a href="../../comics-page.html">Comics 💥</a></li>
-          <hr />
-          <li><a href="../../manga-page.html">Manga 📖</a></li>
-          <hr />
-          <li><a href="../../tv-page.html">Television 📺</a></li>
-          <hr />
-          <li><a href="../../metaverse-page.html">Metaverse 🎮</a></li>
-          <hr />
-          <li><a href="../../worlds-universes-page.html">Worlds & Universes 🌌</a></li>
-          <hr />
-          <li><a href="../../power-room.html">Power Room ⚔️</a></li>
-        </ul>
-      </li>
+<!-- The navigation menu that will show/hide -->
+<nav class="main-navigation">
+<ul>
+<!-- Categories dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="categories-dropdown"
+>
+Categories <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="anime/anime-page.html" class="default-links">Anime 🌸</a></li>
+<hr />
+<li><a href="comics/comics-page.html" class="default-links">Comics 💥</a></li>
+<hr />
+<li><a href="manga/manga-page.html" class="default-links">Manga 📖</a></li>
+<hr />
+<li><a href="tv/tv-page.html" class="default-links">Television 📺</a></li>
+<hr />
+<li><a href="metaverse/metaverse-page.html" class="default-links">Metaverse 🎮</a></li>
+<hr />
+<li>
+<a href="worlds-universes/worlds-universes-page.html" class="default-links">Worlds & Universes 🌌</a>
+</li>
+<hr />
+<li>
+<a href="power-room.html" class="default-links">Power Room ⚔️</a>
+</li>
+</ul>
+</li>
 
-      <!-- FanArcs Info dropdown -->
-      <li>
-        <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="info-dropdown">
-          FanArcs Info <span>►</span>
-        </button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="../../about-page.html">About 🔎</a></li>
-          <li><a href="../../contribute-page.html">Help FanArcs ⁉️ </a></li>
-          <li><a href="../../community-page.html">Community</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+<!-- FanArcs Info dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="info-dropdown"
+>
+FanArcs Info <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="about-page.html" class="default-links">About 🔎</a></li>
+<li><a href="contribute-page.html" class="default-links">Help FanArcs ⁉️ </a></li>
+<li><a href="community-page.html" class="default-links">Community</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 
   <script src="../../js/menu-interaction.js"></script>
   <script src="../../js/accessibility.js"></script>

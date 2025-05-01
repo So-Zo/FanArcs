@@ -1,7 +1,7 @@
 // JavaScript for handling non-existent page links
 document.addEventListener('DOMContentLoaded', function() {
-  // Find all non-existent page links
-  const nonExistentLinks = document.querySelectorAll('.non-existent-page');
+  // Find all non-existent page links (both old and new class names)
+  const nonExistentLinks = document.querySelectorAll('.non-existent-page, .non-existent-link');
 
   // Add click event listeners to each link
   nonExistentLinks.forEach(link => {
