@@ -211,27 +211,13 @@ document.addEventListener('DOMContentLoaded', function() {
     .editable-content.editing {
       border: 1px dashed #ccc;
       padding: 0.5rem;
-      background-image: linear-gradient(
-        to top,
-        #c9c8c5 0%,
-        #c9c8c5 1%,
-        #dbdad7 31%,
-        #dcdad7 75%,
-        #d6d5d2 100%
-      );
+      background-image: var(--base-light-gradient);
       min-height: 100px;
     }
 
     .editable-content.editing:focus {
       outline: 2px solid var(--fanarc-secondary-color, #A997DF);
-      background-image: linear-gradient(
-        to top,
-        #c9c8c5 0%,
-        #c9c8c5 1%,
-        #dbdad7 31%,
-        #dcdad7 75%,
-        #d6d5d2 100%
-      );
+      background-image: var(--base-light-gradient);
     }
   `;
 

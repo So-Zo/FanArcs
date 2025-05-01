@@ -44,11 +44,12 @@
       <p>Browse our collection of manga organized by genre, popularity, and release era. Each page contains official information, character listings, and links to related community content.</p>
 
       <div class="directory-navigation">
-        <a href="#popular-series" class="directory-nav-button" data-section="popular">Popular Manga</a>
-        <a href="#genres" class="directory-nav-button" data-section="genres">Browse by Genre</a>
-        <a href="#eras" class="directory-nav-button" data-section="eras">Browse by Era</a>
-        <a href="#studios" class="directory-nav-button" data-section="studios">Browse by Publisher</a>
-        <a href="#alphabetical" class="directory-nav-button" data-section="alphabetical">Alphabetical List</a>
+        <a href="#popular-series" class="default-links" data-section="popular">Popular Manga</a>
+        <a href="#genres" class="default-links" data-section="genres">Browse by Genre</a>
+        <a href="#eras" class="default-links" data-section="eras">Browse by Era</a>
+        <a href="#studios" class="default-links" data-section="studios">Browse by Publisher</a>
+        <a href="#alphabetical" class="default-links" data-section="alphabetical">Alphabetical List</a>
+        <a href="manga-history.html" class="default-links">History of Manga</a>
       </div>
     </section>
 
@@ -96,7 +97,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="#popular-all" class="view-more-button" data-action="view-all" data-category="popular">View All Popular Manga</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Popular Manga" data-related-to="Manga">View All Popular Manga</a>
       </div>
     </section>
 
@@ -130,14 +131,14 @@
       </div>
 
       <div class="view-more-container">
-        <a href="genres/index.html" class="view-more-button" data-action="view-all" data-category="genres">View All Genres</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Manga Genres" data-related-to="Manga">View All Genres</a>
       </div>
     </section>
 
     <!-- Eras Section -->
     <section id="eras" class="directory-section" data-section-type="eras">
       <h2>Browse by Era</h2>
-      <p>Explore manga from different time periods, from classics to the latest releases.</p>
+      <p>Explore manga from different time periods, from classics to the latest releases. For a comprehensive overview of how manga has evolved over time, check out our <a href="manga-history.html" class="default-links">History of Manga</a> page.</p>
 
       <!-- Era Directory - Will be populated by backend data -->
       <div class="era-directory" data-content="manga-eras">
@@ -194,7 +195,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="publishers/index.html" class="view-more-button" data-action="view-all" data-category="studios">View All Publishers</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Manga Publishers" data-related-to="Manga">View All Publishers</a>
       </div>
     </section>
 

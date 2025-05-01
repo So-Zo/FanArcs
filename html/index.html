@@ -14,7 +14,7 @@ content="Your go-to site for anime, manga, comics, TV, and fanfiction. Explore d
 <link rel="stylesheet" href="../css/main.css" />
 
 <!-- Page-specific CSS -->
-<link rel="stylesheet" href="../css/pages/home-page.css" />
+<link rel="stylesheet" href="../css/pages/main-pages/home-page.css" />
 
 <title>FanArcs</title>
 </head>
@@ -23,7 +23,7 @@ content="Your go-to site for anime, manga, comics, TV, and fanfiction. Explore d
 <!-- Header Section: Site title, Search bar, Navigation links -->
 <header role="banner">
 <div class="header-logo">
-<img src="images/logo-image.jpg" alt="The FanArcs Logo" />
+<img src="../logo-image.jpg" alt="The FanArcs Logo" />
 </div>
 
 <input
@@ -70,7 +70,7 @@ placeholder="Search for Characters, Universes, etc."
 <hr />
 
 <section class="section-anime" role="region" aria-labelledby="anime-section-title">
-<a class="default-links" href="anime/anime-page.html" id="anime-section-title">Anime</a>
+<a class="index-page-link" href="anime/anime-page.html" id="anime-section-title">Anime</a>
 <p>
 Explore the Origins or the Fan Lore behind some of your favorite
 stories!
@@ -79,7 +79,7 @@ stories!
 <hr />
 
 <section class="section-comics" role="region" aria-labelledby="comics-section-title">
-<a class="default-links" href="comics/comics-page.html" id="comics-section-title">Comics</a>
+<a class="index-page-link" href="comics/comics-page.html" id="comics-section-title">Comics</a>
 <p>
 Comics superheroes and more! Which one will you explore?
 </p>
@@ -88,7 +88,7 @@ Comics superheroes and more! Which one will you explore?
 <hr />
 
 <section class="section-manga" role="region" aria-labelledby="manga-section-title">
-<a class="default-links" href="manga/manga-page.html" id="manga-section-title">Manga</a>
+<a class="index-page-link" href="manga/manga-page.html" id="manga-section-title">Manga</a>
 <p>
 Explore the Origins or the Fan Lore behind some of your favorite
 stories!
@@ -97,7 +97,7 @@ stories!
 <hr />
 
 <section class="section-tv" role="region" aria-labelledby="tv-section-title">
-<a class="default-links" href="tv/tv-page.html" id="tv-section-title">Television</a>
+<a class="index-page-link" href="tv/tv-page.html" id="tv-section-title">Television</a>
 <p>
 Learn about the origins of your favorite Characters, Stories, and
 Universes!
@@ -105,17 +105,16 @@ Universes!
 </section>
 <hr />
 
-<section class="section-metaverse" role="region" aria-labelledby="metaverse-section-title">
-<a class="default-links" href="metaverse/metaverse-page.html" id="metaverse-section-title">Metaverse</a>
+<section class="section-video-games" role="region" aria-labelledby="video-games-section-title">
+<a class="index-page-link" href="video-games/video-games.html" id="video-games-section-title">Video Games</a>
 <p>
-See the differences and similarities, or uprisings of your favorite
-Games and Characters from the ages!
+Explore the Origins, Inspiration and even the process behind your favorite games and tech!
 </p>
 </section>
 <hr />
 
 <section class="section-worlds-universes" role="region" aria-labelledby="worlds-section-title">
-<a class="default-links" href="worlds-universes/worlds-universes-page.html" id="worlds-section-title">Worlds & Universes</a>
+<a class="index-page-link" href="worlds-universes/worlds-universes-page.html" id="worlds-section-title">Worlds & Universes</a>
 <p>
 Explore the Most Popular Characters, Worlds, and Story spinoffs!
 </p>
@@ -123,7 +122,7 @@ Explore the Most Popular Characters, Worlds, and Story spinoffs!
 <hr />
 
 <section class="section-power-room" role="region" aria-labelledby="power-room-section-title">
-<a class="default-links" href="power-room.html" id="power-room-section-title">Power Room</a>
+<a class="index-page-link" href="power-room.html" id="power-room-section-title">Power Room</a>
 <p>
 Compare the powers and abilities of your favorite characters from across different universes!
 </p>
@@ -134,13 +133,13 @@ Compare the powers and abilities of your favorite characters from across differe
 <footer class="site-footer">
   <div class="footer-container">
     <div class="footer-section footer-about">
-      <img src="images/logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+      <img src="../logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
       <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
       <div class="social-links">
-        <a href="#" class="social-icon" aria-label="Facebook">📘</a>
-        <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
-        <a href="#" class="social-icon" aria-label="Instagram">📷</a>
-        <a href="#" class="social-icon" aria-label="Discord">💬</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Facebook" data-related-to="Social Media">📘</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Twitter" data-related-to="Social Media">🐦</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Instagram" data-related-to="Social Media">📷</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Discord" data-related-to="Social Media">💬</a>
       </div>
     </div>
 
@@ -160,7 +159,7 @@ Compare the powers and abilities of your favorite characters from across differe
 
   <div class="footer-bottom">
     <p>&copy; 2025 FanArcs. All rights reserved.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+    <p><a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Privacy Policy" data-related-to="Legal">Privacy Policy</a> | <a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Terms of Service" data-related-to="Legal">Terms of Service</a> | <a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Cookie Policy" data-related-to="Legal">Cookie Policy</a></p>
   </div>
 </footer>
 
@@ -201,7 +200,7 @@ Categories <span>►</span>
 <hr />
 <li><a href="tv/tv-page.html" class="default-links">Television 📺</a></li>
 <hr />
-<li><a href="metaverse/metaverse-page.html" class="default-links">Metaverse 🎮</a></li>
+<li><a href="video-games/video-games.html" class="default-links">Video Games 🎮</a></li>
 <hr />
 <li>
 <a href="worlds-universes/worlds-universes-page.html" class="default-links">Worlds & Universes 🌌</a>
@@ -232,10 +231,10 @@ FanArcs Info <span>►</span>
 </nav>
 
 
-<script src="js/menu-interaction.js"></script>
-<script src="js/search-functionality.js"></script>
-<script src="js/accessibility.js"></script>
-<script src="js/keyboard-shortcuts-reference.js"></script>
+<script src="../js/menu-interaction.js"></script>
+<script src="../js/search-functionality.js"></script>
+<script src="../js/accessibility.js"></script>
+<script src="../js/keyboard-shortcuts-reference.js"></script>
 </body>
 </html>
 

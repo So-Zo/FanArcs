@@ -186,14 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .modal-content {
-      background-image: linear-gradient(
-        to top,
-        #c9c8c5 0%,
-        #c9c8c5 1%,
-        #dbdad7 31%,
-        #dcdad7 75%,
-        #d6d5d2 100%
-      );
+      background-image: var(--base-light-gradient);
       border-radius: 8px;
       width: 90%;
       max-width: 500px;
@@ -240,14 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .modal-info {
-      background-image: linear-gradient(
-        to top,
-        #c9c8c5 0%,
-        #c9c8c5 1%,
-        #dbdad7 31%,
-        #dcdad7 75%,
-        #d6d5d2 100%
-      );
+      background-image: var(--base-light-gradient);
       border-radius: 4px;
       padding: 1rem;
       margin-top: 1rem;
@@ -267,14 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     .cancel-button {
       padding: 0.75rem 1.5rem;
-      background-image: linear-gradient(
-        to top,
-        #c9c8c5 0%,
-        #c9c8c5 1%,
-        #dbdad7 31%,
-        #dcdad7 75%,
-        #d6d5d2 100%
-      );
+      background-image: var(--base-light-gradient);
       color: #333;
       border: none;
       border-radius: 4px;

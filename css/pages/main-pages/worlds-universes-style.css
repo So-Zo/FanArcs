@@ -1,0 +1,19 @@
+/* Page-specific details */
+body {
+ background: var(--worlds-gradient);
+ color: black;
+}
+
+.image-header {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: 0.25rem;
+}

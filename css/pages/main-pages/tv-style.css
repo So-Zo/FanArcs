@@ -1,8 +1,12 @@
-.header-logo img {
+/* Page-specific details */
+body {
+  background-image: var(--tv-gradient);
+}
+
+.image-header img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 1rem;
   margin-bottom: 0.25rem;
-  overflow: hidden;
 }

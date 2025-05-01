@@ -31,6 +31,7 @@
     <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
       <span>⌨️</span> Keyboard shortcuts
     </button>
+    <button class="wiki-edit-button" id="page-edit-button">Edit Page</button>
   </div>
 
   <main id="main-content" role="main">
@@ -39,11 +40,12 @@
       <p>Browse our collection of anime series organized by genre, popularity, and release era. Each show page contains official information, character listings, and links to related community content.</p>
 
       <div class="directory-navigation">
-        <a href="#popular-series" class="directory-nav-button">Popular Series</a>
-        <a href="#genres" class="directory-nav-button">Browse by Genre</a>
-        <a href="#eras" class="directory-nav-button">Browse by Era</a>
-        <a href="#studios" class="directory-nav-button">Browse by Studio</a>
-        <a href="#alphabetical" class="directory-nav-button">Alphabetical List</a>
+        <a href="#popular-series" class="non-existent-link" data-page-type="anchor" data-page-title="Popular Series" data-related-to="Anime">Popular Series</a>
+        <a href="#genres" class="non-existent-link" data-page-type="anchor" data-page-title="Browse by Genre" data-related-to="Anime">Browse by Genre</a>
+        <a href="#eras" class="non-existent-link" data-page-type="anchor" data-page-title="Browse by Era" data-related-to="Anime">Browse by Era</a>
+        <a href="#studios" class="non-existent-link" data-page-type="anchor" data-page-title="Browse by Studio" data-related-to="Anime">Browse by Studio</a>
+        <a href="#alphabetical" class="non-existent-link" data-page-type="anchor" data-page-title="Alphabetical List" data-related-to="Anime">Alphabetical List</a>
+        <a href="anime-history.html" class="default-links">History of Anime</a>
       </div>
     </section>
 
@@ -62,7 +64,7 @@
             <p class="show-description">Follow Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.</p>
             <div class="show-links">
               <a href="#" class="non-existent-link" data-page-type="show" data-page-title="Naruto" data-related-to="Anime">Official Page</a>
-              <a href="../community-page.html#naruto" class="default-links">Community Content →</a>
+              <a href="../community-page.html#naruto" class="default-links">Community Content </a>
               <a href="#" class="non-existent-link" data-page-type="character" data-page-title="Naruto Uzumaki" data-related-to="Naruto">Character: Naruto Uzumaki</a>
             </div>
           </div>
@@ -78,7 +80,7 @@
             <p class="show-description">In a world where humanity lives within cities surrounded by enormous walls due to the Titans, gigantic humanoid creatures who devour humans seemingly without reason.</p>
             <div class="show-links">
               <a href="#" class="non-existent-link" data-page-type="show" data-page-title="Attack on Titan" data-related-to="Anime">Official Page</a>
-              <a href="../community-page.html#attack-on-titan" class="default-links">Community Content →</a>
+              <a href="../community-page.html#attack-on-titan" class="default-links">Community Content </a>
               <a href="#" class="non-existent-link" data-page-type="character" data-page-title="Eren Yeager" data-related-to="Attack on Titan">Character: Eren Yeager</a>
             </div>
           </div>
@@ -94,7 +96,7 @@
             <p class="show-description">In a world where people with superpowers known as "Quirks" are the norm, Izuku Midoriya has dreams of becoming a hero despite being born without abilities.</p>
             <div class="show-links">
               <a href="#" class="non-existent-link" data-page-type="show" data-page-title="My Hero Academia" data-related-to="Anime">Official Page</a>
-              <a href="../community-page.html#my-hero-academia" class="default-links">Community Content →</a>
+              <a href="../community-page.html#my-hero-academia" class="default-links">Community Content </a>
               <a href="#" class="non-existent-link" data-page-type="character" data-page-title="Izuku Midoriya" data-related-to="My Hero Academia">Character: Izuku Midoriya</a>
             </div>
           </div>
@@ -110,7 +112,7 @@
             <p class="show-description">Tanjiro Kamado's peaceful life is shattered after his family is slaughtered by a demon. Now, he fights demons while searching for a cure for his sister, who has been turned into a demon.</p>
             <div class="show-links">
               <a href="#" class="non-existent-link" data-page-type="show" data-page-title="Demon Slayer" data-related-to="Anime">Official Page</a>
-              <a href="../community-page.html#demon-slayer" class="default-links">Community Content →</a>
+              <a href="../community-page.html#demon-slayer" class="default-links">Community Content </a>
               <a href="#" class="non-existent-link" data-page-type="character" data-page-title="Tanjiro Kamado" data-related-to="Demon Slayer">Character: Tanjiro Kamado</a>
             </div>
           </div>
@@ -118,7 +120,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="#popular-all" class="view-more-button">View All Popular Series</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Popular Anime Series" data-related-to="Anime">View All Popular Series</a>
       </div>
     </section>
 
@@ -153,53 +155,53 @@
         <div class="genre-category">
           <h3>Slice of Life & Comedy</h3>
           <ul class="show-list">
-            <li><a href="k-on.html" class="default-links">K-On!</a></li>
-            <li><a href="spy-x-family.html" class="default-links">Spy x Family</a></li>
-            <li><a href="kaguya-sama.html" class="default-links">Kaguya-sama: Love is War</a></li>
-            <li><a href="nichijou.html" class="default-links">Nichijou</a></li>
-            <li><a href="genres/slice-of-life.html" class="default-links">View All Slice of Life Anime →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="K-On!" data-related-to="Anime">K-On!</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Spy x Family" data-related-to="Anime">Spy x Family</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Kaguya-sama: Love is War" data-related-to="Anime">Kaguya-sama: Love is War</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Nichijou" data-related-to="Anime">Nichijou</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Slice of Life Anime" data-related-to="Anime">View All Slice of Life Anime</a></li>
           </ul>
         </div>
 
         <div class="genre-category">
           <h3>Drama & Romance</h3>
           <ul class="show-list">
-            <li><a href="your-lie-in-april.html" class="default-links">Your Lie in April</a></li>
-            <li><a href="violet-evergarden.html" class="default-links">Violet Evergarden</a></li>
-            <li><a href="fruits-basket.html" class="default-links">Fruits Basket</a></li>
-            <li><a href="clannad.html" class="default-links">Clannad</a></li>
-            <li><a href="genres/drama.html" class="default-links">View All Drama Anime →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Your Lie in April" data-related-to="Anime">Your Lie in April</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Violet Evergarden" data-related-to="Anime">Violet Evergarden</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Fruits Basket" data-related-to="Anime">Fruits Basket</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Clannad" data-related-to="Anime">Clannad</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Drama Anime" data-related-to="Anime">View All Drama Anime</a></li>
           </ul>
         </div>
       </div>
 
       <div class="view-more-container">
-        <a href="genres/index.html" class="view-more-button">View All Genres</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Anime Genres" data-related-to="Anime">View All Genres</a>
       </div>
     </section>
 
     <section id="eras" class="directory-section">
       <h2>Browse by Era</h2>
-      <p>Explore anime from different time periods, from classics to the latest releases.</p>
+      <p>Explore anime from different time periods, from classics to the latest releases. For a comprehensive overview of how anime has evolved over time, check out our <a href="anime-history.html" class="default-links">History of Anime</a> page.</p>
 
       <div class="era-directory">
         <div class="era-category">
           <h3>Classic (Pre-2000)</h3>
           <ul class="show-list">
-            <li><a href="cowboy-bebop.html" class="default-links">Cowboy Bebop (1998)</a></li>
-            <li><a href="neon-genesis-evangelion.html" class="default-links">Neon Genesis Evangelion (1995)</a></li>
-            <li><a href="dragon-ball.html" class="default-links">Dragon Ball (1986)</a></li>
-            <li><a href="eras/classic.html" class="default-links">View All Classic Anime →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Cowboy Bebop" data-related-to="Anime">Cowboy Bebop (1998)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Neon Genesis Evangelion" data-related-to="Anime">Neon Genesis Evangelion (1995)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Dragon Ball" data-related-to="Anime">Dragon Ball (1986)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Classic Anime" data-related-to="Anime">View All Classic Anime</a></li>
           </ul>
         </div>
 
         <div class="era-category">
           <h3>2000s</h3>
           <ul class="show-list">
-            <li><a href="fullmetal-alchemist.html" class="default-links">Fullmetal Alchemist: Brotherhood (2009)</a></li>
-            <li><a href="death-note.html" class="default-links">Death Note (2006)</a></li>
-            <li><a href="code-geass.html" class="default-links">Code Geass (2006)</a></li>
-            <li><a href="eras/2000s.html" class="default-links">View All 2000s Anime →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Fullmetal Alchemist: Brotherhood" data-related-to="Anime">Fullmetal Alchemist: Brotherhood (2009)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Death Note" data-related-to="Anime">Death Note (2006)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Code Geass" data-related-to="Anime">Code Geass (2006)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="2000s Anime" data-related-to="Anime">View All 2000s Anime</a></li>
           </ul>
         </div>
 
@@ -272,7 +274,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="studios/index.html" class="view-more-button">View All Studios</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Anime Studios" data-related-to="Anime">View All Studios</a>
       </div>
     </section>
 
@@ -281,12 +283,12 @@
       <p>Browse all anime series in our database alphabetically.</p>
 
       <div class="alphabet-navigation">
-        <a href="#a" class="alphabet-link">A</a>
-        <a href="#b" class="alphabet-link">B</a>
-        <a href="#c" class="alphabet-link">C</a>
-        <a href="#d" class="alphabet-link">D</a>
+        <a href="#a" class="non-existent-link" data-page-type="anchor" data-page-title="A" data-related-to="Anime">A</a>
+        <a href="#b" class="non-existent-link" data-page-type="anchor" data-page-title="B" data-related-to="Anime">B</a>
+        <a href="#c" class="non-existent-link" data-page-type="anchor" data-page-title="C" data-related-to="Anime">C</a>
+        <a href="#d" class="non-existent-link" data-page-type="anchor" data-page-title="D" data-related-to="Anime">D</a>
         <!-- Continue with all letters -->
-        <a href="#z" class="alphabet-link">Z</a>
+        <a href="#z" class="non-existent-link" data-page-type="anchor" data-page-title="Z" data-related-to="Anime">Z</a>
       </div>
 
       <div class="alphabetical-listing">
@@ -325,13 +327,13 @@
         <div class="help-option">
           <h3>Request a Show</h3>
           <p>Don't see a show that should be included? Let us know and we'll add it to our database.</p>
-          <a href="../contribute-page.html#request-content" class="default-links">Request Show Addition →</a>
+          <a href="#" class="non-existent-link" data-page-type="action" data-page-title="Request Show Addition" data-related-to="Anime">Request Show Addition</a>
         </div>
 
         <div class="help-option">
           <h3>Create a Show Page</h3>
           <p>Contribute to FanArcs by creating a page for your favorite anime series.</p>
-          <a href="../contribute-page.html#create-content" class="default-links">Learn How to Contribute →</a>
+          <a href="#" class="non-existent-link" data-page-type="action" data-page-title="Learn How to Contribute" data-related-to="Anime">Learn How to Contribute</a>
           <p>Try creating one of these popular shows:</p>
           <ul class="show-list">
             <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Jojo's Bizarre Adventure" data-related-to="Anime">Jojo's Bizarre Adventure</a></li>
@@ -349,10 +351,10 @@
         <img src="../../images/logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
         <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
         <div class="social-links">
-          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
-          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
-          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
-          <a href="#" class="social-icon" aria-label="Discord">💬</a>
+          <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Facebook" data-related-to="Social Media">📘</a>
+          <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Twitter" data-related-to="Social Media">🐦</a>
+          <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Instagram" data-related-to="Social Media">📷</a>
+          <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Discord" data-related-to="Social Media">💬</a>
         </div>
       </div>
 
@@ -372,7 +374,7 @@
 
     <div class="footer-bottom">
       <p>&copy; 2025 FanArcs. All rights reserved.</p>
-      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+      <p><a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Privacy Policy" data-related-to="Legal">Privacy Policy</a> | <a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Terms of Service" data-related-to="Legal">Terms of Service</a> | <a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Cookie Policy" data-related-to="Legal">Cookie Policy</a></p>
     </div>
   </footer>
 

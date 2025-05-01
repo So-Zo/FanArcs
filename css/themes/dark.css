@@ -8,7 +8,7 @@
   --text-color: #e0e0e0;
   --bg-color: #121212;
   --heading-color: #f0f0f0;
-  
+
   /* Background gradients */
   --bg-gradient-light: linear-gradient(
     to top,
@@ -18,7 +18,116 @@
     #252525 75%,
     #2a2a2a 100%
   );
-  
+
+  /* Override light theme gradients with dark versions */
+  --content-intro-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --guide-section-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --filter-btn-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --episode-item-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --tag-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --action-button-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --accessibility-container-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
+  --genre-card-gradient: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+
+  --main-navigation-gradient: linear-gradient(to right, #4b0082, #330066);
+  --nav-dropdown-gradient: linear-gradient(to right, #4b0082, #330066);
+  --content-tabs-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+  --theory-item-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+  --filter-dropdown-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+  --about-intro-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+  --about-section-gradient: linear-gradient(
+    to top,
+    #1a1a1a 0%,
+    #1a1a1a 1%,
+    #222222 31%,
+    #252525 75%,
+    #2a2a2a 100%
+  );
+
   /* UI colors */
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.5);
@@ -26,30 +135,30 @@
   --input-border: rgba(255, 255, 255, 0.2);
   --input-text: #e0e0e0;
   --input-placeholder: #999999;
-  
+
   /* Card colors */
   --card-bg: #1e1e1e;
   --card-border: rgba(255, 255, 255, 0.1);
   --card-shadow: rgba(0, 0, 0, 0.5);
-  
+
   /* Button colors */
   --button-bg: #2a2a2a;
   --button-text: #e0e0e0;
   --button-border: rgba(255, 255, 255, 0.1);
   --button-hover-bg: #333333;
-  
+
   /* Navigation colors */
   --nav-bg: #1a1a1a;
   --nav-text: #e0e0e0;
   --nav-border: rgba(255, 255, 255, 0.1);
   --nav-hover-bg: rgba(255, 255, 255, 0.05);
-  
+
   /* Footer colors */
   --footer-bg: rgba(0, 0, 0, 0.8);
   --footer-text: #e0e0e0;
   --footer-link: #cccccc;
   --footer-border: rgba(255, 255, 255, 0.1);
-  
+
   /* Shadows */
   --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
   --shadow-md: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);

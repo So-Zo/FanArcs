@@ -1,59 +1,58 @@
 /*
- * Footer Styles for Fan Arc
- * This file contains styling for the site footer
+ * Footer Styles for FanArcs
+ * This file contains styling for footer elements across the website
  */
 
-/* Footer Styles */
+/* Site Footer */
 .site-footer {
-  background: transparent;
-  color: #ffffff;
-  padding: 2rem 1rem 6rem;
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  padding: 2rem 1rem 5rem;
   margin-top: 2rem;
-  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-  gap: 2rem;
 }
 
+/* Footer Sections */
 .footer-section {
-  padding: 0 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-section h3 {
-  font-size: 1.2rem;
+  color: var(--fanarc-secondary-color);
   margin-bottom: 1rem;
-  color: var(--fanarc-secondary-color);
-  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  font-size: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 0.5rem;
-  justify-content: flex-start;
-}
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-  color: #e0e0e0;
-  text-decoration: none;
-  transition: color var(--transition-base);
   display: block;
-  padding: 0.25rem 0;
+  text-align: left;
 }
 
-.footer-links a:hover {
-  color: var(--fanarc-secondary-color);
-  text-decoration: underline;
+/* Footer About Section */
+.footer-about {
+  display: flex;
+  flex-direction: column;
 }
 
+.footer-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.footer-about p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Social Links */
 .social-links {
   display: flex;
   gap: 1rem;
@@ -67,95 +66,111 @@
   width: 2.5rem;
   height: 2.5rem;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: var(--border-radius-circle);
-  color: #ffffff;
+  border-radius: 50%;
+  color: white;
   text-decoration: none;
   transition: background-color var(--transition-base), transform var(--transition-base);
 }
 
 .social-icon:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-0.1875rem);
+  background-color: var(--fanarc-secondary-color);
+  transform: translateY(-3px);
 }
 
+/* Footer Contact Section */
 .footer-contact p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .footer-contact span {
-  display: inline-block;
-  width: 1.25rem;
-  text-align: center;
+  font-size: 1.25rem;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
-  font-size: 0.9rem;
-  color: #cccccc;
-}
-
-.footer-bottom p {
-  margin: 0.5rem 0;
-}
-
-.footer-logo {
-  max-width: 9.375rem;
-  margin-bottom: 1rem;
-}
-
+/* Newsletter Form */
 .newsletter-form {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   margin-top: 1rem;
 }
 
 .newsletter-form input {
+  flex: 1;
   padding: 0.75rem;
   border: none;
-  border-radius: var(--border-radius-small);
+  border-radius: 0.25rem 0 0 0.25rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
 }
 
 .newsletter-form input::placeholder {
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .newsletter-form button {
-  padding: 0.75rem;
-  border: none;
-  border-radius: var(--border-radius-small);
+  padding: 0.75rem 1rem;
   background-color: var(--fanarc-secondary-color);
-  color: var(--fanarc-primary-color);
-  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
   cursor: pointer;
   transition: background-color var(--transition-base);
 }
 
 .newsletter-form button:hover {
-  background-color: #8a7ac0;
+  background-color: #8a7ab8;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom a {
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.footer-bottom a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 /* Responsive adjustments */
-@media (max-width: var(--breakpoint-sm)) {
-  .footer-container {
-    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-  }
-}
-
-@media (max-width: var(--breakpoint-xs)) {
+@media (max-width: var(--breakpoint-md)) {
   .footer-container {
     grid-template-columns: 1fr;
   }
+  
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+}
 
-  .social-links {
-    justify-content: center;
+@media (max-width: var(--breakpoint-sm)) {
+  .site-footer {
+    padding: 1.5rem 1rem 5rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletter-form button {
+    border-radius: 0.25rem;
   }
 }

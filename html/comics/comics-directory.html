@@ -44,11 +44,12 @@
       <p>Browse our collection of comics organized by genre, popularity, and release era. Each page contains official information, character listings, and links to related community content.</p>
 
       <div class="directory-navigation">
-        <a href="#popular-series" class="directory-nav-button" data-section="popular">Popular Comics</a>
-        <a href="#genres" class="directory-nav-button" data-section="genres">Browse by Genre</a>
-        <a href="#eras" class="directory-nav-button" data-section="eras">Browse by Era</a>
-        <a href="#studios" class="directory-nav-button" data-section="studios">Browse by Publisher</a>
-        <a href="#alphabetical" class="directory-nav-button" data-section="alphabetical">Alphabetical List</a>
+        <a href="#popular-series" class="non-existent-link" data-page-type="anchor" data-page-title="Popular Comics" data-related-to="Comics">Popular Comics</a>
+        <a href="#genres" class="non-existent-link" data-page-type="anchor" data-page-title="Browse by Genre" data-related-to="Comics">Browse by Genre</a>
+        <a href="#eras" class="non-existent-link" data-page-type="anchor" data-page-title="Browse by Era" data-related-to="Comics">Browse by Era</a>
+        <a href="#studios" class="non-existent-link" data-page-type="anchor" data-page-title="Browse by Publisher" data-related-to="Comics">Browse by Publisher</a>
+        <a href="#alphabetical" class="non-existent-link" data-page-type="anchor" data-page-title="Alphabetical List" data-related-to="Comics">Alphabetical List</a>
+        <a href="comics-history.html" class="default-links">History of Comics</a>
       </div>
     </section>
 
@@ -87,7 +88,7 @@
             <p class="show-genres">Superhero, Action, Crime, Drama</p>
             <p class="show-description">Follow the adventures of Bruce Wayne, a billionaire who fights crime in Gotham City as the masked vigilante Batman.</p>
             <div class="show-links">
-              <a href="batman.html" class="default-links">Official Page →</a>
+              <a href="#" class="non-existent-link" data-page-type="show" data-page-title="Batman" data-related-to="Comics">Official Page</a>
               <a href="../community-page.html#batman" class="default-links">Community Content →</a>
             </div>
           </div>
@@ -95,7 +96,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="#popular-all" class="view-more-button" data-action="view-all" data-category="popular">View All Popular Comics</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Popular Comics" data-related-to="Comics">View All Popular Comics</a>
       </div>
     </section>
 
@@ -120,23 +121,23 @@
         <div class="genre-category fallback-content">
           <h3>Superhero</h3>
           <ul class="show-list">
-            <li><a href="batman.html" class="default-links">Batman</a></li>
-            <li><a href="spider-man.html" class="default-links">Spider-Man</a></li>
-            <li><a href="x-men.html" class="default-links">X-Men</a></li>
-            <li><a href="genres/superhero.html" class="default-links">View All Superhero Comics →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Batman" data-related-to="Comics">Batman</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Spider-Man" data-related-to="Comics">Spider-Man</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="X-Men" data-related-to="Comics">X-Men</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Superhero Comics" data-related-to="Comics">View All Superhero Comics</a></li>
           </ul>
         </div>
       </div>
 
       <div class="view-more-container">
-        <a href="genres/index.html" class="view-more-button" data-action="view-all" data-category="genres">View All Genres</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Comics Genres" data-related-to="Comics">View All Genres</a>
       </div>
     </section>
 
     <!-- Eras Section -->
     <section id="eras" class="directory-section" data-section-type="eras">
       <h2>Browse by Era</h2>
-      <p>Explore comics from different time periods, from classics to the latest releases.</p>
+      <p>Explore comics from different time periods, from classics to the latest releases. For a comprehensive overview of how comics have evolved over time, check out our <a href="comics-history.html" class="default-links">History of Comics</a> page.</p>
 
       <!-- Era Directory - Will be populated by backend data -->
       <div class="era-directory" data-content="comics-eras">
@@ -154,10 +155,10 @@
         <div class="era-category fallback-content">
           <h3>Golden Age (1938-1956)</h3>
           <ul class="show-list">
-            <li><a href="action-comics-1.html" class="default-links">Action Comics #1 (1938)</a></li>
-            <li><a href="detective-comics-27.html" class="default-links">Detective Comics #27 (1939)</a></li>
-            <li><a href="captain-america-1.html" class="default-links">Captain America Comics #1 (1941)</a></li>
-            <li><a href="eras/golden-age.html" class="default-links">View All Golden Age Comics →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Action Comics #1" data-related-to="Comics">Action Comics #1 (1938)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Detective Comics #27" data-related-to="Comics">Detective Comics #27 (1939)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Captain America Comics #1" data-related-to="Comics">Captain America Comics #1 (1941)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Golden Age Comics" data-related-to="Comics">View All Golden Age Comics</a></li>
           </ul>
         </div>
       </div>
@@ -184,16 +185,16 @@
         <div class="studio-category fallback-content">
           <h3>DC Comics</h3>
           <ul class="show-list">
-            <li><a href="batman.html" class="default-links">Batman</a></li>
-            <li><a href="superman.html" class="default-links">Superman</a></li>
-            <li><a href="wonder-woman.html" class="default-links">Wonder Woman</a></li>
-            <li><a href="publishers/dc.html" class="default-links">View All DC Comics →</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Batman" data-related-to="Comics">Batman</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Superman" data-related-to="Comics">Superman</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Wonder Woman" data-related-to="Comics">Wonder Woman</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="DC Comics" data-related-to="Comics">View All DC Comics</a></li>
           </ul>
         </div>
       </div>
 
       <div class="view-more-container">
-        <a href="publishers/index.html" class="view-more-button" data-action="view-all" data-category="studios">View All Publishers</a>
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Comics Publishers" data-related-to="Comics">View All Publishers</a>
       </div>
     </section>
 
@@ -205,13 +206,13 @@
       <div class="alphabet-navigation" data-content="alphabet-nav">
         <!-- Will be populated dynamically -->
         <template id="alphabet-link-template">
-          <a href="#" class="alphabet-link" data-letter=""></a>
+          <a href="#" class="non-existent-link" data-page-type="anchor" data-letter="" data-related-to="Comics"></a>
         </template>
 
         <!-- Fallback content -->
-        <a href="#a" class="alphabet-link fallback-content">A</a>
-        <a href="#b" class="alphabet-link fallback-content">B</a>
-        <a href="#c" class="alphabet-link fallback-content">C</a>
+        <a href="#a" class="non-existent-link" data-page-type="anchor" data-page-title="A" data-related-to="Comics">A</a>
+        <a href="#b" class="non-existent-link" data-page-type="anchor" data-page-title="B" data-related-to="Comics">B</a>
+        <a href="#c" class="non-existent-link" data-page-type="anchor" data-page-title="C" data-related-to="Comics">C</a>
         <!-- More letters would be here -->
       </div>
 
@@ -230,8 +231,8 @@
         <div id="a" class="letter-section fallback-content">
           <h3>A</h3>
           <ul class="show-list-alpha">
-            <li><a href="avengers.html" class="default-links">Avengers</a></li>
-            <li><a href="aquaman.html" class="default-links">Aquaman</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Avengers" data-related-to="Comics">Avengers</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Aquaman" data-related-to="Comics">Aquaman</a></li>
           </ul>
         </div>
       </div>
@@ -249,13 +250,13 @@
         <div class="help-option">
           <h3>Request Content</h3>
           <p>Don't see a comic that should be included? Let us know and we'll add it to our database.</p>
-          <a href="../contribute-page.html#request-content" class="default-links" data-action="request">Request Addition →</a>
+          <a href="#" class="non-existent-link" data-page-type="action" data-page-title="Request Comic Addition" data-related-to="Comics">Request Addition</a>
         </div>
 
         <div class="help-option">
           <h3>Create Content</h3>
           <p>Contribute to FanArcs by creating a page for your favorite comic.</p>
-          <a href="../contribute-page.html#create-content" class="default-links" data-action="create">Learn How to Contribute →</a>
+          <a href="#" class="non-existent-link" data-page-type="action" data-page-title="Learn How to Contribute" data-related-to="Comics">Learn How to Contribute</a>
         </div>
       </div>
     </section>
@@ -367,6 +368,8 @@
   <script src="../../js/menu-interaction.js"></script>
   <!-- JavaScript for directory data loading -->
   <script src="../../js/directory-data.js"></script>
+  <!-- JavaScript for non-existent pages -->
+  <script src="../../js/non-existent-pages.js"></script>
   <!-- JavaScript for keyboard shortcuts -->
   <script src="../../js/keyboard-shortcuts-reference.js"></script>
 </body>

@@ -44,11 +44,11 @@
       <p>Browse our collection of [media type] organized by genre, popularity, and release era. Each page contains official information, character listings, and links to related community content.</p>
 
       <div class="directory-navigation">
-        <a href="#popular-series" class="directory-nav-button" data-section="popular">Popular [Media Type]</a>
-        <a href="#genres" class="directory-nav-button" data-section="genres">Browse by Genre</a>
-        <a href="#eras" class="directory-nav-button" data-section="eras">Browse by Era</a>
-        <a href="#studios" class="directory-nav-button" data-section="studios">Browse by [Studio Type]</a>
-        <a href="#alphabetical" class="directory-nav-button" data-section="alphabetical">Alphabetical List</a>
+        <a href="#popular-series" class="default-links" data-section="popular">Popular [Media Type]</a>
+        <a href="#genres" class="default-links" data-section="genres">Browse by Genre</a>
+        <a href="#eras" class="default-links" data-section="eras">Browse by Era</a>
+        <a href="#studios" class="default-links" data-section="studios">Browse by [Studio Type]</a>
+        <a href="#alphabetical" class="default-links" data-section="alphabetical">Alphabetical List</a>
       </div>
     </section>
 
@@ -95,7 +95,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="#popular-all" class="view-more-button" data-action="view-all" data-category="popular">View All Popular [Media Type]</a>
+        <a href="#popular-all" class="default-links" data-action="view-all" data-category="popular">View All Popular [Media Type]</a>
       </div>
     </section>
 
@@ -129,7 +129,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="genres/index.html" class="view-more-button" data-action="view-all" data-category="genres">View All Genres</a>
+        <a href="genres/index.html" class="default-links" data-action="view-all" data-category="genres">View All Genres</a>
       </div>
     </section>
 
@@ -193,7 +193,7 @@
       </div>
 
       <div class="view-more-container">
-        <a href="studios/index.html" class="view-more-button" data-action="view-all" data-category="studios">View All [Studio Type]</a>
+        <a href="studios/index.html" class="default-links" data-action="view-all" data-category="studios">View All [Studio Type]</a>
       </div>
     </section>
 
@@ -205,13 +205,13 @@
       <div class="alphabet-navigation" data-content="alphabet-nav">
         <!-- Will be populated dynamically -->
         <template id="alphabet-link-template">
-          <a href="#" class="alphabet-link" data-letter=""></a>
+          <a href="#" class="default-links" data-letter=""></a>
         </template>
 
         <!-- Fallback content -->
-        <a href="#a" class="alphabet-link fallback-content">A</a>
-        <a href="#b" class="alphabet-link fallback-content">B</a>
-        <a href="#c" class="alphabet-link fallback-content">C</a>
+        <a href="#a" class="default-links fallback-content">A</a>
+        <a href="#b" class="default-links fallback-content">B</a>
+        <a href="#c" class="default-links fallback-content">C</a>
         <!-- More letters would be here -->
       </div>
 

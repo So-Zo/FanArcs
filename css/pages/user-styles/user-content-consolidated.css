@@ -1,18 +1,43 @@
 /*
  * User Content Styles for FanArcs
  * This file contains styles specific to user-generated content pages
+ * Consolidated from user-content.css and user-content-style.css
  */
 
-/* Content header */
+/* ===== CONTENT HEADER ===== */
+.image-header {
+  position: relative;
+}
+
+.content-header-image {
+  width: 100%;
+  height: 15.625rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-base);
+}
+
+.content-category-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-base);
+  font-weight: bold;
+  box-shadow: var(--shadow-xs);
+}
+
 .content-header {
+  padding: 1.5rem 1rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .content-title {
   font-size: var(--font-size-xxxl);
-  color: var(--fanarc-primary-color);
   margin-bottom: 0.5rem;
+  color: var(--fanarc-primary-color);
 }
 
 .content-meta {
@@ -20,9 +45,22 @@
   font-size: var(--font-size-sm);
 }
 
-/* Content tabs navigation */
+.content-meta a {
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+}
+
+.content-meta a:hover {
+  text-decoration: underline;
+}
+
+/* ===== CONTENT TABS ===== */
 .content-tabs {
-  margin-bottom: 2rem;
+  background-image: var(--content-tabs-gradient);
+  border-radius: var(--border-radius-base);
+  margin: 0 1rem 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
   border-bottom: var(--border-width-thin) solid #ddd;
 }
 
@@ -31,7 +69,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow-x: auto;
 }
 
 .content-tabs li {
@@ -43,6 +80,7 @@
   padding: 0.75rem 1.25rem;
   color: #666;
   text-decoration: none;
+  font-weight: 500;
   border-bottom: 0.25rem solid transparent;
   transition: all var(--transition-base);
 }
@@ -53,18 +91,28 @@
   border-bottom-color: var(--fanarc-secondary-color);
 }
 
-/* Content container layout */
+.content-tabs a.active {
+  background-color: var(--fanarc-primary-color);
+  color: white;
+}
+
+/* ===== CONTENT LAYOUT ===== */
 .content-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
-/* Main content area */
 .content-main {
   min-width: 0; /* Fix for grid overflow */
 }
 
+.content-sidebar {
+  min-width: 0; /* Fix for grid overflow */
+}
+
+/* ===== CONTENT SECTIONS ===== */
 .content-section {
   display: none;
 }
@@ -82,10 +130,12 @@
 }
 
 .content-block h2 {
-  color: var(--fanarc-primary-color);
   margin-top: 0;
   margin-bottom: 1rem;
+  color: var(--fanarc-primary-color);
   font-size: var(--font-size-xl);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
 }
 
 .editable-content {
@@ -101,11 +151,7 @@
   margin-bottom: 1rem;
 }
 
-/* Sidebar */
-.content-sidebar {
-  min-width: 0; /* Fix for grid overflow */
-}
-
+/* ===== SIDEBAR BLOCKS ===== */
 .sidebar-block {
   background-image: var(--bg-gradient-light);
   border-radius: var(--border-radius-base);
@@ -115,13 +161,15 @@
 }
 
 .sidebar-block h3 {
-  color: var(--fanarc-primary-color);
   margin-top: 0;
   margin-bottom: 1rem;
+  color: var(--fanarc-primary-color);
   font-size: var(--font-size-lg);
+  border-bottom: var(--border-width-thin) solid #eee;
+  padding-bottom: 0.5rem;
 }
 
-/* Character cards */
+/* ===== CHARACTER GRID ===== */
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
@@ -130,16 +178,16 @@
 
 .character-card {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-image: var(--base-light-gradient);
   border-radius: var(--border-radius-base);
   overflow: hidden;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--shadow-xs);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .character-card:hover {
   transform: translateY(-0.3125rem);
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: var(--shadow-md);
 }
 
 .character-image {
@@ -183,7 +231,7 @@
   text-decoration: underline;
 }
 
-/* Episode list */
+/* ===== EPISODE LIST ===== */
 .episode-list {
   display: flex;
   flex-direction: column;
@@ -193,10 +241,15 @@
 .episode-item {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-image: var(--episode-item-gradient);
   border-radius: var(--border-radius-base);
   padding: 1rem;
   box-shadow: var(--shadow-xs);
+  transition: background-color var(--transition-base);
+}
+
+.episode-item:hover {
+  background-color: #f0f0f0;
 }
 
 .episode-number {
@@ -224,7 +277,12 @@
   margin: 0;
 }
 
-/* Fan theories */
+.episode-actions {
+  width: 5rem;
+  text-align: right;
+}
+
+/* ===== FAN THEORIES ===== */
 .theory-list {
   display: flex;
   flex-direction: column;
@@ -232,10 +290,15 @@
 }
 
 .theory-item {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-image: var(--theory-item-gradient);
   border-radius: var(--border-radius-base);
   padding: 1.25rem;
   box-shadow: var(--shadow-xs);
+  transition: background-color var(--transition-base);
+}
+
+.theory-item:hover {
+  background-color: #f0f0f0;
 }
 
 .theory-title {
@@ -245,16 +308,38 @@
 }
 
 .theory-meta {
-  color: #666;
   font-size: var(--font-size-xs);
+  color: #666;
   margin-bottom: 0.75rem;
 }
 
 .theory-summary {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
+  line-height: var(--line-height-base);
 }
 
-/* Discussion section */
+.add-theory {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.add-theory-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.add-theory-button:hover {
+  background-color: #1a0f6b;
+}
+
+/* ===== DISCUSSION THREAD ===== */
 .discussion-thread {
   display: flex;
   flex-direction: column;
@@ -283,7 +368,7 @@
 
 .comment-content {
   flex-grow: 1;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-image: var(--base-light-gradient);
   border-radius: var(--border-radius-base);
   padding: 1rem;
   box-shadow: var(--shadow-xs);
@@ -304,7 +389,8 @@
 }
 
 .comment-text {
-  margin-bottom: 0.75rem;
+  margin: 0 0 1rem;
+  line-height: var(--line-height-base);
 }
 
 .comment-actions {
@@ -357,6 +443,7 @@
   background-color: #1a0f6b;
 }
 
+/* ===== SIDEBAR COMPONENTS ===== */
 /* Quick info sidebar */
 .info-list {
   list-style: none;
@@ -422,13 +509,13 @@
 .action-button {
   display: block;
   width: 100%;
-  background-color: white;
+  background-image: var(--action-button-gradient);
   border: var(--border-width-thin) solid #ddd;
   border-radius: var(--border-radius-base);
   padding: 0.75rem;
   margin-bottom: 0.75rem;
   cursor: pointer;
-  transition: background-color var(--transition-base);
+  transition: background-color var(--transition-base), color var(--transition-base);
   text-align: left;
 }
 
@@ -440,7 +527,22 @@
   margin-bottom: 0;
 }
 
-/* Media queries */
+.edit-button:hover {
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+}
+
+.history-button:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.report-button:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: var(--breakpoint-md)) {
   .content-container {
     grid-template-columns: 1fr;
@@ -452,6 +554,14 @@
   
   .sidebar-block {
     margin-bottom: 1rem;
+  }
+  
+  .content-tabs {
+    overflow-x: auto;
+  }
+  
+  .content-tabs ul {
+    width: max-content;
   }
 }
 
@@ -484,9 +594,23 @@
     margin-right: 0;
     margin-bottom: 0.5rem;
   }
+  
+  .episode-details {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .episode-actions {
+    width: auto;
+    text-align: left;
+  }
 }
 
 @media (max-width: var(--breakpoint-xs)) {
+  .content-header-image {
+    height: 11.25rem;
+  }
+  
   .content-header {
     margin-bottom: 1.5rem;
   }
@@ -495,8 +619,16 @@
     font-size: var(--font-size-xl);
   }
   
+  .content-tabs a {
+    padding: 0.75rem 1rem;
+  }
+  
   .content-block {
     padding: 1rem;
+  }
+  
+  .character-grid {
+    grid-template-columns: 1fr;
   }
   
   .comment-item {

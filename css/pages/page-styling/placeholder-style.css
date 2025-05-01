@@ -1,0 +1,115 @@
+/*
+ * Placeholder Page Styles for FanArcs
+ * This file contains styles specific to the placeholder page template
+ */
+
+/* Placeholder container */
+.placeholder-container {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-image: var(--bg-gradient-light);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: var(--fanarc-secondary-color);
+}
+
+.placeholder-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fanarc-primary-color);
+}
+
+.placeholder-message {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.create-page-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius-base);
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color var(--transition-base);
+  border: none;
+  cursor: pointer;
+}
+
+.create-page-button:hover {
+  background-color: #1a0f6b;
+}
+
+.placeholder-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-image: var(--bg-gradient-light);
+  border-radius: var(--border-radius-base);
+  text-align: left;
+}
+
+.placeholder-info h3 {
+  margin-top: 0;
+  color: var(--fanarc-primary-color);
+}
+
+.placeholder-info ul {
+  padding-left: 1.5rem;
+}
+
+.placeholder-info li {
+  margin-bottom: 0.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Media queries */
+@media (max-width: var(--breakpoint-sm)) {
+  .placeholder-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .placeholder-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: var(--breakpoint-xs)) {
+  .placeholder-container {
+    padding: 1rem;
+  }
+  
+  .placeholder-icon {
+    font-size: 4rem;
+  }
+  
+  .placeholder-title {
+    font-size: 1.5rem;
+  }
+  
+  .create-page-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}

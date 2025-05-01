@@ -1,0 +1,25 @@
+/* Page-specific details */
+body {
+  background-image: var(--anime-gradient);
+}
+
+.image-header {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Page-specific styles only - component styles moved to directory-categories.css */
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-sm)) {
+  /* Mobile-specific styles for anime page */
+}

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page metadata - will be filled by the user -->
+  <title>[Section Title] | FanArcs</title>
+
+  <!-- Data attributes for backend integration -->
+  <meta name="data-source" content="user-generated-section" />
+  <meta name="data-section-type" content="[section-type]" />
+  <meta name="data-creator" content="[creator-username]" />
+  <meta name="data-creation-date" content="[creation-date]" />
+  <meta name="data-related-to" content="[related-media-type]" />
+
+  <!-- Main CSS framework -->
+  <link rel="stylesheet" href="../../css/main.css" />
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="../../css/pages/user-content-consolidated.css" />
+</head>
+<body>
+  <header role="banner">
+    <div class="image-header">
+      <img src="[header-image-path]" alt="[Section Title]" class="content-header-image" />
+      <div class="content-category-badge">[Category]</div>
+    </div>
+
+
+    <input
+      type="search"
+      id="site-search-bar"
+      aria-label="Search Site"
+      placeholder="Search for Characters, Universes, etc."
+    />
+  </header>
+
+
+
+  <main id="main-content" role="main">
+    <div class="content-header">
+      <h1 class="content-title">[Section Title]</h1>
+      <div class="content-meta">
+        <span class="content-type">[Section Type]</span> •
+        <span class="content-creator">Created by <a href="[creator-profile]">[Creator Name]</a></span> •
+        <span class="content-date">Created on [Creation Date]</span>
+      </div>
+      <!-- Wiki edit button - only on wiki pages -->
+      <button class="wiki-edit-button">Edit Page</button>
+    </div>
+
+    <!-- Section Introduction -->
+    <section class="directory-intro">
+      <p>[Enter an introduction to this section here. Explain what this section covers and how users can navigate it.]</p>
+
+      <!-- Directory Navigation - customize based on section needs -->
+      <div class="directory-navigation">
+        <a href="#popular" class="default-links" data-section="popular">Popular [Items]</a>
+        <a href="#categories" class="default-links" data-section="categories">Browse by Category</a>
+        <a href="#creators" class="default-links" data-section="creators">Browse by Creator</a>
+        <a href="#alphabetical" class="default-links" data-section="alphabetical">Alphabetical List</a>
+      </div>
+    </section>
+
+    <!-- Popular Items Section -->
+    <section id="popular" class="directory-section" data-section-type="popular">
+      <h2>Popular [Items]</h2>
+      <p>[Description of this section]</p>
+
+      <!-- Item Grid - Will be populated by user content -->
+      <div class="show-grid" data-content="popular-items">
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="show-card fallback-content">
+          <div class="show-image">
+            <img src="../../images/placeholder.jpg" alt="[Item Title]" />
+          </div>
+          <div class="show-info">
+            <h3>[Item Title]</h3>
+            <p class="show-genres">[Categories/Tags]</p>
+            <p class="show-description">[Brief description of this item]</p>
+            <div class="show-links">
+              <a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item Title]" data-related-to="[Section Title]">View Page</a>
+              <a href="../community-page.html#[item-anchor]" class="default-links">Community Content →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more fallback items as needed -->
+      </div>
+
+      <div class="view-more-container">
+        <a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Popular [Items]" data-related-to="[Section Title]">View All Popular [Items]</a>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="directory-section" data-section-type="categories">
+      <h2>Browse by Category</h2>
+      <p>[Description of categories]</p>
+
+      <!-- Category Directory -->
+      <div class="genre-directory" data-content="item-categories">
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="genre-category fallback-content">
+          <h3>[Category 1]</h3>
+          <ul class="show-list">
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item 1]" data-related-to="[Section Title]">[Item 1]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item 2]" data-related-to="[Section Title]">[Item 2]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item 3]" data-related-to="[Section Title]">[Item 3]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="[Category 1] [Items]" data-related-to="[Section Title]">View All [Category 1] [Items]</a></li>
+          </ul>
+        </div>
+
+        <!-- Add more category sections as needed -->
+      </div>
+    </section>
+
+    <!-- Creators Section -->
+    <section id="creators" class="directory-section" data-section-type="creators">
+      <h2>Browse by Creator</h2>
+      <p>[Description of creator categories]</p>
+
+      <!-- Creator Directory -->
+      <div class="studio-directory" data-content="item-creators">
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="studio-category fallback-content">
+          <h3>[Creator/Studio 1]</h3>
+          <ul class="show-list">
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item 1]" data-related-to="[Section Title]">[Item 1]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item 2]" data-related-to="[Section Title]">[Item 2]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item 3]" data-related-to="[Section Title]">[Item 3]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="[Creator/Studio 1] [Items]" data-related-to="[Section Title]">View All [Creator/Studio 1] [Items]</a></li>
+          </ul>
+        </div>
+
+        <!-- Add more creator sections as needed -->
+      </div>
+    </section>
+
+    <!-- Alphabetical Section -->
+    <section id="alphabetical" class="directory-section" data-section-type="alphabetical">
+      <h2>Alphabetical List</h2>
+      <p>Browse all [items] alphabetically.</p>
+
+      <!-- Alphabet Navigation -->
+      <div class="alphabet-navigation" data-content="alphabet-nav">
+        <!-- Fallback content -->
+        <a href="#a" class="default-links fallback-content">A</a>
+        <a href="#b" class="default-links fallback-content">B</a>
+        <a href="#c" class="default-links fallback-content">C</a>
+        <!-- More letters would be here -->
+      </div>
+
+      <!-- Alphabetical Directory -->
+      <div class="alphabetical-directory" data-content="alphabetical-items">
+        <!-- Fallback content if no JavaScript or data -->
+        <div id="a" class="letter-section fallback-content">
+          <h3>A</h3>
+          <ul class="show-list-alpha">
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item A1]" data-related-to="[Section Title]">[Item A1]</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="item" data-page-title="[Item A2]" data-related-to="[Section Title]">[Item A2]</a></li>
+          </ul>
+        </div>
+
+        <!-- Add more letter sections as needed -->
+      </div>
+    </section>
+
+    <!-- Custom Content Section - For user-specific content -->
+    <section id="custom-content" class="directory-section" data-section-type="custom">
+      <h2>[Custom Section Title]</h2>
+      <p>[Description of custom content]</p>
+
+      <!-- Editable content area -->
+      <div class="content-block">
+        <div class="editable-content" id="custom-content-area">
+          <!-- User content goes here -->
+          <p>Enter your custom content here. This section can be used for any additional information or content organization that doesn't fit into the standard categories above.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contributor Information Footer -->
+    <div class="contributor-footer">
+      <div class="contributor-info">
+        <img src="[creator-avatar]" alt="Creator" class="contributor-avatar">
+        <span>Created by <a href="[creator-profile]">[Creator Name]</a> on [Creation Date]</span>
+      </div>
+      <a href="#page-history" class="page-history-link">View Page History</a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About FanArcs</h3>
+        <p>
+          FanArcs is a community-driven platform for fans to explore and
+          contribute to their favorite fictional universes.
+        </p>
+        <a href="../about-page.html">Learn More</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../contribute-page.html">Contribute</a></li>
+          <li><a href="../community-page.html">Community</a></li>
+          <li><a href="../wiki-page.html">Wiki</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <ul class="social-links">
+          <li><a href="#" class="social-icon twitter">Twitter</a></li>
+          <li><a href="#" class="social-icon discord">Discord</a></li>
+          <li><a href="#" class="social-icon reddit">Reddit</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 FanArcs. All rights reserved.</p>
+      <ul class="footer-legal">
+        <li><a href="../terms-page.html">Terms of Service</a></li>
+        <li><a href="../privacy-page.html">Privacy Policy</a></li>
+        <li><a href="../copyright-page.html">Copyright</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JavaScript files -->
+  <script src="../../js/menu-interaction.js"></script>
+  <script src="../../js/non-existent-pages.js"></script>
+  <script src="../../js/keyboard-shortcuts-reference.js"></script>
+  <script src="../../js/user-content.js"></script>
+</body>
+</html>

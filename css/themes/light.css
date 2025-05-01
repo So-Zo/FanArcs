@@ -10,14 +10,7 @@
   --heading-color: #222222;
 
   /* Background gradients */
-  --bg-gradient-light: linear-gradient(
-    to top,
-    #c9c8c5 0%,
-    #c9c8c5 1%,
-    #dbdad7 31%,
-    #dcdad7 75%,
-    #d6d5d2 100%
-  );
+  --bg-gradient-light: var(--base-light-gradient);
 
   /* UI colors */
   --border-color: rgba(0, 0, 0, 0.1);
