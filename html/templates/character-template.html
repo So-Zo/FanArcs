@@ -38,6 +38,11 @@
       </div>
     </div>
 
+    <!-- Wiki Edit Controls -->
+    <div class="wiki-controls-container">
+      <button class="wiki-edit-button" id="page-edit-button">Edit Page</button>
+    </div>
+
     <nav class="content-tabs" role="navigation" aria-label="Content sections">
       <ul>
         <li><a href="#overview" class="active" aria-current="page">Overview</a></li>
@@ -53,24 +58,24 @@
         <!-- Overview Section -->
         <section id="overview" class="content-section active">
           <div class="content-block">
-            <h2>Character Profile</h2>
-            <div class="editable-content">
+            <h2>Character Profile<a href="#edit-profile" class="section-edit-control" data-section="profile">Edit</a></h2>
+            <div class="editable-content" id="profile-content">
               <!-- User content goes here -->
               <p>Enter a brief description of the character here...</p>
             </div>
           </div>
 
           <div class="content-block">
-            <h2>Background</h2>
-            <div class="editable-content">
+            <h2>Background<a href="#edit-background" class="section-edit-control" data-section="background">Edit</a></h2>
+            <div class="editable-content" id="background-content">
               <!-- User content goes here -->
               <p>Enter the character's background and history here...</p>
             </div>
           </div>
 
           <div class="content-block">
-            <h2>Personality</h2>
-            <div class="editable-content">
+            <h2>Personality<a href="#edit-personality" class="section-edit-control" data-section="personality">Edit</a></h2>
+            <div class="editable-content" id="personality-content">
               <!-- User content goes here -->
               <p>Describe the character's personality traits here...</p>
               <p>Key personality traits include:</p>
@@ -239,6 +244,15 @@
         </div>
       </aside>
     </div>
+
+    <!-- Contributor Information Footer -->
+    <div class="contributor-footer">
+      <div class="contributor-info">
+        <img src="[last-editor-avatar]" alt="Last Editor" class="contributor-avatar">
+        <span>Last edited by <a href="[last-editor-profile]">[Last Editor Name]</a> on [Last Edit Date]</span>
+      </div>
+      <a href="#page-history" class="page-history-link">View Page History</a>
+    </div>
   </main>
 
   <!-- Footer Section -->
@@ -349,6 +363,7 @@
           <li><a href="../../about-page.html">About 🔎</a></li>
           <li><a href="../../contribute-page.html">Help FanArcs ⁉️ </a></li>
           <li><a href="../../community-page.html">Community</a></li>
+          <li><a href="../../keyboard-shortcuts.html">Keyboard Shortcuts ⌨️</a></li>
         </ul>
       </li>
     </ul>
@@ -358,5 +373,7 @@
   <script src="../../js/accessibility.js"></script>
   <script src="../../js/user-content.js"></script>
   <script src="../../js/non-existent-pages.js"></script>
+  <script src="../../js/page-history.js"></script>
+  <script src="../../js/keyboard-shortcuts-reference.js"></script>
 </body>
 </html>

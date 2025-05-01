@@ -38,6 +38,11 @@
       </div>
     </div>
 
+    <!-- Wiki Edit Controls -->
+    <div class="wiki-controls-container">
+      <button class="wiki-edit-button" id="page-edit-button">Edit Page</button>
+    </div>
+
     <nav class="content-tabs" role="navigation" aria-label="Content sections">
       <ul>
         <li><a href="#overview" class="active" aria-current="page">Overview</a></li>
@@ -53,24 +58,24 @@
         <!-- Overview Section -->
         <section id="overview" class="content-section active">
           <div class="content-block">
-            <h2>Synopsis</h2>
-            <div class="editable-content">
+            <h2>Synopsis<a href="#edit-synopsis" class="section-edit-control" data-section="synopsis">Edit</a></h2>
+            <div class="editable-content" id="synopsis-content">
               <!-- User content goes here -->
               <p>Enter a synopsis of the show/character here...</p>
             </div>
           </div>
 
           <div class="content-block">
-            <h2>Background</h2>
-            <div class="editable-content">
+            <h2>Background<a href="#edit-background" class="section-edit-control" data-section="background">Edit</a></h2>
+            <div class="editable-content" id="background-content">
               <!-- User content goes here -->
               <p>Enter background information here...</p>
             </div>
           </div>
 
           <div class="content-block">
-            <h2>Notable Features</h2>
-            <div class="editable-content">
+            <h2>Notable Features<a href="#edit-features" class="section-edit-control" data-section="features">Edit</a></h2>
+            <div class="editable-content" id="features-content">
               <!-- User content goes here -->
               <p>Enter notable features here...</p>
             </div>
@@ -231,6 +236,15 @@
         </div>
       </aside>
     </div>
+
+    <!-- Contributor Information Footer -->
+    <div class="contributor-footer">
+      <div class="contributor-info">
+        <img src="[last-editor-avatar]" alt="Last Editor" class="contributor-avatar">
+        <span>Last edited by <a href="[last-editor-profile]">[Last Editor Name]</a> on [Last Edit Date]</span>
+      </div>
+      <a href="#page-history" class="page-history-link">View Page History</a>
+    </div>
   </main>
 
   <!-- Footer Section -->
@@ -343,6 +357,7 @@
           <li><a href="../../about-page.html">About 🔎</a></li>
           <li><a href="../../contribute-page.html">Help Fan Arc ⁉️ </a></li>
           <li><a href="../../community-page.html">Community</a></li>
+          <li><a href="../../keyboard-shortcuts.html">Keyboard Shortcuts ⌨️</a></li>
         </ul>
       </li>
     </ul>
@@ -352,5 +367,7 @@
   <script src="../../js/accessibility.js"></script>
   <script src="../../js/user-content.js"></script>
   <script src="../../js/non-existent-pages.js"></script>
+  <script src="../../js/page-history.js"></script>
+  <script src="../../js/keyboard-shortcuts-reference.js"></script>
 </body>
 </html>
