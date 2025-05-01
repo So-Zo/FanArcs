@@ -13,7 +13,6 @@
 </head>
 
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
   <header role="banner">
     <div class="header-image">
       <img src="../../images/anime/AnimeShowsHeader.jpg" alt="Anime Shows Directory" />
@@ -26,6 +25,13 @@
       placeholder="Search for shows, characters, etc."
     />
   </header>
+
+  <div class="accessibility-container">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
+      <span>⌨️</span> Keyboard shortcuts
+    </button>
+  </div>
 
   <main id="main-content" role="main">
     <section class="directory-intro">
@@ -440,5 +446,6 @@
 
   <script src="../../js/menu-interaction.js"></script>
   <script src="../../js/non-existent-pages.js"></script>
+  <script src="../../js/keyboard-shortcuts-reference.js"></script>
 </body>
 </html>

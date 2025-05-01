@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get all keyboard shortcuts reference buttons
   const shortcutsReferenceButtons = document.querySelectorAll('.keyboard-shortcuts-reference');
-  
+
   // Add event listeners to all keyboard shortcuts reference buttons
   shortcutsReferenceButtons.forEach(button => {
     button.addEventListener('click', function(event) {
@@ -14,30 +14,30 @@ document.addEventListener('DOMContentLoaded', function() {
       showKeyboardShortcutsModal();
     });
   });
-  
+
   // Add keyboard shortcut to show the shortcuts modal (Alt + ?)
   document.addEventListener('keydown', function(event) {
     // Check if Alt + ? is pressed and not inside an input or textarea
-    if (event.altKey && 
-        event.key === '?' && 
-        document.activeElement.tagName !== 'INPUT' && 
+    if (event.altKey &&
+        event.key === '?' &&
+        document.activeElement.tagName !== 'INPUT' &&
         document.activeElement.tagName !== 'TEXTAREA' &&
         !document.activeElement.hasAttribute('contenteditable')) {
-      
+
       event.preventDefault();
       showKeyboardShortcutsModal();
     }
   });
-  
-  // Function to show the keyboard shortcuts modal
-  function showKeyboardShortcutsModal() {
+
+  // Function to show the keyboard shortcuts modal - make it globally available
+  window.showKeyboardShortcutsModal = function() {
     // Create modal element
     const modal = document.createElement('div');
     modal.className = 'keyboard-shortcuts-modal';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
     modal.setAttribute('aria-labelledby', 'keyboard-shortcuts-title');
-    
+
     // Create modal content
     modal.innerHTML = `
       <div class="keyboard-shortcuts-container">
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
               </li>
             </ul>
           </div>
-          
+
           <div class="shortcut-category">
             <h3>Navigation</h3>
             <ul class="shortcut-list">
@@ -105,28 +105,28 @@ document.addEventListener('DOMContentLoaded', function() {
               </li>
             </ul>
           </div>
-          
+
           <a href="keyboard-shortcuts.html" class="view-all-shortcuts">View all keyboard shortcuts</a>
         </div>
       </div>
     `;
-    
+
     // Add modal to the document
     document.body.appendChild(modal);
-    
+
     // Add event listener to close button
     const closeButton = modal.querySelector('.keyboard-shortcuts-close');
     closeButton.addEventListener('click', function() {
       closeKeyboardShortcutsModal(modal);
     });
-    
+
     // Add event listener to close when clicking outside
     modal.addEventListener('click', function(event) {
       if (event.target === modal) {
         closeKeyboardShortcutsModal(modal);
       }
     });
-    
+
     // Add event listener for escape key
     document.addEventListener('keydown', function escapeListener(event) {
       if (event.key === 'Escape') {
@@ -134,28 +134,28 @@ document.addEventListener('DOMContentLoaded', function() {
         document.removeEventListener('keydown', escapeListener);
       }
     });
-    
+
     // Show modal with animation
     setTimeout(() => {
       modal.classList.add('active');
     }, 10);
   }
-  
-  // Function to close the keyboard shortcuts modal
-  function closeKeyboardShortcutsModal(modal) {
+
+  // Function to close the keyboard shortcuts modal - make it globally available
+  window.closeKeyboardShortcutsModal = function(modal) {
     modal.classList.remove('active');
     setTimeout(() => {
       document.body.removeChild(modal);
     }, 300);
   }
-  
+
   // Add keyboard shortcuts reference buttons to wiki controls containers
   addKeyboardShortcutsReferenceButtons();
-  
+
   // Function to add keyboard shortcuts reference buttons to wiki controls containers
   function addKeyboardShortcutsReferenceButtons() {
     const wikiControlsContainers = document.querySelectorAll('.wiki-controls-container');
-    
+
     wikiControlsContainers.forEach(container => {
       // Check if the container already has a keyboard shortcuts reference button
       if (!container.querySelector('.keyboard-shortcuts-reference')) {
@@ -164,13 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
         button.className = 'keyboard-shortcuts-reference';
         button.setAttribute('aria-label', 'Keyboard shortcuts reference');
         button.setAttribute('type', 'button');
-        
+
         // Add event listener to the button
         button.addEventListener('click', function(event) {
           event.preventDefault();
           showKeyboardShortcutsModal();
         });
-        
+
         // Add the button to the container
         container.appendChild(button);
       }

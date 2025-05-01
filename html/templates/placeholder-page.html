@@ -15,7 +15,6 @@
 
 </head>
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
   <header role="banner">
     <div class="image-header">
       <img src="../../placeholder-header.jpg" alt="Placeholder Header" />
@@ -28,6 +27,13 @@
       placeholder="Search for Characters, Universes, etc."
     />
   </header>
+
+  <div class="accessibility-container">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
+      <span>⌨️</span> Keyboard shortcuts
+    </button>
+  </div>
 
   <main id="main-content" role="main">
     <div class="placeholder-container">

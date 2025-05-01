@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../../css/pages/character-page.css" />
 </head>
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
   <header role="banner">
     <div class="image-header">
       <img src="[character-image-path]" alt="[Character Name]" class="content-header-image" />
@@ -27,6 +26,13 @@
       placeholder="Search for Characters, Universes, etc."
     />
   </header>
+
+  <div class="accessibility-container">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
+      <span>⌨️</span> Keyboard shortcuts
+    </button>
+  </div>
 
   <main id="main-content" role="main">
     <div class="content-header">
@@ -58,7 +64,7 @@
         <!-- Overview Section -->
         <section id="overview" class="content-section active">
           <div class="content-block">
-            <h2>Character Profile<a href="#edit-profile" class="section-edit-control" data-section="profile">Edit</a></h2>
+            <h2>Character Profile</h2>
             <div class="editable-content" id="profile-content">
               <!-- User content goes here -->
               <p>Enter a brief description of the character here...</p>
@@ -66,7 +72,7 @@
           </div>
 
           <div class="content-block">
-            <h2>Background<a href="#edit-background" class="section-edit-control" data-section="background">Edit</a></h2>
+            <h2>Background</h2>
             <div class="editable-content" id="background-content">
               <!-- User content goes here -->
               <p>Enter the character's background and history here...</p>
@@ -74,7 +80,7 @@
           </div>
 
           <div class="content-block">
-            <h2>Personality<a href="#edit-personality" class="section-edit-control" data-section="personality">Edit</a></h2>
+            <h2>Personality</h2>
             <div class="editable-content" id="personality-content">
               <!-- User content goes here -->
               <p>Describe the character's personality traits here...</p>

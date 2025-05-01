@@ -28,7 +28,16 @@
         data-search-type="manga"
       />
     </header>
-    <main>
+
+    <div class="accessibility-container">
+      <a href="#main-content" class="skip-link">Skip to content</a>
+      <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
+        <span>⌨️</span> Keyboard shortcuts
+      </button>
+      <button class="wiki-edit-button" id="page-edit-button">Edit Page</button>
+    </div>
+
+    <main id="main-content">
       <hr />
 
       <!-- Table of Contents -->
@@ -863,5 +872,6 @@
 
     <!-- JavaScript for interactions -->
     <script src="../js/menu-interaction.js"></script>
+    <script src="../js/keyboard-shortcuts-reference.js"></script>
   </body>
 </html>

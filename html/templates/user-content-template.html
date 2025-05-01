@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../../css/pages/user-content-style.css" />
 </head>
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
   <header role="banner">
     <div class="image-header">
       <img src="[header-image-path]" alt="[Title]" class="content-header-image" />
@@ -28,6 +27,13 @@
     />
   </header>
 
+  <div class="accessibility-container">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
+      <span>⌨️</span> Keyboard shortcuts
+    </button>
+  </div>
+
   <main id="main-content" role="main">
     <div class="content-header">
       <h1 class="content-title">[Title]</h1>
@@ -36,11 +42,6 @@
         <span class="content-creator">Created by <a href="[creator-profile]">[Creator Name]</a></span> •
         <span class="content-date">Created on [Creation Date]</span>
       </div>
-    </div>
-
-    <!-- Wiki Edit Controls -->
-    <div class="wiki-controls-container">
-      <button class="wiki-edit-button" id="page-edit-button">Edit Page</button>
     </div>
 
     <nav class="content-tabs" role="navigation" aria-label="Content sections">
@@ -58,7 +59,7 @@
         <!-- Overview Section -->
         <section id="overview" class="content-section active">
           <div class="content-block">
-            <h2>Synopsis<a href="#edit-synopsis" class="section-edit-control" data-section="synopsis">Edit</a></h2>
+            <h2>Synopsis</h2>
             <div class="editable-content" id="synopsis-content">
               <!-- User content goes here -->
               <p>Enter a synopsis of the show/character here...</p>
@@ -66,7 +67,7 @@
           </div>
 
           <div class="content-block">
-            <h2>Background<a href="#edit-background" class="section-edit-control" data-section="background">Edit</a></h2>
+            <h2>Background</h2>
             <div class="editable-content" id="background-content">
               <!-- User content goes here -->
               <p>Enter background information here...</p>
@@ -74,7 +75,7 @@
           </div>
 
           <div class="content-block">
-            <h2>Notable Features<a href="#edit-features" class="section-edit-control" data-section="features">Edit</a></h2>
+            <h2>Notable Features</h2>
             <div class="editable-content" id="features-content">
               <!-- User content goes here -->
               <p>Enter notable features here...</p>

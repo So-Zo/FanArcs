@@ -16,20 +16,21 @@
   border-width: 0;
 }
 
-/* Skip to main content link */
-.skip-link {
-  position: absolute;
-  top: -3.125rem;
-  left: 0;
-  background-color: var(--fanarc-primary-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  z-index: 9999;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 0;
+/* Skip to main content link and accessibility container */
+.accessibility-container {
+  background: linear-gradient(
+    to top,
+    #c9c8c5 0%,
+    #c9c8c5 1%,
+    #dbdad7 31%,
+    #dcdad7 75%,
+    #d6d5d2 100%
+  );
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
 }
 
 /* Focus visible utility */
@@ -43,7 +44,7 @@
   .high-contrast-border {
     border: 0.125rem solid currentColor;
   }
-  
+
   .high-contrast-outline {
     outline: 0.125rem solid currentColor;
     outline-offset: 0.125rem;

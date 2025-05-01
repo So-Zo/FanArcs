@@ -12,6 +12,8 @@
 }
 
 /* Default link styling */
+.skip-link,
+.keyboard-shortcuts-link,
 .default-links {
   color: #4a2bfd;
   text-decoration: none;
