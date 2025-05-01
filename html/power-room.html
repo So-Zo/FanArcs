@@ -7,10 +7,10 @@
   <title>Power Room | FanArcs</title>
 
   <!-- Main CSS framework -->
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="../css/main.css" />
 
   <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="css/pages/power-room.css" />
+  <link rel="stylesheet" href="../css/pages/power-room.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -29,51 +29,26 @@
       </p>
     </section>
 
+    <!-- Wiki Edit Controls -->
+    <div class="wiki-controls-container">
+      <button class="wiki-edit-button" id="page-edit-button">Edit Page</button>
+    </div>
+
     <section class="power-comparison-container" role="region" aria-label="Character comparison">
-      <!-- Left Character Panel -->
-      <div class="character-panel left-character" role="region" aria-label="Left character">
-        <div class="character-image">
-          <img src="Post-test.jpg" alt="Character 1" id="left-character-img" />
-        </div>
-        <div class="character-info">
-          <h2 id="left-character-name">Character Name</h2>
-          <h3 id="left-character-show">Show Title</h3>
-          <div class="character-stats">
-            <div class="stat-item">
-              <span class="stat-label">Strength:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 75%"></div>
-              </div>
-              <span class="stat-value">75</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Speed:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 85%"></div>
-              </div>
-              <span class="stat-value">85</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Intelligence:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 60%"></div>
-              </div>
-              <span class="stat-value">60</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Durability:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 70%"></div>
-              </div>
-              <span class="stat-value">70</span>
-            </div>
+      <!-- Character Selection Area -->
+      <div class="character-selection-area">
+        <!-- Left Character Selection Panel -->
+        <div class="character-selection-panel left-panel">
+          <div class="character-image">
+            <img src="character-placeholder.jpg" alt="Character 1" id="left-character-img" />
           </div>
-        </div>
-        <div class="character-selection">
+          <h2 id="left-character-name" class="character-name">Character Name</h2>
+
           <div class="character-search">
             <input type="search" id="left-character-search" class="character-search-input" aria-label="Search for left character" placeholder="Search for characters...">
             <button class="search-button" id="left-search-button" aria-label="Search">🔍</button>
           </div>
+
           <div class="character-filter">
             <select id="left-universe-filter" class="universe-filter" aria-label="Filter by universe for left character">
               <option value="all">All Universes</option>
@@ -86,64 +61,35 @@
           </div>
 
           <div class="character-list-container">
-            <ul id="left-character-list" class="character-list" role="listbox" aria-label="Left character selection"></ul>
+            <ul id="left-character-list" class="character-list" role="listbox" aria-label="Left character selection">
+              <!-- Character items will be populated here by JavaScript -->
+              <!-- Each item will have an alternate version toggle button -->
+            </ul>
+          </div>
+
+          <div class="character-controls">
+            <button class="prev-character" id="left-prev" aria-label="Previous character (left side)">◀</button>
+            <button class="next-character" id="left-next" aria-label="Next character (left side)">▶</button>
           </div>
         </div>
-        <div class="character-controls left-controls">
-          <button class="prev-character" id="left-prev" aria-label="Previous character (left side)">◀</button>
-          <button class="next-character" id="left-next" aria-label="Next character (left side)">▶</button>
-        </div>
-      </div>
 
-      <!-- VS Divider for Desktop -->
-      <div class="vs-divider" aria-hidden="true">
-        <span>VS</span>
-      </div>
-
-      <!-- Right Character Panel -->
-      <div class="character-panel right-character" role="region" aria-label="Right character">
-        <div class="character-image">
-          <img src="character-placeholder.jpg" alt="Character 2" id="right-character-img" />
+        <!-- VS Divider -->
+        <div class="vs-divider" aria-hidden="true">
+          <span>VS</span>
         </div>
-        <div class="character-info">
-          <h2 id="right-character-name">Character Name</h2>
-          <h3 id="right-character-show">Show Title</h3>
-          <div class="character-stats">
-            <div class="stat-item">
-              <span class="stat-label">Strength:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 90%"></div>
-              </div>
-              <span class="stat-value">90</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Speed:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 65%"></div>
-              </div>
-              <span class="stat-value">65</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Intelligence:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 50%"></div>
-              </div>
-              <span class="stat-value">50</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">Durability:</span>
-              <div class="stat-bar">
-                <div class="stat-fill" style="width: 95%"></div>
-              </div>
-              <span class="stat-value">95</span>
-            </div>
+
+        <!-- Right Character Selection Panel -->
+        <div class="character-selection-panel right-panel">
+          <div class="character-image">
+            <img src="character-placeholder.jpg" alt="Character 2" id="right-character-img" />
           </div>
-        </div>
-        <div class="character-selection">
+          <h2 id="right-character-name" class="character-name">Character Name</h2>
+
           <div class="character-search">
             <input type="search" id="right-character-search" class="character-search-input" aria-label="Search for right character" placeholder="Search for characters...">
             <button class="search-button" id="right-search-button" aria-label="Search">🔍</button>
           </div>
+
           <div class="character-filter">
             <select id="right-universe-filter" class="universe-filter" aria-label="Filter by universe for right character">
               <option value="all">All Universes</option>
@@ -154,24 +100,280 @@
               <option value="games">Games</option>
             </select>
           </div>
+
           <div class="character-list-container">
-            <ul id="right-character-list" class="character-list" role="listbox" aria-label="Right character selection"></ul>
+            <ul id="right-character-list" class="character-list" role="listbox" aria-label="Right character selection">
+              <!-- Character items will be populated here by JavaScript -->
+              <!-- Each item will have an alternate version toggle button -->
+            </ul>
+          </div>
+
+          <div class="character-controls">
+            <button class="prev-character" id="right-prev" aria-label="Previous character (right side)">◀</button>
+            <button class="next-character" id="right-next" aria-label="Next character (right side)">▶</button>
           </div>
         </div>
-        <div class="character-controls right-controls">
-          <button class="prev-character" id="right-prev" aria-label="Previous character (right side)">◀</button>
-          <button class="next-character" id="right-next" aria-label="Next character (right side)">▶</button>
+      </div>
+
+      <!-- Comparison Content Area -->
+      <div class="comparison-content-area">
+        <!-- Comparison Navigation Tabs -->
+        <div class="comparison-tabs">
+          <button class="tab-button active" data-tab="stats">Stats & Abilities</button>
+          <button class="tab-button" data-tab="timelines">Timelines</button>
+          <button class="tab-button" data-tab="worlds">Worlds & Universes</button>
+          <button class="tab-button" data-tab="feats">Notable Feats</button>
+        </div>
+
+        <!-- Comparison Content Panels -->
+        <div class="comparison-panels">
+          <!-- Stats & Abilities Panel -->
+          <div class="comparison-panel active" id="stats-panel">
+            <div class="comparison-panel-header">
+              <h3>Stats & Abilities<a href="#edit-stats" class="section-edit-control" data-section="stats">Edit</a></h3>
+            </div>
+            <div class="comparison-panel-content editable-content" id="stats-content">
+              <div class="left-content">
+                <h3>Stats & Abilities</h3>
+                <div class="character-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Strength:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill left-stat" style="width: 75%"></div>
+                    </div>
+                    <span class="stat-value">75</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Speed:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill left-stat" style="width: 85%"></div>
+                    </div>
+                    <span class="stat-value">85</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Intelligence:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill left-stat" style="width: 60%"></div>
+                    </div>
+                    <span class="stat-value">60</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Durability:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill left-stat" style="width: 70%"></div>
+                    </div>
+                    <span class="stat-value">70</span>
+                  </div>
+                </div>
+
+                <div class="character-abilities">
+                  <h4>Special Abilities</h4>
+                  <ul class="abilities-list" id="left-abilities-list">
+                    <li>Super Strength</li>
+                    <li>Flight</li>
+                    <li>Energy Projection</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="right-content">
+                <h3>Stats & Abilities</h3>
+                <div class="character-stats">
+                  <div class="stat-item">
+                    <span class="stat-label">Strength:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill right-stat" style="width: 90%"></div>
+                    </div>
+                    <span class="stat-value">90</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Speed:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill right-stat" style="width: 65%"></div>
+                    </div>
+                    <span class="stat-value">65</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Intelligence:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill right-stat" style="width: 50%"></div>
+                    </div>
+                    <span class="stat-value">50</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-label">Durability:</span>
+                    <div class="stat-bar">
+                      <div class="stat-fill right-stat" style="width: 95%"></div>
+                    </div>
+                    <span class="stat-value">95</span>
+                  </div>
+                </div>
+
+                <div class="character-abilities">
+                  <h4>Special Abilities</h4>
+                  <ul class="abilities-list" id="right-abilities-list">
+                    <li>Invulnerability</li>
+                    <li>Heat Vision</li>
+                    <li>Super Speed</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timelines Panel -->
+          <div class="comparison-panel" id="timelines-panel">
+            <div class="comparison-panel-header">
+              <h3>Character Timelines<a href="#edit-timelines" class="section-edit-control" data-section="timelines">Edit</a></h3>
+            </div>
+            <div class="comparison-panel-content editable-content" id="timelines-content">
+              <div class="left-content">
+                <h3>Character Timeline</h3>
+                <div class="timeline-container" id="left-timeline">
+                  <div class="timeline-event">
+                    <div class="timeline-date">Origin</div>
+                    <div class="timeline-description">Character origin story and initial power level</div>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="timeline-date">Major Event 1</div>
+                    <div class="timeline-description">Description of power evolution</div>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="timeline-date">Major Event 2</div>
+                    <div class="timeline-description">Further character development</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right-content">
+                <h3>Character Timeline</h3>
+                <div class="timeline-container" id="right-timeline">
+                  <div class="timeline-event">
+                    <div class="timeline-date">Origin</div>
+                    <div class="timeline-description">Character origin story and initial power level</div>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="timeline-date">Major Event 1</div>
+                    <div class="timeline-description">Description of power evolution</div>
+                  </div>
+                  <div class="timeline-event">
+                    <div class="timeline-date">Major Event 2</div>
+                    <div class="timeline-description">Further character development</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Worlds & Universes Panel -->
+          <div class="comparison-panel" id="worlds-panel">
+            <div class="comparison-panel-header">
+              <h3>Worlds & Universes<a href="#edit-worlds" class="section-edit-control" data-section="worlds">Edit</a></h3>
+            </div>
+            <div class="comparison-panel-content editable-content" id="worlds-content">
+              <div class="left-content">
+                <h3>World & Universe</h3>
+                <div class="world-info" id="left-world-info">
+                  <h4>Universe Name</h4>
+                  <p>Description of the character's universe, its rules, and power scaling.</p>
+                  <h4>Notable Locations</h4>
+                  <ul>
+                    <li>Location 1</li>
+                    <li>Location 2</li>
+                  </ul>
+                  <h4>Power System</h4>
+                  <p>Description of how powers work in this universe</p>
+                </div>
+              </div>
+
+              <div class="right-content">
+                <h3>World & Universe</h3>
+                <div class="world-info" id="right-world-info">
+                  <h4>Universe Name</h4>
+                  <p>Description of the character's universe, its rules, and power scaling.</p>
+                  <h4>Notable Locations</h4>
+                  <ul>
+                    <li>Location 1</li>
+                    <li>Location 2</li>
+                  </ul>
+                  <h4>Power System</h4>
+                  <p>Description of how powers work in this universe</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notable Feats Panel -->
+          <div class="comparison-panel" id="feats-panel">
+            <div class="comparison-panel-header">
+              <h3>Notable Feats<a href="#edit-feats" class="section-edit-control" data-section="feats">Edit</a></h3>
+            </div>
+            <div class="comparison-panel-content editable-content" id="feats-content">
+              <div class="left-content">
+                <h3>Notable Feats</h3>
+                <div class="feats-container" id="left-feats">
+                  <div class="feat-item">
+                    <h4>Feat Title</h4>
+                    <p>Description of impressive achievement or display of power</p>
+                    <div class="feat-metrics">
+                      <span class="feat-metric">Power Level: <strong>High</strong></span>
+                      <span class="feat-metric">Difficulty: <strong>Extreme</strong></span>
+                    </div>
+                  </div>
+                  <div class="feat-item">
+                    <h4>Feat Title</h4>
+                    <p>Description of impressive achievement or display of power</p>
+                    <div class="feat-metrics">
+                      <span class="feat-metric">Power Level: <strong>Medium</strong></span>
+                      <span class="feat-metric">Difficulty: <strong>High</strong></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right-content">
+                <h3>Notable Feats</h3>
+                <div class="feats-container" id="right-feats">
+                  <div class="feat-item">
+                    <h4>Feat Title</h4>
+                    <p>Description of impressive achievement or display of power</p>
+                    <div class="feat-metrics">
+                      <span class="feat-metric">Power Level: <strong>Extreme</strong></span>
+                      <span class="feat-metric">Difficulty: <strong>Medium</strong></span>
+                    </div>
+                  </div>
+                  <div class="feat-item">
+                    <h4>Feat Title</h4>
+                    <p>Description of impressive achievement or display of power</p>
+                    <div class="feat-metrics">
+                      <span class="feat-metric">Power Level: <strong>High</strong></span>
+                      <span class="feat-metric">Difficulty: <strong>High</strong></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Contributor Information Footer -->
+    <div class="contributor-footer">
+      <div class="contributor-info">
+        <img src="[last-editor-avatar]" alt="Last Editor" class="contributor-avatar">
+        <span>Last edited by <a href="[last-editor-profile]">[Last Editor Name]</a> on [Last Edit Date]</span>
+      </div>
+      <a href="#page-history" class="page-history-link">View Page History</a>
+    </div>
   </main>
 
   <!-- Footer Section -->
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-section footer-about">
-        <img src="logo-image.jpg" alt="Fan Arc Logo" class="footer-logo">
-        <p>Fan Arc is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+        <img src="logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+        <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
         <div class="social-links">
           <a href="#" class="social-icon" aria-label="Facebook">📘</a>
           <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
@@ -182,7 +384,7 @@
 
       <div class="footer-section footer-contact">
         <h3>Contact Us</h3>
-        <p><span>📧</span> contact@fanarc.com</p>
+        <p><span>📧</span> contact@fanarcs.com</p>
         <p><span>📱</span> (555) 123-4567</p>
         <p><span>🏢</span> 123 Fan Street, Anime City</p>
         <h3>Newsletter</h3>
@@ -194,87 +396,82 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Fan Arc. All rights reserved.</p>
+      <p>&copy; 2025 FanArcs. All rights reserved.</p>
       <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
     </div>
   </footer>
 
   <!-- Bottom navigation bar -->
   <div class="bottom-navigation">
-    <a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
-    <a
-      href="profile-page.html"
-      class="nav-profile-button"
-      aria-label="Profile Page"
-      >👤</a
-    >
-    <div class="nav-search-popup" onclick="toggleSearchPopup()">
-      <span>🔍</span>
-    </div>
+    <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+  <a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+  <a href="profile-page.html"class="nav-profile-button"aria-label="Profile Page">👤</a>
+  <div class="nav-search-popup" onclick="toggleSearchPopup()">
+  <span>🔍</span>
+  </div>
 
-    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-    </div>
+  <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+  <div class="hamburger-bar"></div>
+  <div class="hamburger-bar"></div>
+  <div class="hamburger-bar"></div>
+  </div>
   </div>
 
   <!-- The navigation menu that will show/hide -->
   <nav class="main-navigation">
-    <ul>
-      <ul>
-        <li><a href="index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
-      </ul>
-      <!-- Categories dropdown -->
-      <li>
-        <button
-          class="nav-dropdown-toggle"
-          aria-expanded="false"
-          aria-controls="categories-dropdown"
-        >
-          Categories <span>►</span>
-        </button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="anime-page.html">Anime 🌸</a></li>
-          <hr />
-          <li><a href="comics-page.html">Comics 💥</a></li>
-          <hr />
-          <li><a href="manga-page.html">Manga 📖</a></li>
-          <hr />
-          <li><a href="tv-page.html">Television 📺</a></li>
-          <hr />
-          <li><a href="metaverse-page.html">Metaverse 🎮</a></li>
-          <hr />
-          <li>
-            <a href="worlds-universes-page.html">Worlds & Universes 🌌</a>
-          </li>
-          <hr />
-          <li>
-            <a href="power-room.html">Power Room ⚔️</a>
-          </li>
-        </ul>
-      </li>
+  <ul>
+  <!-- Categories dropdown -->
+  <li>
+  <button
+  class="nav-dropdown-toggle"
+  aria-expanded="false"
+  aria-controls="categories-dropdown"
+  >
+  Categories <span>►</span>
+  </button>
+  <ul class="nav-dropdown-menu">
+  <li><a href="anime/anime-page.html" class="default-links">Anime 🌸</a></li>
+  <hr />
+  <li><a href="comics/comics-page.html" class="default-links">Comics 💥</a></li>
+  <hr />
+  <li><a href="manga/manga-page.html" class="default-links">Manga 📖</a></li>
+  <hr />
+  <li><a href="tv/tv-page.html" class="default-links">Television 📺</a></li>
+  <hr />
+  <li><a href="metaverse/metaverse-page.html" class="default-links">Metaverse 🎮</a></li>
+  <hr />
+  <li>
+  <a href="worlds-universes/worlds-universes-page.html" class="default-links">Worlds & Universes 🌌</a>
+  </li>
+  <hr />
+  <li>
+  <a href="power-room.html" class="default-links">Power Room ⚔️</a>
+  </li>
+  </ul>
+  </li>
 
-      <!-- FanArcs Info dropdown -->
-      <li>
-        <button
-          class="nav-dropdown-toggle"
-          aria-expanded="false"
-          aria-controls="info-dropdown"
-        >
-          Fan Arc Info <span>►</span>
-        </button>
-        <ul class="nav-dropdown-menu">
-          <li><a href="about-page.html">About 🔎</a></li>
-          <li><a href="contribute-page.html">Help Fan Arc ⁉️ </a></li>
-          <li><a href="community-page.html">Community</a></li>
-        </ul>
-      </li>
-    </ul>
+  <!-- FanArcs Info dropdown -->
+  <li>
+  <button
+  class="nav-dropdown-toggle"
+  aria-expanded="false"
+  aria-controls="info-dropdown"
+  >
+  FanArcs Info <span>►</span>
+  </button>
+  <ul class="nav-dropdown-menu">
+  <li><a href="about-page.html" class="default-links">About 🔎</a></li>
+  <li><a href="contribute-page.html" class="default-links">Help FanArcs ⁉️ </a></li>
+  <li><a href="community-page.html" class="default-links">Community</a></li>
+  </ul>
+  </li>
+  </ul>
   </nav>
 
   <script src="../js/menu-interaction.js"></script>
   <script src="../js/power-room.js"></script>
   <script src="../js/accessibility.js"></script>
+  <script src="../js/page-history.js"></script>
+  <script src="../js/keyboard-shortcuts-reference.js"></script>
 </body>
 </html>
