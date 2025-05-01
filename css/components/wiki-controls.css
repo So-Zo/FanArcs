@@ -1,0 +1,156 @@
+/*
+ * Wiki Controls Component for FanArcs
+ * This file contains styles for wiki-style editing controls
+ */
+
+/* Edit button with pencil icon */
+.wiki-edit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.wiki-edit-button:hover {
+  background-color: var(--fanarc-primary-color);
+  transform: translateY(-0.125rem);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Pencil icon using Unicode */
+.wiki-edit-button::before {
+  content: "✏️";
+  font-size: 1rem;
+}
+
+/* Keyboard shortcut tooltip */
+.wiki-edit-button::after {
+  content: "Press E to edit";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--fanarc-primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-xs);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+  white-space: nowrap;
+  z-index: var(--z-index-tooltip);
+  pointer-events: none;
+  margin-bottom: 0.5rem;
+}
+
+/* Show tooltip on hover */
+.wiki-edit-button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Section edit controls */
+.section-edit-control {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+}
+
+.section-edit-control:hover {
+  opacity: 1;
+}
+
+/* Pencil icon for section edit */
+.section-edit-control::before {
+  content: "✏️";
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+/* Wiki controls container */
+.wiki-controls-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius-small);
+}
+
+/* Contributor information footer */
+.contributor-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: var(--font-size-sm);
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contributor-info {
+  display: flex;
+  align-items: center;
+}
+
+.contributor-avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.page-history-link {
+  color: var(--fanarc-secondary-color);
+  text-decoration: none;
+}
+
+.page-history-link:hover {
+  text-decoration: underline;
+}
+
+/* Focus state for accessibility */
+.wiki-edit-button:focus,
+.section-edit-control:focus,
+.page-history-link:focus {
+  outline: 0.125rem dotted var(--fanarc-secondary-color);
+  outline-offset: 0.125rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: var(--breakpoint-sm)) {
+  .wiki-controls-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contributor-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  /* Adjust tooltip position for small screens */
+  .wiki-edit-button::after {
+    bottom: auto;
+    top: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+}
