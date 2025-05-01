@@ -15,8 +15,8 @@
   </head>
 
   <body>
-    <header>
-      <div class="TestImgHead">
+    <header role="banner">
+      <div class="header-image">
         <img src="../images/manga/MangaHeader.jpg" alt="Manga Overview" />
       </div>
 
@@ -25,6 +25,7 @@
         id="site-search-bar"
         aria-label="Search From Manga Page"
         placeholder="Search for Characters, Universes, etc."
+        data-search-type="manga"
       />
     </header>
     <main>
@@ -66,8 +67,8 @@
 
         <div class="community-connection">
           <h4>Looking for specific manga series or characters?</h4>
-          <p>Browse our <a href="manga/shows-directory.html" class="default-links">Manga Shows Directory</a> to find official pages for your favorite series and characters.</p>
-          <p>You can also visit our <a href="community-page.html#manga-section" class="default-links">Community Section</a> to explore fan-created content about manga series, characters, and more!</p>
+          <p>Browse our <a href="manga-directory.html" class="default-links">Manga Shows Directory</a> to find official pages for your favorite series and characters.</p>
+          <p>You can also visit our <a href="../community-page.html#manga-section" class="default-links">Community Section</a> to explore fan-created content about manga series, characters, and more!</p>
         </div>
       </section>
       <hr />
@@ -272,7 +273,7 @@
           <div class="genre-nav-buttons">
             <a href="#popular-genres" class="default-links">Popular Genres</a>
             <a href="#demographic-genres" class="default-links">Demographic Categories</a>
-            <a href="manga/shows-directory.html#genres" class="default-links">Full Genre Directory →</a>
+            <a href="manga-directory.html#genres" class="default-links">Full Genre Directory →</a>
           </div>
         </div>
 
@@ -286,7 +287,7 @@
               <p>Action-focused manga featuring protagonists who grow stronger through training and combat.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Dragon Ball, One Piece, Naruto, My Hero Academia</li>
-                <li><a href="manga/shows-directory.html#genres" class="default-links">Explore Shōnen Battle Manga →</a></li>
+                <li><a href="manga-directory.html#genres" class="default-links">Explore Shōnen Battle Manga →</a></li>
               </ul>
             </div>
 
@@ -295,7 +296,7 @@
               <p>Focuses on the everyday experiences of characters, often with a warm or comedic tone.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Yotsuba&!, Barakamon, Silver Spoon</li>
-                <li><a href="manga/shows-directory.html#genres" class="default-links">Explore Slice of Life Manga →</a></li>
+                <li><a href="manga-directory.html#genres" class="default-links">Explore Slice of Life Manga →</a></li>
               </ul>
             </div>
 
@@ -304,7 +305,7 @@
               <p>Designed to evoke fear through disturbing imagery and unsettling narratives.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Junji Ito's works (Uzumaki, Tomie), Parasyte</li>
-                <li><a href="manga/shows-directory.html#genres" class="default-links">Explore Horror Manga →</a></li>
+                <li><a href="manga-directory.html#genres" class="default-links">Explore Horror Manga →</a></li>
               </ul>
             </div>
 
@@ -313,7 +314,7 @@
               <p>Focuses on romantic relationships between characters and emotional connections.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Kimi ni Todoke, Horimiya, Kaguya-sama</li>
-                <li><a href="manga/shows-directory.html#genres" class="default-links">Explore Romance Manga →</a></li>
+                <li><a href="manga-directory.html#genres" class="default-links">Explore Romance Manga →</a></li>
               </ul>
             </div>
 
@@ -322,7 +323,7 @@
               <p>Set in fantastical worlds with elements like magic and supernatural powers.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Berserk, Made in Abyss, The Ancient Magus' Bride</li>
-                <li><a href="manga/shows-directory.html#genres" class="default-links">Explore Fantasy Manga →</a></li>
+                <li><a href="manga-directory.html#genres" class="default-links">Explore Fantasy Manga →</a></li>
               </ul>
             </div>
 
@@ -331,13 +332,13 @@
               <p>Centers around competitive sports and athletes, focusing on teamwork and growth.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Haikyuu!!, Slam Dunk, Blue Lock</li>
-                <li><a href="manga/shows-directory.html#genres" class="default-links">Explore Sports Manga →</a></li>
+                <li><a href="manga-directory.html#genres" class="default-links">Explore Sports Manga →</a></li>
               </ul>
             </div>
           </div>
 
           <div class="view-more-container">
-            <a href="manga/shows-directory.html#genres" class="view-more-button">View All Genres in Directory</a>
+            <a href="manga-directory.html#genres" class="view-more-button">View All Genres in Directory</a>
           </div>
         </div>
 
@@ -351,7 +352,7 @@
               <p>Aimed at boys and young men ages 12-18, featuring action, adventure, and coming-of-age themes.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> One Piece, Naruto, My Hero Academia</li>
-                <li><a href="manga/shows-directory.html#demographics" class="default-links">Explore Shōnen Manga →</a></li>
+                <li><a href="manga-directory.html#demographics" class="default-links">Explore Shōnen Manga →</a></li>
               </ul>
             </div>
 
@@ -360,7 +361,7 @@
               <p>Aimed at girls and young women ages 12-18, often focusing on romance and emotional growth.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Fruits Basket, Ouran High School Host Club, Nana</li>
-                <li><a href="manga/shows-directory.html#demographics" class="default-links">Explore Shōjo Manga →</a></li>
+                <li><a href="manga-directory.html#demographics" class="default-links">Explore Shōjo Manga →</a></li>
               </ul>
             </div>
 
@@ -369,7 +370,7 @@
               <p>Targeted at adult men (18+), with more complex themes and mature content.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Berserk, Vagabond, Vinland Saga</li>
-                <li><a href="manga/shows-directory.html#demographics" class="default-links">Explore Seinen Manga →</a></li>
+                <li><a href="manga-directory.html#demographics" class="default-links">Explore Seinen Manga →</a></li>
               </ul>
             </div>
 
@@ -378,7 +379,7 @@
               <p>Targeted at adult women (18+), featuring realistic relationships and mature themes.</p>
               <ul class="show-list">
                 <li><strong>Notable Examples:</strong> Chihayafuru, Honey and Clover, Wotakoi</li>
-                <li><a href="manga/shows-directory.html#demographics" class="default-links">Explore Josei Manga →</a></li>
+                <li><a href="manga-directory.html#demographics" class="default-links">Explore Josei Manga →</a></li>
               </ul>
             </div>
           </div>
@@ -388,9 +389,9 @@
           <h3>Finding Your Perfect Manga</h3>
           <p>Not sure where to start? Here are some resources to help you discover manga based on your interests:</p>
           <ul class="resource-links">
-            <li><a href="manga/shows-directory.html" class="default-links">Browse Our Manga Shows Directory</a></li>
-            <li><a href="manga/shows-directory.html#popular-series" class="default-links">Popular Series for Beginners</a></li>
-            <li><a href="manga/shows-directory.html#genres" class="default-links">Browse by Genre</a></li>
+            <li><a href="manga-directory.html" class="default-links">Browse Our Manga Shows Directory</a></li>
+            <li><a href="manga-directory.html#popular-series" class="default-links">Popular Series for Beginners</a></li>
+            <li><a href="manga-directory.html#genres" class="default-links">Browse by Genre</a></li>
           </ul>
         </div>
       </section>
@@ -543,13 +544,13 @@
               <div class="world-example">
                 <h4>The World of One Piece</h4>
                 <p>A vast ocean world divided by the Grand Line, filled with islands, pirates, and mysterious Devil Fruits</p>
-                <a href="manga/shows-directory.html#universes" class="default-links">Explore the Grand Line in Shows Directory →</a>
+                <a href="manga-directory.html#universes" class="default-links">Explore the Grand Line in Shows Directory →</a>
               </div>
 
               <div class="world-example">
                 <h4>Berserk's Dark Fantasy World</h4>
                 <p>A medieval European-inspired dark fantasy realm where humans struggle against demonic forces</p>
-                <a href="manga/shows-directory.html#universes" class="default-links">Discover the World of Berserk in Shows Directory →</a>
+                <a href="manga-directory.html#universes" class="default-links">Discover the World of Berserk in Shows Directory →</a>
               </div>
             </div>
           </div>
@@ -561,13 +562,13 @@
               <div class="world-example">
                 <h4>Akira's Neo-Tokyo</h4>
                 <p>A cyberpunk metropolis rebuilt after a catastrophic explosion, filled with biker gangs, government experiments, and psychic powers</p>
-                <a href="manga/shows-directory.html#universes" class="default-links">Explore Neo-Tokyo in Shows Directory →</a>
+                <a href="manga-directory.html#universes" class="default-links">Explore Neo-Tokyo in Shows Directory →</a>
               </div>
 
               <div class="world-example">
                 <h4>Attack on Titan's Walled Society</h4>
                 <p>A society enclosed by massive walls to protect humanity from giant humanoid creatures</p>
-                <a href="manga/shows-directory.html#universes" class="default-links">Discover the Walls in Shows Directory →</a>
+                <a href="manga-directory.html#universes" class="default-links">Discover the Walls in Shows Directory →</a>
               </div>
             </div>
           </div>
@@ -587,7 +588,7 @@
         <div class="community-connection">
           <h4>Explore Manga Worlds in Our Shows Directory</h4>
           <p>Our shows directory features official information about your favorite manga universes, including character profiles, location guides, power system explanations, and more!</p>
-          <a href="manga/shows-directory.html" class="default-links">Browse All Manga Shows →</a>
+          <a href="manga-directory.html" class="default-links">Browse All Manga Shows →</a>
         </div>
       </section>
       <hr />
@@ -605,15 +606,15 @@
             <ul class="recommendation-list">
               <li>
                 <strong>Death Note</strong> - A psychological thriller about a student who discovers a notebook that kills anyone whose name is written in it
-                <a href="manga/shows-directory.html#popular-series" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#popular-series" class="default-links">View Series Details →</a>
               </li>
               <li>
                 <strong>Fullmetal Alchemist</strong> - A perfect blend of action, drama, and fantasy with a complete, satisfying story
-                <a href="manga/shows-directory.html#popular-series" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#popular-series" class="default-links">View Series Details →</a>
               </li>
               <li>
                 <strong>Yotsuba&!</strong> - A heartwarming slice-of-life series about an energetic young girl discovering the world
-                <a href="manga/shows-directory.html#popular-series" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#popular-series" class="default-links">View Series Details →</a>
               </li>
             </ul>
           </div>
@@ -624,15 +625,15 @@
             <ul class="recommendation-list">
               <li>
                 <strong>Astro Boy</strong> - Osamu Tezuka's groundbreaking series about a robot boy with human emotions
-                <a href="manga/shows-directory.html#eras" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#eras" class="default-links">View Series Details →</a>
               </li>
               <li>
                 <strong>Dragon Ball</strong> - Akira Toriyama's martial arts adventure that popularized manga worldwide
-                <a href="manga/shows-directory.html#eras" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#eras" class="default-links">View Series Details →</a>
               </li>
               <li>
                 <strong>Akira</strong> - Katsuhiro Otomo's cyberpunk masterpiece that revolutionized manga storytelling
-                <a href="manga/shows-directory.html#eras" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#eras" class="default-links">View Series Details →</a>
               </li>
             </ul>
           </div>
@@ -643,15 +644,15 @@
             <ul class="recommendation-list">
               <li>
                 <strong>Demon Slayer</strong> - A visually stunning tale of a boy hunting demons in Taisho-era Japan
-                <a href="manga/shows-directory.html#popular-series" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#popular-series" class="default-links">View Series Details →</a>
               </li>
               <li>
                 <strong>Jujutsu Kaisen</strong> - A dark fantasy about students battling curses with supernatural powers
-                <a href="manga/shows-directory.html#popular-series" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#popular-series" class="default-links">View Series Details →</a>
               </li>
               <li>
                 <strong>Spy x Family</strong> - A charming blend of action and comedy about a spy who must create a fake family
-                <a href="manga/shows-directory.html#popular-series" class="default-links">View Series Details →</a>
+                <a href="manga-directory.html#popular-series" class="default-links">View Series Details →</a>
               </li>
             </ul>
           </div>
@@ -660,7 +661,7 @@
         <div class="community-connection">
           <h4>Find Your Next Favorite Manga</h4>
           <p>Looking for more manga to read? Browse our comprehensive shows directory to discover series based on your interests and preferences.</p>
-          <a href="manga/shows-directory.html" class="default-links">Browse All Manga Shows →</a>
+          <a href="manga-directory.html" class="default-links">Browse All Manga Shows →</a>
         </div>
       </section>
       <hr />
@@ -799,6 +800,7 @@
       <!-- Bottom navigation bar -->
       <div class="bottom-navigation">
         <a href="../index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+        <a href="../community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
         <a href="../profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
         <div class="nav-search-popup" onclick="toggleSearchPopup()">
           <span>🔍</span>
