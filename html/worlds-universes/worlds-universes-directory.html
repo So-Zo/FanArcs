@@ -9,9 +9,11 @@
 
   <!-- Page-specific CSS -->
   <link rel="stylesheet" href="../../css/pages/worlds-universes-style.css" />
-  <link rel="stylesheet" href="../../css/components/directory-categories.css" />
-  <link rel="stylesheet" href="../../css/components/show-cards.css" />
   <title>Worlds & Universes Directory | FanArcs</title>
+
+  <!-- Data attributes for backend integration -->
+  <meta name="data-source" content="worlds-universes-directory" />
+  <meta name="data-categories" content="popular,types,media,creators,alphabetical" />
 </head>
 
 <body>
@@ -26,6 +28,7 @@
       id="site-search-bar"
       aria-label="Search Worlds & Universes"
       placeholder="Search for fictional worlds, universes, etc."
+      data-search-type="worlds"
     />
   </header>
 
@@ -35,19 +38,19 @@
       <p>Browse our collection of fictional worlds and universes organized by type, medium, and creator. Each world page contains official information, location listings, and links to related community content.</p>
 
       <div class="directory-navigation">
-        <a href="#popular-worlds" class="directory-nav-button">Popular Worlds</a>
-        <a href="#world-types" class="directory-nav-button">Browse by Type</a>
-        <a href="#media-source" class="directory-nav-button">Browse by Media</a>
-        <a href="#creators" class="directory-nav-button">Browse by Creator</a>
-        <a href="#alphabetical" class="directory-nav-button">Alphabetical List</a>
+        <a href="#popular-worlds" class="directory-nav-button" data-section="popular">Popular Worlds</a>
+        <a href="#world-types" class="directory-nav-button" data-section="types">Browse by Type</a>
+        <a href="#media-source" class="directory-nav-button" data-section="media">Browse by Media</a>
+        <a href="#creators" class="directory-nav-button" data-section="creators">Browse by Creator</a>
+        <a href="#alphabetical" class="directory-nav-button" data-section="alphabetical">Alphabetical List</a>
       </div>
     </section>
 
-    <section id="popular-worlds" class="directory-section">
+    <section id="popular-worlds" class="directory-section" data-section-type="popular">
       <h2>Popular Fictional Worlds</h2>
       <p>These widely acclaimed fictional worlds are excellent starting points for exploring worldbuilding.</p>
 
-      <div class="show-grid">
+      <div class="show-grid" data-content="popular-worlds">
         <div class="show-card">
           <div class="show-image">
             <img src="../../images/worlds/middle-earth.jpg" alt="Middle-earth" />
@@ -110,15 +113,15 @@
       </div>
 
       <div class="view-more-container">
-        <a href="#popular-all" class="view-more-button">View All Popular Worlds</a>
+        <a href="#popular-all" class="view-more-button" data-action="view-all" data-category="popular">View All Popular Worlds</a>
       </div>
     </section>
 
-    <section id="world-types" class="directory-section">
+    <section id="world-types" class="directory-section" data-section-type="types">
       <h2>Browse by World Type</h2>
       <p>Find fictional worlds based on their genre and characteristics.</p>
 
-      <div class="genre-directory">
+      <div class="genre-directory" data-content="world-types">
         <div class="genre-category">
           <h3>Fantasy Worlds</h3>
           <ul class="show-list">
@@ -165,15 +168,15 @@
       </div>
 
       <div class="view-more-container">
-        <a href="types/index.html" class="view-more-button">View All World Types</a>
+        <a href="types/index.html" class="view-more-button" data-action="view-all" data-category="types">View All World Types</a>
       </div>
     </section>
 
-    <section id="media-source" class="directory-section">
+    <section id="media-source" class="directory-section" data-section-type="media">
       <h2>Browse by Media Source</h2>
       <p>Explore fictional worlds based on their original medium.</p>
 
-      <div class="media-directory">
+      <div class="media-directory" data-content="world-media">
         <div class="media-category">
           <h3>Literature</h3>
           <ul class="show-list">
@@ -218,13 +221,17 @@
           </ul>
         </div>
       </div>
+
+      <div class="view-more-container">
+        <a href="media/index.html" class="view-more-button" data-action="view-all" data-category="media">View All Media Sources</a>
+      </div>
     </section>
 
-    <section id="creators" class="directory-section">
+    <section id="creators" class="directory-section" data-section-type="creators">
       <h2>Browse by Creator</h2>
       <p>Explore fictional worlds based on their creators and worldbuilders.</p>
 
-      <div class="creator-directory">
+      <div class="creator-directory" data-content="world-creators">
         <div class="creator-category">
           <h3>J.R.R. Tolkien</h3>
           <ul class="show-list">
@@ -265,15 +272,15 @@
       </div>
 
       <div class="view-more-container">
-        <a href="creators/index.html" class="view-more-button">View All Creators</a>
+        <a href="creators/index.html" class="view-more-button" data-action="view-all" data-category="creators">View All Creators</a>
       </div>
     </section>
 
-    <section id="alphabetical" class="directory-section">
+    <section id="alphabetical" class="directory-section" data-section-type="alphabetical">
       <h2>Alphabetical List</h2>
       <p>Browse all fictional worlds and universes in our database alphabetically.</p>
 
-      <div class="alphabet-navigation">
+      <div class="alphabet-navigation" data-content="alphabet-nav">
         <a href="#a" class="alphabet-link">A</a>
         <a href="#b" class="alphabet-link">B</a>
         <a href="#c" class="alphabet-link">C</a>
@@ -282,7 +289,7 @@
         <a href="#z" class="alphabet-link">Z</a>
       </div>
 
-      <div class="alphabetical-listing">
+      <div class="alphabetical-listing" data-content="alphabetical-listing">
         <div id="a" class="letter-section">
           <h3>A</h3>
           <ul class="show-list-alpha">
@@ -394,18 +401,18 @@
           Categories <span>►</span>
         </button>
         <ul class="nav-dropdown-menu" id="categories-dropdown">
-          <li><a href="../anime-page.html">Anime 🌸</a></li>
+          <li><a href="../anime/anime-page.html">Anime 🌸</a></li>
           <hr />
-          <li><a href="../comics-page.html">Comics 💥</a></li>
+          <li><a href="../comics/comics-page.html">Comics 💥</a></li>
           <hr />
-          <li><a href="../manga-page.html">Manga 📖</a></li>
+          <li><a href="../manga/manga-page.html">Manga 📖</a></li>
           <hr />
-          <li><a href="../tv-page.html">Television 📺</a></li>
+          <li><a href="../tv/tv-page.html">Television 📺</a></li>
           <hr />
-          <li><a href="../metaverse-page.html">Metaverse 🎮</a></li>
+          <li><a href="../metaverse/metaverse-page.html">Metaverse 🎮</a></li>
           <hr />
           <li>
-            <a href="../worlds-universes-page.html">Worlds & Universes 🌌</a>
+            <a href="../worlds-universes/worlds-universes-page.html">Worlds & Universes 🌌</a>
           </li>
           <hr />
           <li>
@@ -432,6 +439,11 @@
     </ul>
   </nav>
 
+  <!-- JavaScript for interactions -->
   <script src="../../js/menu-interaction.js"></script>
+  <!-- JavaScript for directory data loading -->
+  <script src="../../js/directory-data.js"></script>
+  <!-- JavaScript for non-existent pages -->
+  <script src="../../js/non-existent-pages.js"></script>
 </body>
 </html>

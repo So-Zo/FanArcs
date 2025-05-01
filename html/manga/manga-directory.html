@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main CSS framework -->
+  <link rel="stylesheet" href="../../css/main.css" />
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="../../css/pages/manga-style.css" />
+  <title>Manga Directory | FanArcs</title>
+
+  <!-- Data attributes for backend integration -->
+  <meta name="data-source" content="manga-directory" />
+  <meta name="data-categories" content="popular,genres,eras,publishers,alphabetical" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+  <header role="banner">
+    <div class="header-image">
+      <img src="../../images/manga/MangaHeader.jpg" alt="Manga Directory" />
+    </div>
+
+    <input
+      type="search"
+      id="site-search-bar"
+      aria-label="Search Manga"
+      placeholder="Search for manga, characters, etc."
+      data-search-type="manga"
+    />
+  </header>
+
+  <main id="main-content" role="main">
+    <section class="directory-intro">
+      <h1>Manga Directory</h1>
+      <p>Browse our collection of manga organized by genre, popularity, and release era. Each page contains official information, character listings, and links to related community content.</p>
+
+      <div class="directory-navigation">
+        <a href="#popular-series" class="directory-nav-button" data-section="popular">Popular Manga</a>
+        <a href="#genres" class="directory-nav-button" data-section="genres">Browse by Genre</a>
+        <a href="#eras" class="directory-nav-button" data-section="eras">Browse by Era</a>
+        <a href="#studios" class="directory-nav-button" data-section="studios">Browse by Publisher</a>
+        <a href="#alphabetical" class="directory-nav-button" data-section="alphabetical">Alphabetical List</a>
+      </div>
+    </section>
+
+    <!-- Popular Series Section -->
+    <section id="popular-series" class="directory-section" data-section-type="popular">
+      <h2>Popular Manga</h2>
+      <p>These widely acclaimed manga are excellent starting points for exploring the medium.</p>
+
+      <!-- Show Grid - Will be populated by backend data -->
+      <div class="show-grid" data-content="popular-manga">
+        <!-- Template for show card - will be cloned by JavaScript -->
+        <template id="show-card-template">
+          <div class="show-card" data-show-id="">
+            <div class="show-image">
+              <img src="" alt="" />
+            </div>
+            <div class="show-info">
+              <h3></h3>
+              <p class="show-genres"></p>
+              <p class="show-description"></p>
+              <div class="show-links">
+                <a href="" class="default-links">Official Page →</a>
+                <a href="" class="default-links">Community Content →</a>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="show-card fallback-content">
+          <div class="show-image">
+            <img src="../../images/manga/shows/one-piece.jpg" alt="One Piece" />
+          </div>
+          <div class="show-info">
+            <h3>One Piece</h3>
+            <p class="show-genres">Adventure, Fantasy, Action, Comedy</p>
+            <p class="show-description">Follow Monkey D. Luffy and his pirate crew in their search for the world's ultimate treasure known as the One Piece.</p>
+            <div class="show-links">
+              <a href="#" class="non-existent-link" data-page-type="show" data-page-title="One Piece" data-related-to="Manga">Official Page</a>
+              <a href="../community-page.html#one-piece" class="default-links">Community Content →</a>
+              <a href="#" class="non-existent-link" data-page-type="character" data-page-title="Monkey D. Luffy" data-related-to="One Piece">Character: Monkey D. Luffy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-more-container">
+        <a href="#popular-all" class="view-more-button" data-action="view-all" data-category="popular">View All Popular Manga</a>
+      </div>
+    </section>
+
+    <!-- Genres Section -->
+    <section id="genres" class="directory-section" data-section-type="genres">
+      <h2>Browse by Genre</h2>
+      <p>Find manga based on your preferred storytelling styles and themes.</p>
+
+      <!-- Genre Directory - Will be populated by backend data -->
+      <div class="genre-directory" data-content="manga-genres">
+        <!-- Template for genre category - will be cloned by JavaScript -->
+        <template id="genre-category-template">
+          <div class="genre-category" data-genre-id="">
+            <h3></h3>
+            <ul class="show-list">
+              <!-- Will be populated dynamically -->
+            </ul>
+          </div>
+        </template>
+
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="genre-category fallback-content">
+          <h3>Shonen (Young Men)</h3>
+          <ul class="show-list">
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Naruto" data-related-to="Manga">Naruto</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="One Piece" data-related-to="Manga">One Piece</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="My Hero Academia" data-related-to="Manga">My Hero Academia</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Shonen Manga" data-related-to="Manga">View All Shonen Manga</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="view-more-container">
+        <a href="genres/index.html" class="view-more-button" data-action="view-all" data-category="genres">View All Genres</a>
+      </div>
+    </section>
+
+    <!-- Eras Section -->
+    <section id="eras" class="directory-section" data-section-type="eras">
+      <h2>Browse by Era</h2>
+      <p>Explore manga from different time periods, from classics to the latest releases.</p>
+
+      <!-- Era Directory - Will be populated by backend data -->
+      <div class="era-directory" data-content="manga-eras">
+        <!-- Template for era category - will be cloned by JavaScript -->
+        <template id="era-category-template">
+          <div class="era-category" data-era-id="">
+            <h3></h3>
+            <ul class="show-list">
+              <!-- Will be populated dynamically -->
+            </ul>
+          </div>
+        </template>
+
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="era-category fallback-content">
+          <h3>Modern (2010-Present)</h3>
+          <ul class="show-list">
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Demon Slayer" data-related-to="Manga">Demon Slayer (2016-2020)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Jujutsu Kaisen" data-related-to="Manga">Jujutsu Kaisen (2018-Present)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Chainsaw Man" data-related-to="Manga">Chainsaw Man (2018-Present)</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Modern Manga" data-related-to="Manga">View All Modern Manga</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publishers Section -->
+    <section id="studios" class="directory-section" data-section-type="studios">
+      <h2>Browse by Publisher</h2>
+      <p>Discover manga produced by renowned publishers known for their distinctive styles and quality.</p>
+
+      <!-- Studio Directory - Will be populated by backend data -->
+      <div class="studio-directory" data-content="manga-studios">
+        <!-- Template for studio category - will be cloned by JavaScript -->
+        <template id="studio-category-template">
+          <div class="studio-category" data-studio-id="">
+            <h3></h3>
+            <ul class="show-list">
+              <!-- Will be populated dynamically -->
+            </ul>
+          </div>
+        </template>
+
+        <!-- Fallback content if no JavaScript or data -->
+        <div class="studio-category fallback-content">
+          <h3>Shueisha (Jump)</h3>
+          <ul class="show-list">
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="One Piece" data-related-to="Manga">One Piece</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Naruto" data-related-to="Manga">Naruto</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Dragon Ball" data-related-to="Manga">Dragon Ball</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="directory" data-page-title="Shueisha Manga" data-related-to="Manga">View All Shueisha Manga</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="view-more-container">
+        <a href="publishers/index.html" class="view-more-button" data-action="view-all" data-category="studios">View All Publishers</a>
+      </div>
+    </section>
+
+    <!-- Alphabetical Section -->
+    <section id="alphabetical" class="directory-section" data-section-type="alphabetical">
+      <h2>Alphabetical List</h2>
+      <p>Browse all manga in our database alphabetically.</p>
+
+      <div class="alphabet-navigation" data-content="alphabet-nav">
+        <!-- Will be populated dynamically -->
+        <template id="alphabet-link-template">
+          <a href="#" class="alphabet-link" data-letter=""></a>
+        </template>
+
+        <!-- Fallback content -->
+        <a href="#a" class="alphabet-link fallback-content">A</a>
+        <a href="#b" class="alphabet-link fallback-content">B</a>
+        <a href="#c" class="alphabet-link fallback-content">C</a>
+        <!-- More letters would be here -->
+      </div>
+
+      <div class="alphabetical-listing" data-content="alphabetical-listing">
+        <!-- Template for letter section - will be cloned by JavaScript -->
+        <template id="letter-section-template">
+          <div class="letter-section" data-letter="">
+            <h3></h3>
+            <ul class="show-list-alpha">
+              <!-- Will be populated dynamically -->
+            </ul>
+          </div>
+        </template>
+
+        <!-- Fallback content if no JavaScript or data -->
+        <div id="a" class="letter-section fallback-content">
+          <h3>A</h3>
+          <ul class="show-list-alpha">
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Attack on Titan" data-related-to="Manga">Attack on Titan</a></li>
+            <li><a href="#" class="non-existent-link" data-page-type="show" data-page-title="Assassination Classroom" data-related-to="Manga">Assassination Classroom</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="directory-help">
+      <h2>Can't Find What You're Looking For?</h2>
+      <div class="help-options">
+        <div class="help-option">
+          <h3>Use Search</h3>
+          <p>Try searching for specific manga or characters using the search bar at the top of the page.</p>
+        </div>
+
+        <div class="help-option">
+          <h3>Request Content</h3>
+          <p>Don't see a manga that should be included? Let us know and we'll add it to our database.</p>
+          <a href="../contribute-page.html#request-content" class="default-links" data-action="request">Request Addition →</a>
+        </div>
+
+        <div class="help-option">
+          <h3>Create Content</h3>
+          <p>Contribute to FanArcs by creating a page for your favorite manga.</p>
+          <a href="../contribute-page.html#create-content" class="default-links" data-action="create">Learn How to Contribute →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-about">
+        <img src="../../images/logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+        <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="Discord">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p><span>📧</span> contact@fanarcs.com</p>
+        <p><span>📱</span> (555) 123-4567</p>
+        <p><span>🏢</span> 123 Fan Street, Anime City</p>
+
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FanArcs. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-navigation">
+    <a href="../index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+    <a href="../community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+    <a href="../profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
+    <div class="nav-search-popup" onclick="toggleSearchPopup()">
+      <span>🔍</span>
+    </div>
+
+    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </div>
+
+  <!-- The navigation menu that will show/hide -->
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="../index.html" class="nav-home-button" aria-label="Go Home">Home Page🏠</a></li>
+      <!-- Categories dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+        >
+          Categories <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="categories-dropdown">
+          <li><a href="../anime/anime-page.html">Anime 🌸</a></li>
+          <hr />
+          <li><a href="../comics/comics-page.html">Comics 💥</a></li>
+          <hr />
+          <li><a href="../manga/manga-page.html">Manga 📖</a></li>
+          <hr />
+          <li><a href="../tv/tv-page.html">Television 📺</a></li>
+          <hr />
+          <li><a href="../metaverse/metaverse-page.html">Metaverse 🎮</a></li>
+          <hr />
+          <li>
+            <a href="../worlds-universes/worlds-universes-page.html">Worlds & Universes 🌌</a>
+          </li>
+          <hr />
+          <li>
+            <a href="../power-room.html">Power Room ⚔️</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- FanArcs Info dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="info-dropdown"
+        >
+          FanArcs Info <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="info-dropdown">
+          <li><a href="../about-page.html">About 🔎</a></li>
+          <li><a href="../contribute-page.html">Help FanArcs ⁉️</a></li>
+          <li><a href="../community-page.html">Community 👥</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- JavaScript for interactions -->
+  <script src="../../js/menu-interaction.js"></script>
+  <!-- JavaScript for directory data loading -->
+  <script src="../../js/directory-data.js"></script>
+  <!-- JavaScript for non-existent pages -->
+  <script src="../../js/non-existent-pages.js"></script>
+</body>
+</html>
