@@ -1,0 +1,117 @@
+/*
+ * Keyboard Shortcuts Page Styles for FanArcs
+ * This file contains styles specific to the keyboard shortcuts page
+ */
+
+/* Container for all shortcut sections */
+.shortcuts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Individual shortcut section */
+.shortcuts-section {
+  margin-bottom: 3rem;
+}
+
+.shortcuts-section h2 {
+  color: var(--fanarc-primary-color);
+  font-size: var(--font-size-xl);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Grid layout for shortcut cards */
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual shortcut card */
+.shortcut-card {
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius-base);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.shortcut-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-md);
+}
+
+/* Keyboard key styling */
+.shortcut-keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-md);
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: #333;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 2px #fff;
+  text-shadow: 0 1px 0 #fff;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+/* Shortcut description */
+.shortcut-description {
+  text-align: center;
+  color: #555;
+  font-size: var(--font-size-md);
+}
+
+/* Dark theme adjustments */
+.dark-theme .shortcut-card {
+  background-color: var(--bg-color-light);
+}
+
+.dark-theme kbd {
+  color: #eee;
+  background-color: #333;
+  border-color: #555;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 0 0 2px #222;
+  text-shadow: 0 1px 0 #000;
+}
+
+.dark-theme .shortcut-description {
+  color: #ccc;
+}
+
+.dark-theme .shortcuts-section h2 {
+  border-bottom-color: #333;
+}
+
+/* Media queries for responsive design */
+@media (max-width: var(--breakpoint-md)) {
+  .shortcuts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .shortcut-card {
+    padding: 1rem;
+  }
+}
