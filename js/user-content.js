@@ -41,45 +41,134 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Edit page functionality
-  const editButton = document.querySelector('.edit-button');
-  if (editButton) {
-    editButton.addEventListener('click', function() {
-      // Toggle editable content
-      const editableContent = document.querySelectorAll('.editable-content');
+  // Wiki edit functionality
+  const wikiEditButton = document.querySelector('.wiki-edit-button');
+  const sidebarEditButton = document.querySelector('.edit-button');
 
-      if (this.classList.contains('editing')) {
-        // Save changes
-        this.textContent = 'Edit Page';
-        this.classList.remove('editing');
+  // Function to toggle edit mode
+  function toggleEditMode(button) {
+    const editableContent = document.querySelectorAll('.editable-content');
+    const allEditButtons = document.querySelectorAll('.wiki-edit-button, .edit-button');
 
-        editableContent.forEach(content => {
-          content.setAttribute('contenteditable', 'false');
-          content.classList.remove('editing');
-        });
+    if (button.classList.contains('editing')) {
+      // Save changes
+      allEditButtons.forEach(btn => {
+        if (btn.classList.contains('wiki-edit-button')) {
+          btn.textContent = 'Edit Page';
+        } else {
+          btn.textContent = 'Edit Page';
+        }
+        btn.classList.remove('editing');
+      });
 
-        // In a real application, this would save the content to the server
-        alert('In a real application, your changes would be saved to the database.');
-      } else {
-        // Enable editing
-        this.textContent = 'Save Changes';
-        this.classList.add('editing');
+      editableContent.forEach(content => {
+        content.setAttribute('contenteditable', 'false');
+        content.classList.remove('editing');
+      });
 
-        editableContent.forEach(content => {
-          content.setAttribute('contenteditable', 'true');
-          content.classList.add('editing');
-        });
+      // In a real application, this would save the content to the server
+      alert('In a real application, your changes would be saved to the database.');
+    } else {
+      // Enable editing
+      allEditButtons.forEach(btn => {
+        if (btn.classList.contains('wiki-edit-button')) {
+          btn.textContent = 'Save Changes';
+        } else {
+          btn.textContent = 'Save Changes';
+        }
+        btn.classList.add('editing');
+      });
+
+      editableContent.forEach(content => {
+        content.setAttribute('contenteditable', 'true');
+        content.classList.add('editing');
+      });
+    }
+  }
+
+  // Add event listeners to both edit buttons
+  if (wikiEditButton) {
+    wikiEditButton.addEventListener('click', function() {
+      toggleEditMode(this);
+    });
+  }
+
+  if (sidebarEditButton) {
+    sidebarEditButton.addEventListener('click', function() {
+      toggleEditMode(this);
+    });
+  }
+
+  // Section edit controls
+  const sectionEditControls = document.querySelectorAll('.section-edit-control');
+  if (sectionEditControls.length > 0) {
+    sectionEditControls.forEach(control => {
+      control.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const sectionId = this.getAttribute('data-section');
+        const sectionContent = document.getElementById(`${sectionId}-content`);
+
+        if (sectionContent) {
+          // Enable editing for just this section
+          sectionContent.setAttribute('contenteditable', 'true');
+          sectionContent.classList.add('editing');
+          sectionContent.focus();
+
+          // Scroll to the section
+          sectionContent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          // Add a temporary save button
+          const saveButton = document.createElement('button');
+          saveButton.textContent = 'Save Section';
+          saveButton.className = 'section-save-button';
+          saveButton.style.marginTop = '0.5rem';
+          saveButton.style.padding = '0.5rem 1rem';
+          saveButton.style.backgroundColor = 'var(--fanarc-secondary-color)';
+          saveButton.style.color = 'white';
+          saveButton.style.border = 'none';
+          saveButton.style.borderRadius = 'var(--border-radius-small)';
+          saveButton.style.cursor = 'pointer';
+
+          // Insert the save button after the section content
+          sectionContent.parentNode.insertBefore(saveButton, sectionContent.nextSibling);
+
+          // Add event listener to the save button
+          saveButton.addEventListener('click', function() {
+            sectionContent.setAttribute('contenteditable', 'false');
+            sectionContent.classList.remove('editing');
+
+            // In a real application, this would save the section content to the server
+            alert(`In a real application, changes to the "${sectionId}" section would be saved to the database.`);
+
+            // Remove the save button
+            this.remove();
+          });
+        }
+      });
+    });
+  }
+
+  // Keyboard shortcut for editing (press 'e')
+  document.addEventListener('keydown', function(event) {
+    // Check if 'e' key is pressed and not inside an input or textarea
+    if (event.key === 'e' &&
+        !event.ctrlKey &&
+        !event.altKey &&
+        !event.metaKey &&
+        document.activeElement.tagName !== 'INPUT' &&
+        document.activeElement.tagName !== 'TEXTAREA' &&
+        !document.activeElement.hasAttribute('contenteditable')) {
+
+      // Trigger the wiki edit button if it exists
+      const editButton = document.querySelector('.wiki-edit-button') || document.querySelector('.edit-button');
+      if (editButton && !editButton.classList.contains('editing')) {
+        editButton.click();
       }
-    });
-  }
+    }
+  });
 
-  // View history functionality
-  const historyButton = document.querySelector('.history-button');
-  if (historyButton) {
-    historyButton.addEventListener('click', function() {
-      alert('In a real application, this would show the edit history of the page.');
-    });
-  }
+  // View history functionality is now handled in page-history.js
 
   // Report issue functionality
   const reportButton = document.querySelector('.report-button');
