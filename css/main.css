@@ -15,7 +15,6 @@
 /* Components - Box Layouts */
 @import 'components/box-layouts/cards.css';
 @import 'components/box-layouts/content-blocks.css';
-@import 'components/box-layouts/interactive-elements.css';
 
 /* Components - Button Links */
 @import 'components/button-links/buttons.css';
@@ -23,8 +22,8 @@
 @import 'components/button-links/links.css';
 
 /* Components - Navigation and Footer */
-@import 'components/navigation.css';
-@import 'components/footer.css';
+@import 'components/box-layouts/navigation.css';
+@import 'components/box-layouts/footer.css';
 
 /* Utilities */
 @import 'utilities/accessibility.css';

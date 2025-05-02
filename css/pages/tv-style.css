@@ -1,8 +1,0 @@
-/* Page-specific details */
-body {
-  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
-}
-
-.page-header {
-  background: linear-gradient(to right, red, white, blue);
-}

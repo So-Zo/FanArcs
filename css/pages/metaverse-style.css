@@ -1,8 +1,0 @@
-/* Page-specific details */
-body {
-  background: linear-gradient(90deg, rgba(1,82,64,1) 19%, rgba(4,100,75,0.9) 53%, rgba(2,95,55,.8) 100%);
-}
-
-.page-header {
-  background: linear-gradient(to right, darkgreen, white, seagreen );
-}
