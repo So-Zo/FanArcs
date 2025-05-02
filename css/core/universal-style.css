@@ -37,6 +37,21 @@ h6 {
   margin-bottom: 0.25rem;
 }
 
+/* Media queries to limit image header size on larger screens */
+@media (min-width: 992px) {
+  .image-header img {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-header img {
+    max-width: 700px;
+  }
+}
+
 
 nav a:hover {
   color: var(--link-hover-color);

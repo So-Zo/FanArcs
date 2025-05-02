@@ -43,6 +43,20 @@ body {
   overflow: hidden; /* Prevents anything from spilling outside the container */
 }
 
+/* Media queries to limit header logo size on larger screens */
+@media (min-width: 992px) {
+  .header-logo img {
+    max-width: 300px; /* Limit width on laptop screens */
+    margin: 0 auto; /* Center the image */
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-logo img {
+    max-width: 250px; /* Further limit width on very large screens */
+  }
+}
+
 /* Welcome Guide Styles */
 .welcome-guide {
   display: grid;

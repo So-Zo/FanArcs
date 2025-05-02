@@ -1,0 +1,58 @@
+/*
+ * Responsive Image Styles for FanArcs
+ * This file contains media queries to handle image sizing across different screen sizes
+ */
+
+/* General image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 992px) {
+  /* General image size limits for content images */
+  .section-content img:not(.header-logo img):not(.footer-logo):not(.image-header img) {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Character images and profile images */
+  .character-image img,
+  .profile-image img {
+    max-width: 400px;
+  }
+  
+  /* Banner images */
+  .banner-image img {
+    max-width: 900px;
+  }
+}
+
+/* Even larger screens */
+@media (min-width: 1200px) {
+  /* General image size limits for content images */
+  .section-content img:not(.header-logo img):not(.footer-logo):not(.image-header img) {
+    max-width: 500px;
+  }
+  
+  /* Character images and profile images */
+  .character-image img,
+  .profile-image img {
+    max-width: 350px;
+  }
+  
+  /* Banner images */
+  .banner-image img {
+    max-width: 800px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+  /* Further limit image sizes on very large screens */
+  .section-content img:not(.header-logo img):not(.footer-logo):not(.image-header img) {
+    max-width: 450px;
+  }
+}

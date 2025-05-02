@@ -29,6 +29,7 @@
 /* Utilities */
 @import 'utilities/accessibility.css';
 @import 'utilities/animations.css';
+@import 'utilities/responsive-images.css';
 
 /* Default theme (can be overridden) */
 @import 'themes/light.css';
