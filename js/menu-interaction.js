@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to toggle the navigation menu
   function toggleNavMenu() {
     mainNavigation.classList.toggle("active");
+    hamburgerIcon.classList.toggle("active"); // Toggle active class on hamburger icon
 
     // Update ARIA attributes for accessibility
     const isExpanded = mainNavigation.classList.contains("active");
@@ -44,7 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // If dropdown exists, toggle it
       if (dropdown) {
-        dropdown.classList.toggle("active");
+        // Toggle aria-expanded attribute
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", !isExpanded);
       }
 
       // Prevent the event from bubbling up and closing the main menu
@@ -56,10 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", event => {
     if (!event.target.closest(".main-navigation")) {
       // Close all dropdowns
-      const dropdowns = document.querySelectorAll(".nav-dropdown-menu.active");
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove("active");
+      const toggles = document.querySelectorAll(".nav-dropdown-toggle[aria-expanded='true']");
+      toggles.forEach(toggle => {
+        toggle.setAttribute("aria-expanded", "false");
       });
+
+      // Also close the main navigation if it's open
+      if (mainNavigation.classList.contains("active")) {
+        toggleNavMenu();
+      }
     }
   });
 
