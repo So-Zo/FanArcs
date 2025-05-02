@@ -39,13 +39,13 @@ FanArcs/
 │   │   ├── box-layouts/
 │   │   │   ├── cards.css
 │   │   │   ├── content-blocks.css
-│   │   │   └── interactive-elements.css
+│   │   │   ├── footer.css
+│   │   │   ├── interactive-elements.css
+│   │   │   └── navigation.css
 │   │   ├── button-links/
 │   │   │   ├── buttons.css
 │   │   │   ├── filter-buttons.css
 │   │   │   └── links.css
-│   │   ├── footer.css
-│   │   └── navigation.css
 │   ├── utilities/
 │   │   ├── accessibility.css
 │   │   ├── animations.css
@@ -56,6 +56,7 @@ FanArcs/
 │   │   └── dark.css
 │   ├── pages/
 │   │   ├── main-pages/
+│   │   │   ├── 404-style.css
 │   │   │   ├── about-style.css
 │   │   │   ├── anime-style.css
 │   │   │   ├── comics-style.css
@@ -78,18 +79,6 @@ FanArcs/
 │   │   ├── user-styles/
 │   │   │   ├── user-content-consolidated.css
 │   │   │   └── user-post-style.css
-│   │   ├── anime-style.css
-│   │   ├── character-page.css
-│   │   ├── comics-style.css
-│   │   ├── home-page.css
-│   │   ├── manga-style.css
-│   │   ├── metaverse-style.css
-│   │   ├── placeholder-style.css
-│   │   ├── power-room.css
-│   │   ├── profile-style.css
-│   │   ├── show-page.css
-│   │   ├── tv-style.css
-│   │   └── worlds-universes-style.css
 │   └── main.css
 ├── js/
 │   ├── accessibility.js
@@ -115,6 +104,11 @@ FanArcs/
 │   │   ├── comics-directory.html
 │   │   ├── comics-history.html
 │   │   └── comics-page.html
+│   ├── extras/
+│   │   ├── 404.html
+│   │   ├── about-page.html
+│   │   ├── contribute-page.html
+│   │   └── keyboard-shortcuts.html
 │   ├── manga/
 │   │   ├── manga-directory.html
 │   │   ├── manga-history.html
@@ -138,11 +132,8 @@ FanArcs/
 │   ├── worlds-universes/
 │   │   ├── worlds-universes-directory.html
 │   │   └── worlds-universes-page.html
-│   ├── about-page.html
 │   ├── community-page.html
-│   ├── contribute-page.html
 │   ├── index.html
-│   ├── keyboard-shortcuts.html
 │   ├── power-room.html
 │   └── profile-page.html
 └── [Root image files]
@@ -164,6 +155,12 @@ git clone https://github.com/So-Zo/FanArcs.git
 ```
 
 2. Open `html/index.html` in your browser to view the site locally
+
+3. File Structure Overview:
+   - Main pages are in the `html` root directory
+   - Media-specific pages are in their respective subdirectories (anime, manga, etc.)
+   - Utility pages (404, about, contribute, keyboard shortcuts) are in the `html/extras` directory
+   - CSS files are organized by component type and page category
 
 ## Contributing
 
@@ -191,7 +188,7 @@ FanArcs welcomes contributions! There are several ways to help:
    - Create tutorials for using the site
    - Translate content to other languages
 
-See `contribute-page.html` for detailed contribution guidelines and submission methods.
+See `html/extras/contribute-page.html` for detailed contribution guidelines and submission methods.
 
 ## Contact
 
@@ -204,17 +201,16 @@ FanArcs uses a component-based CSS architecture with improved organization:
 
 - **Core**: Foundational styles like reset, variables, typography, universal styles
 - **Components**:
-  - **Box Layouts**: Cards, content blocks, and interactive elements
+  - **Box Layouts**: Cards, content blocks, interactive elements, navigation, and footer
   - **Button Links**: Buttons, filter buttons, and links
-  - **Navigation & Footer**: Site-wide navigation and footer components
 - **Utilities**: Helper classes for accessibility, animations, and responsive images
 - **Themes**: Light and dark mode themes
 - **Pages**:
-  - **Main Pages**: Styles for primary site pages
+  - **Main Pages**: Styles for primary site pages (home, media types, 404, etc.)
   - **Page Styling**: Styles for specific page types (character, show, etc.)
   - **User Styles**: Styles for user-generated content
 
-This enhanced structure improves maintainability, reduces conflicts, and makes the codebase more scalable and organized.
+This enhanced structure improves maintainability, reduces conflicts, and makes the codebase more scalable and organized. The recent reorganization moved navigation and footer components into the box-layouts directory for better categorization of structural elements.
 
 ## Key Features Implementation
 
