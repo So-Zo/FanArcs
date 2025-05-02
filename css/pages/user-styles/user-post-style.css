@@ -1,16 +1,16 @@
 /* Community Post Card Styles */
 .post-card {
-  background-color: rgba(204, 204, 204, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.08);
-  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.2s ease;
   margin: 0.5rem;
 }
 
 .post-card:hover {
-  box-shadow: 0 0.375rem 0.5rem rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .post-card-header {
@@ -50,9 +50,9 @@
 }
 
 .post-category-tag {
-  background-color: #e6f2ff;
-  color: #0066cc;
-  padding: 0.25rem 0.5rem;
+  background-color: rgba(169, 151, 223, 0.2);
+  color: var(--fanarc-primary-color);
+  padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.8em;
   font-weight: 500;
@@ -108,5 +108,5 @@
 
 .interaction-group button:hover,
 .save-btn button:hover {
-  color: #0066cc;
+  color: var(--fanarc-primary-color);
 }

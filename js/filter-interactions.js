@@ -1,22 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const filterDropdowns = document.querySelectorAll('.filter-dropdown');
 
   // Close all dropdowns
   function closeAllDropdowns() {
-    filterDropdowns.forEach(dropdown => {
+    document.querySelectorAll('.filter-dropdown.active').forEach(dropdown => {
       dropdown.classList.remove('active');
     });
+
     filterButtons.forEach(btn => {
       btn.classList.remove('active');
     });
   }
 
   // Add click event listeners to filter buttons
-  filterButtons.forEach((button, index) => {
+  filterButtons.forEach(button => {
     button.addEventListener('click', (event) => {
       // Prevent event from propagating to document
       event.stopPropagation();
+
+      // Get the parent filter group
+      const filterGroup = button.closest('.filter-group');
+
+      // Get the dropdown within this filter group
+      const dropdown = filterGroup.querySelector('.filter-dropdown');
 
       // If clicking the already active button, close the dropdown
       if (button.classList.contains('active')) {
@@ -27,10 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Close all dropdowns first
       closeAllDropdowns();
 
-      // Open the corresponding dropdown
-      const correspondingDropdown = filterDropdowns[index];
-      if (correspondingDropdown) {
-        correspondingDropdown.classList.add('active');
+      // Open this dropdown
+      if (dropdown) {
+        dropdown.classList.add('active');
         button.classList.add('active');
       }
     });
@@ -38,13 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close dropdowns when clicking outside
   document.addEventListener('click', (event) => {
-    if (!event.target.closest('.filter-btn, .filter-dropdown')) {
+    if (!event.target.closest('.filter-group')) {
       closeAllDropdowns();
     }
   });
 
   // Prevent dropdown from closing when clicking inside
-  filterDropdowns.forEach(dropdown => {
+  document.querySelectorAll('.filter-dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', (event) => {
       event.stopPropagation();
     });

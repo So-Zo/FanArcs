@@ -1,6 +1,5 @@
 body {
   background: var(--about-gradient);
-  color: #333;
 }
 
 .logo-container {
@@ -27,13 +26,11 @@ main {
   margin-bottom: 2rem;
   background-image: var(--about-intro-gradient);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about-intro h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--fanarc-primary-color, #0F084B);
 }
 
 .lead-text {
@@ -48,13 +45,11 @@ main {
   margin-bottom: 2rem;
   background-image: var(--about-section-gradient);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--fanarc-primary-color, #0F084B);
   border-bottom: 2px solid var(--fanarc-secondary-color, #A997DF);
   padding-bottom: 0.5rem;
 }
@@ -76,12 +71,12 @@ main {
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
 .mission-value:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .mission-value h3 {
@@ -102,12 +97,12 @@ main {
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
 .feature:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .feature h3 {
@@ -127,7 +122,7 @@ main {
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 

@@ -19,7 +19,6 @@ body {
   padding: 2rem;
   background: rgba(0, 0, 0, 0.7);
   border-radius: var(--border-radius-large);
-  box-shadow: var(--shadow-lg);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -74,8 +73,7 @@ body {
 
 .home-button:hover {
   background-color: #1a0f6b;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .back-button {
@@ -86,8 +84,7 @@ body {
 
 .back-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Report form section */
@@ -148,7 +145,6 @@ body {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--fanarc-secondary-color);
-  box-shadow: 0 0 0 2px rgba(169, 151, 223, 0.3);
 }
 
 .form-group input[readonly] {
@@ -171,8 +167,7 @@ body {
 
 .submit-report-button:hover {
   background-color: #8a7bc0;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 /* Suggestions section */
@@ -206,8 +201,7 @@ body {
 }
 
 .suggestion-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.2);
 }
 

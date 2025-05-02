@@ -110,13 +110,13 @@
       #6f1a5f 100%
     );
 
-  --contribute-gradient: linear-gradient(135deg, #26a69a, #69f0ae);
+  --contribute-gradient: var(--fanarc-primary-color);
 
   /* Header styling is now handled with images */
 
   /* Component gradients */
   --card-overlay-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  --about-gradient: linear-gradient(135deg, #0F084B, #A997DF);
+  --about-gradient: var(--fanarc-primary-color);
   --left-stat-gradient: linear-gradient(to right, #00b4db, #0083b0);
   --right-stat-gradient: linear-gradient(to right, #ff416c, #ff4b2b);
 
@@ -204,16 +204,19 @@
   --shadow-lg: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
 
-  /* Card Shadows */
-  --card-shadow: var(--shadow-sm);
-  --card-shadow-hover: var(--shadow-md);
+  /* Card Shadows - minimized for cleaner design */
+  --card-shadow: none;
+  --card-shadow-hover: none;
 
-  /* Section Shadows */
-  --section-shadow: var(--shadow-sm);
+  /* Section Shadows - minimized for cleaner design */
+  --section-shadow: none;
 
-  /* Interactive Element Shadows */
-  --button-shadow: var(--shadow-xs);
-  --button-shadow-hover: var(--shadow-sm);
+  /* Interactive Element Shadows - minimized for cleaner design */
+  --button-shadow: none;
+  --button-shadow-hover: none;
+
+  /* Flat design option */
+  --flat-border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 

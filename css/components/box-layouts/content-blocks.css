@@ -19,7 +19,7 @@ section {
   background-image: var(--bg-gradient-light);
   padding: 1.5rem;
   border-radius: var(--border-radius-base);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 1.5rem;
 }
 
@@ -118,12 +118,11 @@ section {
 
 /* Content block with hover effect */
 .hover-block {
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition: transform var(--transition-base);
 }
 
 .hover-block:hover {
   transform: translateY(-0.25rem);
-  box-shadow: var(--shadow-md);
 }
 
 /* Content block with border */
@@ -180,7 +179,7 @@ section {
   .sidebar-block {
     padding: 1rem;
   }
-  
+
   .block-padding-lg {
     padding: 1.5rem;
   }

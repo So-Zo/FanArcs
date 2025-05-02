@@ -6,43 +6,46 @@
   position: relative;
 }
 
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 20;
+}
+
+.filter-group {
+  position: relative;
+  display: inline-block;
+}
+
 .filter-btn {
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  /* Add some padding to make it feel better */
-  background-image: linear-gradient(
-    to top,
-    #c9c8c5 0%,
-    #c9c8c5 1%,
-    #dbdad7 31%,
-    #dcdad7 75%,
-    #d6d5d2 100%
-  );
-  /* Keep it transparent for a clean base */
-  border: 0.1rem solid black;
-  /* Use a Fan Arcs-related color for the border */
-  border-radius: 0.8rem;
-  /* Increase the rounded corners slightly for a softer look */
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  /* Smooth transition for hover */
+  transition: all 0.2s ease;
+  margin-right: 0.5rem;
+  color: #333;
 }
 
 .filter-btn:hover {
-  background-color: rgba(131, 181, 227, 0.2);
-  /* Light hover effect matching the border color */
+  background-color: #e8e8e8;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .filter-btn:focus {
-  background-color: rgba(131, 181, 227, 0.3);
-  /* Slightly darker on focus for accessibility */
+  outline: none;
+  border-color: var(--fanarc-secondary-color);
 }
 
-
-
-.filter-btn:focus {
-  background-color: lightblue;
-  /* Focus state for accessibility */
+.filter-btn.active {
+  background-color: var(--fanarc-secondary-color);
+  color: white;
+  border-color: var(--fanarc-secondary-color);
 }
 
 
@@ -54,25 +57,25 @@
   width: 100%;
   height: auto;
   align-items: center;
+  position: relative;
 }
 
 
 /* Filter Dropdown Styles with Checkboxes */
 .filter-dropdown {
-  width: 100%;
-  max-width: 300px;
-  background-image: linear-gradient(
-    to top,
-    #c9c8c5 0%,
-    #c9c8c5 1%,
-    #dbdad7 31%,
-    #dcdad7 75%,
-    #d6d5d2 100%
-  );
+  width: 250px;
+  background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: none;
-  z-index: 10;
+  z-index: 30;
+  margin-top: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .filter-dropdown ul {
@@ -88,7 +91,7 @@
   align-items: center;
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .filter-dropdown li:last-child {
@@ -96,7 +99,7 @@
 }
 
 .filter-dropdown li:hover {
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
 }
 
 .filter-dropdown .checkbox-wrapper {
@@ -109,21 +112,22 @@
   position: relative;
   width: 1.25rem;
   height: 1.25rem;
-  border: 2px solid #999;
+  border: 1px solid #ccc;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  background-color: white;
 }
 
 .filter-dropdown .custom-checkbox::after {
-  content: '✔';
+  content: '✓';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   color: white;
   font-size: 0.75rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .filter-dropdown input[type="checkbox"] {
@@ -131,15 +135,15 @@
 }
 
 .filter-dropdown input[type="checkbox"]:checked + .custom-checkbox {
-  background-color: #0066cc;
-  border-color: #0066cc;
+  background-color: var(--fanarc-secondary-color);
+  border-color: var(--fanarc-secondary-color);
 }
 
 .filter-dropdown input[type="checkbox"]:checked + .custom-checkbox::after {
   transform: translate(-50%, -50%) scale(1);
-  }
+}
 
-  .filter-dropdown button {
+.filter-dropdown button {
   background: none;
   border: none;
   color: #333;
@@ -148,34 +152,36 @@
   cursor: pointer;
   text-align: left;
   padding: 0;
-  transition: color 0.3s ease;
-  margin-left: 0.75rem;
+  transition: color 0.2s ease;
+  margin-left: 0.5rem;
 }
 
 .filter-dropdown button:hover {
-  color: #0066cc;
+  color: var(--fanarc-primary-color);
 }
 
 .category-count {
-  color: #888;
-  font-size: 0.875rem;
+  color: #666;
+  font-size: 0.75rem;
   background-color: #f0f0f0;
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
+  min-width: 2rem;
+  text-align: center;
 }
 
-/* Optional: Active/Selected State */
+/* Active/Selected State */
 .filter-dropdown li.active {
-  background-color: #e6f2ff;
+  background-color: rgba(169, 151, 223, 0.1);
 }
 
 .filter-dropdown li.active button {
-  color: #0066cc;
+  color: var(--fanarc-primary-color);
   font-weight: 600;
 }
 
 .filter-dropdown li.active .category-count {
-  background-color: #0066cc;
+  background-color: var(--fanarc-secondary-color);
   color: #fff;
 }
 .filter-dropdown.active {
