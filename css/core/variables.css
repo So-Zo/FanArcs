@@ -91,25 +91,11 @@
     #d35400 100%
   );
 
-  --tv-gradient: linear-gradient(
-    to top,
-    #f43b47 0%,
-    #453a94 100%
-  );
+  --tv-gradient: linear-gradient(135deg, #000000 0%, #f9a826 50%, #1a1a1a 100%);
 
-  --video-games-gradient: linear-gradient(
-    to right,
-    #4B0082 0%,
-    #8A2BE2 50%,
-    #9370DB 100%
-  );
+  --video-games-gradient: linear-gradient(137deg, #0b0b2d 0%, #6b24bf 50%, #00ffff 100%);
 
-  --worlds-gradient: linear-gradient(
-    135deg,
-    #c49a6c,
-    #61a7d4,
-    #568a3e
-  );
+  --worlds-gradient: linear-gradient(135deg, #c49a6c, #61a7d4, #568a3e);
 
   --power-room-gradient: radial-gradient(
       circle at 50% 30%,
@@ -229,3 +215,12 @@
   --button-shadow: var(--shadow-xs);
   --button-shadow-hover: var(--shadow-sm);
 }
+
+
+
+
+
+
+
+
+

@@ -8,13 +8,45 @@ body {
   background-image: var(--content-intro-gradient);
 }
 
+/* Common styles for all media sections */
+.section-anime,
+.section-manga,
+.section-tv,
+.section-video-games,
+.section-worlds-universes,
+.section-comics,
+.section-power-room {
+  padding: var(--spacing-lg) var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-base);
+  color: white; /* Set all text in sections to white */
+  text-align: center; /* Center all text in sections */
+}
+
+/* Section paragraph styling */
+.section-anime p,
+.section-manga p,
+.section-tv p,
+.section-video-games p,
+.section-worlds-universes p,
+.section-comics p,
+.section-power-room p {
+  color: white;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-sm);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Individual section backgrounds */
 .section-anime {
   background-image: var(--anime-gradient);
 }
 
 .section-manga {
   background: var(--manga-gradient);
-  color: white;
 }
 
 .section-tv {
@@ -35,7 +67,6 @@ body {
 
 .section-power-room {
   background: var(--power-room-gradient);
-  color: white;
 }
 
 .header-logo img {

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Page Not Found | FanArcs</title>
+
+  <!-- Main CSS framework -->
+  <link rel="stylesheet" href="../css/main.css" />
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="../css/pages/404-style.css" />
+</head>
+<body>
+  <header role="banner">
+    <div class="image-header">
+      <img src="logo-image.jpg" alt="FanArcs Logo" />
+    </div>
+
+    <input
+      type="search"
+      id="site-search-bar"
+      aria-label="Search Site"
+      placeholder="Search for Characters, Universes, etc."
+    />
+  </header>
+
+  <div class="accessibility-container">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <button class="keyboard-shortcuts-link" onclick="showKeyboardShortcutsModal()">
+      <span>⌨️</span> Keyboard shortcuts
+    </button>
+  </div>
+
+  <main id="main-content" role="main">
+    <div class="error-container">
+      <div class="error-icon">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-message">
+        The page you're looking for doesn't exist or has been moved to a different location.
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="home-button">Return to Home</a>
+        <button onclick="history.back()" class="back-button">Go Back</button>
+      </div>
+
+      <div class="error-report">
+        <h2>Report This Issue</h2>
+        <p class="report-intro">Found a broken link or want this page to be created? Let us know!</p>
+
+        <form class="report-form" id="error-report-form">
+          <div class="form-group">
+            <label for="report-type">What would you like to do?</label>
+            <select id="report-type" name="report-type" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="broken-link">Report a broken link</option>
+              <option value="request-page">Request this page be created</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="current-url">Current URL</label>
+            <input type="text" id="current-url" name="current-url" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="user-email">Your Email (optional)</label>
+            <input type="email" id="user-email" name="user-email" placeholder="your.email@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="additional-info">Additional Information</label>
+            <textarea id="additional-info" name="additional-info" rows="3" placeholder="Please provide any details that might help us understand the issue..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-report-button">Submit Report</button>
+        </form>
+      </div>
+
+      <div class="error-suggestions">
+        <h2>You might be interested in:</h2>
+        <div class="suggestion-grid">
+          <a href="anime/anime-page.html" class="suggestion-card anime-card">
+            <span class="suggestion-icon">🌸</span>
+            <h3>Anime</h3>
+            <p>Explore anime series and characters</p>
+          </a>
+
+          <a href="manga/manga-page.html" class="suggestion-card manga-card">
+            <span class="suggestion-icon">📖</span>
+            <h3>Manga</h3>
+            <p>Discover manga series and creators</p>
+          </a>
+
+          <a href="comics/comics-page.html" class="suggestion-card comics-card">
+            <span class="suggestion-icon">💥</span>
+            <h3>Comics</h3>
+            <p>Browse comics from various publishers</p>
+          </a>
+
+          <a href="tv/tv-page.html" class="suggestion-card tv-card">
+            <span class="suggestion-icon">📺</span>
+            <h3>Television</h3>
+            <p>Find TV shows and characters</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-about">
+        <img src="logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+        <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="Discord">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p><span>📧</span> contact@fanarcs.com</p>
+        <p><span>📱</span> (555) 123-4567</p>
+        <p><span>🏢</span> 123 Fan Street, Anime City</p>
+
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 FanArcs. All rights reserved.</p>
+      <p><a href="#" class="default-links">Privacy Policy</a> | <a href="#" class="default-links">Terms of Service</a> | <a href="#" class="default-links">Cookie Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Bottom navigation bar -->
+  <div class="bottom-navigation">
+    <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+    <a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+    <a href="profile-page.html" class="nav-profile-button" aria-label="Profile Page">👤</a>
+    <div class="nav-search-popup" onclick="toggleSearchPopup()">
+      <span>🔍</span>
+    </div>
+
+    <div class="hamburger-menu-icon" aria-label="Open navigation menu">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
+  </div>
+
+  <!-- The navigation menu that will show/hide -->
+  <nav class="main-navigation">
+    <ul>
+      <!-- Categories dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+        >
+          Categories <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="categories-dropdown">
+          <li><a href="anime/anime-page.html" class="default-links">Anime 🌸</a></li>
+          <hr />
+          <li><a href="comics/comics-page.html" class="default-links">Comics 💥</a></li>
+          <hr />
+          <li><a href="manga/manga-page.html" class="default-links">Manga 📖</a></li>
+          <hr />
+          <li><a href="tv/tv-page.html" class="default-links">Television 📺</a></li>
+          <hr />
+          <li><a href="video-games/video-games.html" class="default-links">Video Games 🎮</a></li>
+          <hr />
+          <li><a href="worlds-universes/worlds-universes-directory.html" class="default-links">Worlds & Universes 🌍</a></li>
+          <hr />
+          <li><a href="power-room.html" class="default-links">Power Room ⚔️</a></li>
+        </ul>
+      </li>
+
+      <!-- FanArcs Info dropdown -->
+      <li>
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-controls="info-dropdown"
+        >
+          FanArcs Info <span>►</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="info-dropdown">
+          <li><a href="about-page.html" class="default-links">About 🔎</a></li>
+          <li><a href="contribute-page.html" class="default-links">Help FanArcs ⁉️</a></li>
+          <li><a href="community-page.html" class="default-links">Community 👥</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="js/menu-interaction.js"></script>
+  <script src="js/accessibility.js"></script>
+  <script src="js/keyboard-shortcuts-reference.js"></script>
+  <script>
+    // Script to populate the current URL in the form
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the current URL and display it in the form
+      document.getElementById('current-url').value = window.location.href;
+
+      // Handle form submission
+      document.getElementById('error-report-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // In a real application, this would send the form data to the server
+        // For now, we'll just show a confirmation message
+        alert('Thank you for your report! In a real application, this information would be sent to our team.');
+
+        // Reset the form
+        this.reset();
+        document.getElementById('current-url').value = window.location.href;
+      });
+    });
+  </script>
+</body>
+</html>

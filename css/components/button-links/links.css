@@ -166,10 +166,59 @@
   outline-offset: 0.125rem;
 }
 
+/* Index page section links */
+.index-page-link {
+  color: white;
+  text-decoration: none;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  padding: var(--spacing-sm) 0;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  transition: all var(--transition-base);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Underline animation */
+.index-page-link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: white;
+  transition: width var(--transition-base);
+}
+
+/* Expand underline on hover */
+.index-page-link:hover::before {
+  width: 100%;
+}
+
+.index-page-link:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.7);
+}
+
+.index-page-link:focus {
+  outline: 0.125rem dotted white;
+  outline-offset: 0.25rem;
+}
+
 /* Media queries for responsive design */
 @media (max-width: var(--breakpoint-sm)) {
   .default-links {
     padding: 0.25rem 0;
+  }
+
+  .index-page-link {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-xs) 0;
   }
 
   /* Adjust tooltip position for small screens */
