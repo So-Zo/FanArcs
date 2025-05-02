@@ -581,90 +581,106 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>FanArcs</h3>
-        <ul>
-          <li><a href="../about-page.html">About</a></li>
-          <li><a href="../contribute-page.html">Contribute</a></li>
-          <li><a href="../community-page.html">Community</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Media Types</h3>
-        <ul>
-          <li><a href="../anime-page.html">Anime</a></li>
-          <li><a href="../manga-page.html">Manga</a></li>
-          <li><a href="../comics-page.html">Comics</a></li>
-          <li><a href="../tv-page.html">TV</a></li>
-          <li><a href="../metaverse-page.html">Metaverse</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Content Guidelines</a></li>
-        </ul>
+  <!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section footer-about">
+      <img src="../logo-image.jpg" alt="FanArcs Logo" class="footer-logo">
+      <p>FanArcs is your go-to platform for exploring and sharing content across anime, manga, comics, TV, and more. Join our community of passionate fans!</p>
+      <div class="social-links">
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Facebook" data-related-to="Social Media">📘</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Twitter" data-related-to="Social Media">🐦</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Instagram" data-related-to="Social Media">📷</a>
+        <a href="#" class="non-existent-link social-icon" data-page-type="social" data-page-title="Discord" data-related-to="Social Media">💬</a>
       </div>
     </div>
 
-    <div class="contributor-footer">
-      <div class="page-contributors">
-        <!-- Will be populated by JavaScript -->
-      </div>
-      <a href="#" class="page-history-link">Page History</a>
+    <div class="footer-section footer-contact">
+      <h3>Contact Us</h3>
+      <p><span>📧</span> contact@fanarcs.com</p>
+      <p><span>📱</span> (555) 123-4567</p>
+      <p><span>🏢</span> 123 Fan Street, Anime City</p>
+
+      <h3>Newsletter</h3>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
-  </footer>
+  </div>
 
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <!-- Home link -->
-      <li><a href="../index.html">Home 🏠</a></li>
+  <div class="footer-bottom">
+    <p>&copy; 2025 FanArcs. All rights reserved.</p>
+    <p><a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Privacy Policy" data-related-to="Legal">Privacy Policy</a> | <a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Terms of Service" data-related-to="Legal">Terms of Service</a> | <a href="#" class="non-existent-link" data-page-type="policy" data-page-title="Cookie Policy" data-related-to="Legal">Cookie Policy</a></p>
+  </div>
+</footer>
 
-      <!-- Media Types dropdown -->
-      <li>
-        <button
-          class="nav-dropdown-toggle"
-          aria-expanded="false"
-          aria-controls="media-dropdown"
-        >
-          Media Types <span>►</span>
-        </button>
-        <ul class="nav-dropdown-menu" id="media-dropdown">
-          <li><a href="../anime-page.html">Anime 🇯🇵</a></li>
-          <li><a href="../manga-page.html">Manga 📚</a></li>
-          <li><a href="../comics-page.html">Comics 🦸</a></li>
-          <li><a href="../tv-page.html">TV 📺</a></li>
-          <li><a href="../metaverse-page.html">Metaverse 🌐</a></li>
-          <hr />
-          <li>
-            <a href="../power-room.html">Power Room ⚔️</a>
-          </li>
-        </ul>
-      </li>
+<!-- Bottom navigation bar -->
+<div class="bottom-navigation">
+  <a href="index.html" class="nav-home-button" aria-label="Go Home">🏠</a>
+<a href="community-page.html" class="nav-social-button" aria-label="Go to Community">👥</a>
+<a href="profile-page.html"class="nav-profile-button"aria-label="Profile Page">👤</a>
+<div class="nav-search-popup" onclick="toggleSearchPopup()">
+<span>🔍</span>
+</div>
 
-      <!-- FanArcs Info dropdown -->
-      <li>
-        <button
-          class="nav-dropdown-toggle"
-          aria-expanded="false"
-          aria-controls="info-dropdown"
-        >
-          FanArcs Info <span>►</span>
-        </button>
-        <ul class="nav-dropdown-menu" id="info-dropdown">
-          <li><a href="../about-page.html">About 🔎</a></li>
-          <li><a href="../contribute-page.html">Help FanArcs ⁉️</a></li>
-          <li><a href="../community-page.html">Community 👥</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+<div class="hamburger-menu-icon" aria-label="Open navigation menu">
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+<div class="hamburger-bar"></div>
+</div>
+</div>
+
+<!-- The navigation menu that will show/hide -->
+<nav class="main-navigation">
+<ul>
+<!-- Categories dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="categories-dropdown"
+>
+Categories <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="anime/anime-page.html" class="default-links">Anime 🌸</a></li>
+<hr />
+<li><a href="comics/comics-page.html" class="default-links">Comics 💥</a></li>
+<hr />
+<li><a href="manga/manga-page.html" class="default-links">Manga 📖</a></li>
+<hr />
+<li><a href="tv/tv-page.html" class="default-links">Television 📺</a></li>
+<hr />
+<li><a href="video-games/video-games.html" class="default-links">Video Games 🎮</a></li>
+<hr />
+<li>
+<a href="worlds-universes/worlds-universes-page.html" class="default-links">Worlds & Universes 🌌</a>
+</li>
+<hr />
+<li>
+<a href="power-room.html" class="default-links">Power Room ⚔️</a>
+</li>
+</ul>
+</li>
+
+<!-- FanArcs Info dropdown -->
+<li>
+<button
+class="nav-dropdown-toggle"
+aria-expanded="false"
+aria-controls="info-dropdown"
+>
+FanArcs Info <span>►</span>
+</button>
+<ul class="nav-dropdown-menu">
+<li><a href="about-page.html" class="default-links">About 🔎</a></li>
+<li><a href="contribute-page.html" class="default-links">Help FanArcs ⁉️ </a></li>
+<li><a href="community-page.html" class="default-links">Community</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 
   <script src="../../js/menu-interaction.js"></script>
   <script src="../../js/non-existent-pages.js"></script>
