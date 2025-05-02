@@ -28,76 +28,132 @@ FanArcs is a modern, clean, and accessible platform for fan communities. Built w
 FanArcs/
 ├── css/
 │   ├── core/
-│   │   ├── reset.css
-│   │   ├── variables.css
-│   │   ├── typography.css
 │   │   ├── layout.css
-│   │   └── responsive.css
-│   ├── components/
-│   │   ├── buttons.css
-│   │   ├── links.css
-│   │   ├── cards.css
-│   │   ├── forms.css
-│   │   ├── navigation.css
-│   │   ├── footer.css
+│   │   ├── reset.css
+│   │   ├── responsive.css
 │   │   ├── search.css
-│   │   └── content-blocks.css
+│   │   ├── typography.css
+│   │   ├── universal-style.css
+│   │   └── variables.css
+│   ├── components/
+│   │   ├── box-layouts/
+│   │   │   ├── cards.css
+│   │   │   ├── content-blocks.css
+│   │   │   └── interactive-elements.css
+│   │   ├── button-links/
+│   │   │   ├── buttons.css
+│   │   │   ├── filter-buttons.css
+│   │   │   └── links.css
+│   │   ├── footer.css
+│   │   └── navigation.css
 │   ├── utilities/
 │   │   ├── accessibility.css
 │   │   ├── animations.css
-│   │   └── helpers.css
+│   │   ├── helpers.css
+│   │   └── responsive-images.css
 │   ├── themes/
 │   │   ├── light.css
 │   │   └── dark.css
 │   ├── pages/
-│   │   ├── home-page.css
+│   │   ├── main-pages/
+│   │   │   ├── about-style.css
+│   │   │   ├── anime-style.css
+│   │   │   ├── comics-style.css
+│   │   │   ├── community-style.css
+│   │   │   ├── contribute-style.css
+│   │   │   ├── home-page.css
+│   │   │   ├── manga-style.css
+│   │   │   ├── metaverse-style.css
+│   │   │   ├── power-room.css
+│   │   │   ├── profile-style.css
+│   │   │   ├── tv-style.css
+│   │   │   ├── video-games-style.css
+│   │   │   └── worlds-universes-style.css
+│   │   ├── page-styling/
+│   │   │   ├── character-page.css
+│   │   │   ├── genre-guide.css
+│   │   │   ├── keyboard-shortcuts.css
+│   │   │   ├── placeholder-style.css
+│   │   │   └── show-page.css
+│   │   ├── user-styles/
+│   │   │   ├── user-content-consolidated.css
+│   │   │   └── user-post-style.css
 │   │   ├── anime-style.css
-│   │   ├── manga-style.css
+│   │   ├── character-page.css
 │   │   ├── comics-style.css
-│   │   ├── tv-style.css
+│   │   ├── home-page.css
+│   │   ├── manga-style.css
 │   │   ├── metaverse-style.css
-│   │   ├── worlds-universes-style.css
+│   │   ├── placeholder-style.css
 │   │   ├── power-room.css
-│   │   ├── community-style.css
 │   │   ├── profile-style.css
-│   │   ├── about-style.css
-│   │   └── contribute-style.css
+│   │   ├── show-page.css
+│   │   ├── tv-style.css
+│   │   └── worlds-universes-style.css
 │   └── main.css
 ├── js/
-│   ├── menu-interaction.js
-│   ├── search-functionality.js
-│   ├── power-room.js
 │   ├── accessibility.js
-│   ├── user-content.js
-│   └── non-existent-pages.js
+│   ├── filter-interactions.js
+│   ├── keyboard-shortcuts-reference.js
+│   ├── menu-interaction.js
+│   ├── non-existent-pages.js
+│   ├── page-history.js
+│   ├── power-room.js
+│   ├── profile-interact.js
+│   ├── theme-settings.js
+│   └── user-content.js
 ├── html/
-│   ├── index.html
+│   ├── anime/
+│   │   ├── anime-directory.html
+│   │   ├── anime-history.html
+│   │   ├── anime-page.html
+│   │   ├── characters/
+│   │   │   ├── korosensei-page.html
+│   │   │   └── naruto-uzumaki.html
+│   │   └── naruto.html
+│   ├── comics/
+│   │   ├── comics-directory.html
+│   │   ├── comics-history.html
+│   │   └── comics-page.html
+│   ├── manga/
+│   │   ├── manga-directory.html
+│   │   ├── manga-history.html
+│   │   └── manga-page.html
+│   ├── templates/
+│   │   ├── character-template.html
+│   │   ├── placeholder-page.html
+│   │   ├── shows-directory-template.html
+│   │   ├── user-content-template.html
+│   │   └── user-section-template.html
+│   ├── tv/
+│   │   ├── tv-directory.html
+│   │   ├── tv-history.html
+│   │   └── tv-page.html
+│   ├── video-games/
+│   │   ├── metaverse/
+│   │   │   ├── metaverse-directory.html
+│   │   │   ├── metaverse-history.html
+│   │   │   └── metaverse-page.html
+│   │   └── video-games.html
+│   ├── worlds-universes/
+│   │   ├── worlds-universes-directory.html
+│   │   └── worlds-universes-page.html
 │   ├── about-page.html
-│   ├── anime-page.html
-│   ├── manga-page.html
-│   ├── comics-page.html
-│   ├── tv-page.html
-│   ├── metaverse-page.html
-│   ├── worlds-universes-page.html
-│   ├── power-room.html
 │   ├── community-page.html
 │   ├── contribute-page.html
-│   ├── profile-page.html
-│   ├── templates/
-│   │   ├── placeholder-page.html
-│   │   └── user-content-template.html
-│   ├── anime/
-│   │   ├── naruto.html
-│   │   └── characters/
-│   │       └── naruto-uzumaki.html
-│   └── [other content directories]
-└── images/
-    ├── anime/
-    ├── manga/
-    ├── comics/
-    ├── tv/
-    ├── metaverse/
-    └── worlds/
+│   ├── index.html
+│   ├── keyboard-shortcuts.html
+│   ├── power-room.html
+│   └── profile-page.html
+└── [Root image files]
+    ├── AnimeHeader.jpg
+    ├── Comicheader.jpg
+    ├── logo-image.jpg
+    ├── MangaHeader.jpg
+    ├── MVheader.jpg
+    ├── Post-test.jpg
+    ├── TvHeader.jpg
+    └── WandUheader.jpg
 ```
 
 ## Getting Started
@@ -144,15 +200,21 @@ See `contribute-page.html` for detailed contribution guidelines and submission m
 
 ## CSS Architecture
 
-FanArcs uses a component-based CSS architecture:
+FanArcs uses a component-based CSS architecture with improved organization:
 
-- **Core**: Foundational styles like reset, variables, typography
-- **Components**: Reusable UI elements like buttons, cards, navigation
-- **Utilities**: Helper classes for accessibility, animations
+- **Core**: Foundational styles like reset, variables, typography, universal styles
+- **Components**:
+  - **Box Layouts**: Cards, content blocks, and interactive elements
+  - **Button Links**: Buttons, filter buttons, and links
+  - **Navigation & Footer**: Site-wide navigation and footer components
+- **Utilities**: Helper classes for accessibility, animations, and responsive images
 - **Themes**: Light and dark mode themes
-- **Pages**: Page-specific styles
+- **Pages**:
+  - **Main Pages**: Styles for primary site pages
+  - **Page Styling**: Styles for specific page types (character, show, etc.)
+  - **User Styles**: Styles for user-generated content
 
-This structure improves maintainability, reduces conflicts, and makes the codebase more scalable.
+This enhanced structure improves maintainability, reduces conflicts, and makes the codebase more scalable and organized.
 
 ## Key Features Implementation
 
@@ -160,6 +222,9 @@ This structure improves maintainability, reduces conflicts, and makes the codeba
 - **User-Generated Content**: Templates for creating and sharing fan content
 - **Responsive Navigation**: Bottom navigation on mobile, side navigation on larger screens
 - **Accessibility**: Skip-to-content links, ARIA attributes, keyboard navigation
+- **Responsive Images**: Dedicated CSS for responsive image handling across different screen sizes
+- **Media History Pages**: Consistent template structure for all media history content
+- **Directory Structure**: Organized file structure with dedicated directories for each media type
 
 ## Why FanArcs?
 
